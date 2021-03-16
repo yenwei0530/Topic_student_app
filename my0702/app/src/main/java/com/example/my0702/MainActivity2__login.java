@@ -138,7 +138,7 @@ public class MainActivity2__login extends AppCompatActivity {
     private View.OnClickListener buttonlogin= new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if (ed1.getText().toString().matches("") || ed2.getText().toString().matches("")) {
+           /*記得刪 if (ed1.getText().toString().matches("") || ed2.getText().toString().matches("")) {
 
 
                 Toast toast = Toast.makeText(MainActivity2__login.this, "欄位不能是空白!!", Toast.LENGTH_LONG);
@@ -148,12 +148,12 @@ public class MainActivity2__login extends AppCompatActivity {
 
                     //Toast toast = Toast.makeText(MainActivity2__login.this, "欄位不能是空白!!", Toast.LENGTH_LONG);
                     //toast.show();
-            } else {
+            } else {*/
                 Intent intent = new Intent(MainActivity2__login.this, loginadd.class);
-                intent.putExtra("ed1", ed1.getText().toString());        //傳入點選事件之項目
-                intent.putExtra("ed2", ed2.getText().toString());
+                intent.putExtra("ed1", ed1.getText().toString()); //帳號       //傳入點選事件之項目
+                intent.putExtra("ed2", ed2.getText().toString()); //密碼
                 startActivity(intent);//跳轉到倒計時頁面
-            }
+           /*記得刪 }*/
 
         }
 

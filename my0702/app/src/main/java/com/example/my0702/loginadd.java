@@ -59,29 +59,29 @@ public class loginadd extends AppCompatActivity {
                     只有一筆資料時直接建立JSONObject物件
                     JSONObject jsonData = new JSONObject(result);
                 */
-            String result = MainActivityloginSQL.executeQuery1("SELECT * FROM  `registered` WHERE `id` ='" + TextView1.getText().toString() + "'  and `pwd` ='" + TextView2.getText().toString() + "' ");
-            int a = result.indexOf("off");
+/*記得刪            String result = MainActivityloginSQL.executeQuery1("SELECT * FROM  `registered` WHERE `id` ='" + TextView1.getText().toString() + "'  and `pwd` ='" + TextView2.getText().toString() + "' ");
+            int a = result.indexOf("off");*/
             /*
             String result2;
             if(TextView1.getText().toString().equals("id.getText().toString)"))
             { //判斷帳號是否相同
                 result2 = "此帳號已有人使用，請更換一個!!";
             }*/
-            if (a > -1) {  //判斷無會員
+/*記得刪            if (a > -1) {  //判斷無會員
                 Ed1.setText("-1");
                 Intent intent1 = new Intent(loginadd.this, MainActivity2__login.class);
                 startActivity(intent1);//註冊會員執行跳頁
             }
 
-            JSONArray jsonArray = new JSONArray(result);    //BUG
+            JSONArray jsonArray = new JSONArray(result);    //BUG*/
 
-            if (Integer.parseInt(String.valueOf(jsonArray.length())) == 1) { //判斷有會員資料
+           /*記得刪  if (Integer.parseInt(String.valueOf(jsonArray.length())) == 1) { //判斷有會員資料*/
 
                     Intent intent1 = new Intent(loginadd.this, MainActivity.class);
                     intent1.putExtra("account", TextView1.getText().toString());//"姓名:"
                     startActivity(intent1);//註冊會員執行跳頁
 
-            }
+            /*記得刪}*/
 
             } catch(Exception e){
                 // Log.e("log_tag", e.toString());

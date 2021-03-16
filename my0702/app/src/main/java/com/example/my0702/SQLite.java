@@ -3,7 +3,9 @@ package com.example.my0702;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -55,6 +57,7 @@ public class SQLite extends AppCompatActivity {
         //mm2 = findViewById(R.id.sex);
         //mm3 = findViewById(R.id.Email1);
         mm4 = findViewById(R.id.bird);
+        mm3 = findViewById(R.id.ed_year);
         mm5 = findViewById(R.id.dadage);
 
 
@@ -181,6 +184,21 @@ public class SQLite extends AppCompatActivity {
             }
 
         }, year, month, day).show();
+    }
+    //選擇年級
+    public void classAlertDialog(View v){
+        final String[] dinner = {"一年級","二年級","三年級","四年級","五年級","六年級"};
+
+        AlertDialog.Builder dialog_list = new AlertDialog.Builder(SQLite.this);
+        dialog_list.setTitle("年級");
+        dialog_list.setItems(dinner, new DialogInterface.OnClickListener(){
+
+            //只要你在onClick處理事件內，使用which參數，就可以知道按下陣列裡的哪一個了
+            public void onClick(DialogInterface dialog, int which) {
+                mm3.setText(dinner[which]);
+            }
+        });
+        dialog_list.show();
     }
 //新增資料
     private View.OnClickListener btnAdd1OnClick = new View.OnClickListener() {
