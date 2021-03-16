@@ -29,7 +29,8 @@ public class calender_mood extends AppCompatActivity {
             mRadioButton3,
             mRadioButton4,
             mRadioButton5,
-            mRadioButton6;
+            mRadioButton6,
+            mRadioButton7;
 
     SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
     SimpleDateFormat sDateFormat1 = new SimpleDateFormat("yyyy-MM-dd");
@@ -70,6 +71,7 @@ public class calender_mood extends AppCompatActivity {
         mRadioButton4 = findViewById(R.id.btn_bad2);
         mRadioButton5 = findViewById(R.id.btn_angry2);
         mRadioButton6 = findViewById(R.id.btn_mad2);
+        mRadioButton7 = findViewById(R.id.btn_veryexcited);
     }
     private View.OnClickListener btnAdd1OnClick12345 = new View.OnClickListener() {
         @Override
@@ -86,6 +88,9 @@ public class calender_mood extends AppCompatActivity {
                 ac = "2 生氣";
             } else if (mRadioButton6.isChecked()) {
                 ac = "1 惱火";
+            }
+            else if (mRadioButton7.isChecked()) {
+                ac = "7 非常快樂";
 
             }
 
