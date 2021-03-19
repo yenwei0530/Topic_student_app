@@ -27,7 +27,7 @@ import java.util.Calendar;
 
 //註冊頁面
 public class SQLite extends AppCompatActivity {
-    private TextView TextView1,TextView2;
+    private TextView TextView1,TextView2,TextView3;
     private TextView t1,t2,t3;
     private RadioButton boy, girl,dad,mom;
     private EditText mm0,mm00,mm1,mm2,mm3,mm4,mm5,mm6,mm7,mm8;
@@ -35,7 +35,7 @@ public class SQLite extends AppCompatActivity {
     private Switch sw1;
     private String aa;
     private String a11,a12;
-    private Spinner Spinner,Spinner1;
+    private Spinner Spinner,Spinner1,sp_year,sp_class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,7 @@ public class SQLite extends AppCompatActivity {
         TextView1.setText(loginname);
         TextView2 = findViewById(R.id.n2);
         TextView2.setText(loginname1);
+        TextView3= findViewById(R.id.textView63);
         t1 = findViewById(R.id.n3);
         t2 = findViewById(R.id.n4);
         mm1 = findViewById(R.id.name);
@@ -57,9 +58,30 @@ public class SQLite extends AppCompatActivity {
         //mm2 = findViewById(R.id.sex);
         //mm3 = findViewById(R.id.Email1);
         mm4 = findViewById(R.id.bird);
-        mm3 = findViewById(R.id.ed_year);
+        //mm3 = findViewById(R.id.ed_year);
         mm5 = findViewById(R.id.dadage);
 
+        //設定年級sp
+        sp_year=findViewById(R.id.sp_year);
+        ArrayAdapter<CharSequence> adapter =
+                ArrayAdapter.createFromResource(this,    //對應的Context
+                        R.array.year,                             //資料選項內容
+                        android.R.layout.simple_spinner_item);  //預設Spinner未展開時的View(預設及選取後樣式)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp_year.setAdapter(adapter);
+        sp_year.setOnItemSelectedListener(spnOnItemSelected);
+        //////////////
+
+        //設定班級sp
+        sp_class=findViewById(R.id.sp_class);
+        ArrayAdapter<CharSequence> adapter2 =
+                ArrayAdapter.createFromResource(this,    //對應的Context
+                        R.array.classs,                             //資料選項內容
+                        android.R.layout.simple_spinner_item);  //預設Spinner未展開時的View(預設及選取後樣式)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp_class.setAdapter(adapter2);
+        sp_class.setOnItemSelectedListener(spnOnItemSelected2);
+        //////////////
 
         Spinner =findViewById(R.id.sdad);
         final String[] grade = {"國中", "高中", "大學", "研究所", "碩士", "博士"};
@@ -171,6 +193,35 @@ public class SQLite extends AppCompatActivity {
         btn1.setOnClickListener(btnAdd1OnClick);
         //TextView2.setText(grade[position]);
  }
+ //年級選擇動作
+    private AdapterView.OnItemSelectedListener spnOnItemSelected
+         = new AdapterView.OnItemSelectedListener() {
+        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+            String sPos=String.valueOf(pos);//選項位置
+            //String sInfo=parent.getItemAtPosition(pos).toString();
+            String sInfo=parent.getSelectedItem().toString();//選項內容
+            // 選項有選取時的動作
+        }
+
+        public void onNothingSelected(AdapterView<?> parent) {
+            // 沒有選取時的動作
+        }
+    };
+    //班級選擇動作
+    private AdapterView.OnItemSelectedListener spnOnItemSelected2
+            = new AdapterView.OnItemSelectedListener() {
+        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+            String sPos=String.valueOf(pos);//選項位置
+            //String sInfo=parent.getItemAtPosition(pos).toString();
+            String sInfo=parent.getSelectedItem().toString();//選項內容
+            // 選項有選取時的動作
+        }
+
+        public void onNothingSelected(AdapterView<?> parent) {
+            // 沒有選取時的動作
+        }
+    };
+
     public void datePicker(View v){
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
@@ -181,25 +232,12 @@ public class SQLite extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 String dateTime = String.valueOf(year)+"-"+String.valueOf(month+1)+"-"+String.valueOf(day);
                 mm4.setText(dateTime);
+                mm4.setVisibility(View.VISIBLE);
             }
 
         }, year, month, day).show();
     }
-    //選擇年級
-    public void classAlertDialog(View v){
-        final String[] dinner = {"一年級","二年級","三年級","四年級","五年級","六年級"};
 
-        AlertDialog.Builder dialog_list = new AlertDialog.Builder(SQLite.this);
-        dialog_list.setTitle("年級");
-        dialog_list.setItems(dinner, new DialogInterface.OnClickListener(){
-
-            //只要你在onClick處理事件內，使用which參數，就可以知道按下陣列裡的哪一個了
-            public void onClick(DialogInterface dialog, int which) {
-                mm3.setText(dinner[which]);
-            }
-        });
-        dialog_list.show();
-    }
 //新增資料
     private View.OnClickListener btnAdd1OnClick = new View.OnClickListener() {
         @Override

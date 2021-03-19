@@ -9,4 +9,23 @@
     <string name="title_activity_main3">MainActivity3</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="year">
+        <item>一年</item>
+        <item>二年</item>
+        <item>三年</item>
+        <item>四年</item>
+        <item>五年</item>
+        <item>六年</item>
+    </string-array>
+
+    <string-array name="classs">
+        <item>一班</item>
+        <item>二班</item>
+        <item>三班</item>
+        <item>四班</item>
+        <item>五班</item>
+        <item>六班</item>
+    </string-array>
+
 </resources>
