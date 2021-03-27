@@ -1,8 +1,11 @@
 package com.example.my0702;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Gravity;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -106,7 +109,7 @@ public class SamplePuzzle extends AppCompatActivity {
     private void init() {
         mGridView = (GestureDetectGridView) findViewById(R.id.grid);
         time_view = (TextView) findViewById(R.id.time_view);
-        time_view.bringToFront();
+        //time_view.bringToFront();
 
         mGridView.setNumColumns(COLUMNS);
 
@@ -441,19 +444,20 @@ public class SamplePuzzle extends AppCompatActivity {
     }
 
     private static void swap(Context context, int currentPosition, int swap) {
-        String newPosition = tileList[currentPosition + swap];
-        tileList[currentPosition + swap] = tileList[currentPosition];
-        tileList[currentPosition] = newPosition;
-        display(context);
+      String newPosition = tileList[currentPosition + swap];
+      tileList[currentPosition + swap] = tileList[currentPosition];
+      tileList[currentPosition] = newPosition;
+      display(context);
 
 
         if (isSolved()) {
-            time_running = false;
-            Toast toast = Toast.makeText(context,  "YOU WIN!", Toast.LENGTH_SHORT);
-            LinearLayout toastLayout = (LinearLayout) toast.getView();
+           time_running = false;
+            /* Toast toast = Toast.makeText(context,  "YOU WIN!", Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.BOTTOM|Gravity.RIGHT,0,0);
+           LinearLayout toastLayout = (LinearLayout) toast.getView();
             TextView toastTV = (TextView) toastLayout.getChildAt(0);
             toastTV.setTextSize(60);
-            toast.show();
+            toast.show();*/
         }
     }
 
@@ -536,5 +540,13 @@ public class SamplePuzzle extends AppCompatActivity {
 
         return solved;
     }
+//跳出
+    public void exit(View view) {
+        finish();
+    }
+
+
+
+
 }
 

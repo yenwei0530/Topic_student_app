@@ -7,7 +7,7 @@
     android:background="#FFF6CC">
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@drawable/underline"
             android:orientation="vertical">
@@ -65,7 +65,7 @@
                 app:srcCompat="@drawable/profile1234" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
 
@@ -167,25 +167,29 @@
                         android:text="年級："
                         android:textSize="18sp" />
 
-                    <EditText
-                        android:id="@+id/ed_year"
+                    <Spinner
+                        android:id="@+id/sp_year"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:ems="10"
-                        android:fontFamily="@font/kai08mz"
-                        android:hint="○年級"
-                        android:inputType="date" />
+                        android:layout_weight="1"
+                        android:fontFamily="@font/kai08mz" />
 
-                    <Button
-                        android:id="@+id/btn_year"
-                        android:layout_width="60dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity=""
-                        android:background="@drawable/date1234"
+                    <TextView
+                        android:id="@+id/tv_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
                         android:fontFamily="@font/kai08mz"
-                        android:onClick="classAlertDialog"
-                        android:text="" />
+                        android:gravity="center_vertical"
+                        android:text="班級："
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/kai08mz" />
 
                 </LinearLayout>
 
@@ -236,16 +240,6 @@
                         android:text="出生日期："
                         android:textSize="18sp" />
 
-                    <EditText
-                        android:id="@+id/bird"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:ems="10"
-                        android:fontFamily="@font/kai08mz"
-                        android:hint="yyyy-mm-dd"
-                        android:inputType="date" />
-
                     <Button
                         android:id="@+id/btnDate"
                         android:layout_width="60dp"
@@ -255,6 +249,17 @@
                         android:fontFamily="@font/kai08mz"
                         android:onClick="datePicker"
                         android:text="" />
+
+                    <EditText
+                        android:id="@+id/bird"
+                        android:layout_width="146dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:ems="10"
+                        android:fontFamily="@font/kai08mz"
+                        android:hint="yyyy-mm-dd"
+                        android:inputType="date"
+                        android:visibility="invisible" />
 
                 </LinearLayout>
 
@@ -288,12 +293,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:orientation="horizontal">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/tdad"
@@ -305,13 +310,13 @@
                         android:textSize="18sp" />
 
 
-                <Spinner
-                    android:id="@+id/sdad"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/kai08mz" />
-            </LinearLayout>
+                    <Spinner
+                        android:id="@+id/sdad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/kai08mz" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

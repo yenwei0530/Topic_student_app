@@ -474,6 +474,13 @@
                                 android:fontFamily="@font/kai08mz"
                                 android:hint="按一下，開始寫日記"
                                 android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                            <Button
+                                android:id="@+id/game_next_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/salvar" />
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -517,13 +524,6 @@
                         android:layout_marginStart="40dp"
                         android:gravity="center_vertical"
                         android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/game_next_button"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/salvar" />
 
                         <TextView
                             android:id="@+id/textView19"
