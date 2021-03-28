@@ -19,7 +19,8 @@ public class diary_activity4 extends AppCompatActivity {
         getSupportActionBar().hide();//關閉標題列
 
         //宣告Button物件
-        Button next =findViewById(R.id.next);
+        Button nextpage =findViewById(R.id.nextpage);
+        Button uppage =findViewById(R.id.uppage);
 
         //宣告LinearLayout物件
         LinearLayout L1=findViewById(R.id.L1);
@@ -98,13 +99,22 @@ public class diary_activity4 extends AppCompatActivity {
         });
 
         //下一頁點擊事件
-        next.setOnClickListener(new View.OnClickListener() {
+        nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //跳至下一頁面
                 Intent intent =new Intent(diary_activity4.this,dirary_activity5.class);
                 startActivity(intent);
 
+            }
+        });
+
+        //上一頁點擊事件
+        uppage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //關閉目前頁面
+                finish();
             }
         });
 

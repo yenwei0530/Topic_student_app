@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:drawable/screen_background_light"
+    android:background="#FFD0FF"
     tools:context=".registered_activity">
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:background="@drawable/bg_diaiy"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/exit"
@@ -32,14 +34,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/zkr"
-        android:text="你將來一定會成為很了不起的人！"
+        android:text="日記"
         android:textColor="#FFF"
-        android:textSize="20sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view" />
 
@@ -47,37 +49,67 @@
         android:id="@+id/txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/zkr"
-        android:gravity="center"
-        android:text="寫點東西吧!\n(偷偷告訴你，可以試著按按看下面的圖片)"
+        android:text="(偷偷告訴你，可以試著按按看下面圖片)"
         android:textColor="#FFF"
-        android:textSize="16sp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt1" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="132dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/writediary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt1" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="132dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/writing2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="136dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/writediary"
+        android:id="@+id/imageView3"
+        android:layout_width="132dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/notes"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt2" />
+        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/bg_white"
         android:orientation="vertical"
         android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="70dp">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/L1"
@@ -103,23 +135,42 @@
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginBottom="24dp"
-            android:background="#f4f4f4" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/next"
-            android:layout_width="240dp"
-            android:layout_height="45dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/btn_bg2"
-            android:text="Ya 完成了!"
-            android:textAllCaps="false"
-            android:textColor="#FFF"
-            android:textSize="18sp"
-            app:backgroundTint="@null" />
+            <Button
+                android:id="@+id/uppage"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_bg2"
+                android:text="上一頁"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/nextpage"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="14dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_bg2"
+                android:text="Ya 完成了!"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
