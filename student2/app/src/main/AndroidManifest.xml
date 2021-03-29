@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Student">
-        <activity android:name=".dirary_activity5"></activity>
+        <activity android:name=".dirary_activity5"/>
         <activity android:name=".diary_activity4" />
         <activity android:name=".diary_activity3" />
         <activity android:name=".diary_activity2" />
@@ -23,9 +23,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".registered_activity" />
-        <activity android:name=".mood_game_activity" >
-
-        </activity>
+        <activity android:name=".mood_game_activity" />
+        <activity android:name=".mood_ter_activity" />
+        <activity android:name=".mood_ter_activity2" />
+        <activity android:name=".student_information_activity" />
     </application>
 
 </manifest>

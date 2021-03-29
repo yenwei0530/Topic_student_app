@@ -17,7 +17,7 @@ public class logine_activity extends AppCompatActivity {
         setContentView(R.layout.login);
         getSupportActionBar().hide();//關閉標題列
 
-        /*//宣告TextView物件
+        //宣告TextView物件
         TextView register2=findViewById(R.id.register2);
 
         //宣告Button物件
@@ -41,7 +41,7 @@ public class logine_activity extends AppCompatActivity {
                 Intent intent =new Intent(logine_activity.this,main_activity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
     }
 }
