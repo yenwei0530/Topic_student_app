@@ -1,7 +1,6 @@
 package com.example.student;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -9,16 +8,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class mood_ter_activity2 extends AppCompatActivity {
+public class mood_ter_activity3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mood_ter2);
+        setContentView(R.layout.mood_ter3);
         getSupportActionBar().hide();//關閉標題列
 
         //宣告Button物件
@@ -33,113 +31,54 @@ public class mood_ter_activity2 extends AppCompatActivity {
         ImageView g2 =findViewById(R.id.g2);
         ImageView g3 =findViewById(R.id.g3);
         ImageView g4 =findViewById(R.id.g4);
-        ImageView g5 =findViewById(R.id.g5);
-        ImageView g6 =findViewById(R.id.g6);
-        ImageView g7 =findViewById(R.id.g7);
 
         //宣告LinearLayout物件
         LinearLayout L1=findViewById(R.id.L1);
         LinearLayout L2=findViewById(R.id.L2);
         LinearLayout L3=findViewById(R.id.L3);
         LinearLayout L4=findViewById(R.id.L4);
-        LinearLayout L5=findViewById(R.id.L5);
-        LinearLayout L6=findViewById(R.id.L6);
-        LinearLayout L7=findViewById(R.id.L7);
 
 
-        //情緒7點擊事件
-        L7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                g7.setColorFilter(Color.YELLOW);
-                //改變其他btn為黑
-                g6.setColorFilter(Color.GRAY);
-                g5.setColorFilter(Color.GRAY);
-                g4.setColorFilter(Color.GRAY);
-                g3.setColorFilter(Color.GRAY);
-                g2.setColorFilter(Color.GRAY);
-                g1.setColorFilter(Color.GRAY);
-            }
-        });
-        //情緒6點擊事件
-        L6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                g6.setColorFilter(Color.YELLOW);
-                //改變其他btn為黑
-                g7.setColorFilter(Color.GRAY);
-                g5.setColorFilter(Color.GRAY);
-                g4.setColorFilter(Color.GRAY);
-                g3.setColorFilter(Color.GRAY);
-                g2.setColorFilter(Color.GRAY);
-                g1.setColorFilter(Color.GRAY);
-            }
-        });
-        //情緒5點擊事件
-        L5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                g5.setColorFilter(Color.YELLOW);
-                //改變其他btn為黑
-                g7.setColorFilter(Color.GRAY);
-                g6.setColorFilter(Color.GRAY);
-                g4.setColorFilter(Color.GRAY);
-                g3.setColorFilter(Color.GRAY);
-                g2.setColorFilter(Color.GRAY);
-                g1.setColorFilter(Color.GRAY);
-            }
-        });
-        //情緒4點擊事件
+
+        //方法4點擊事件
         L4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 g4.setColorFilter(Color.YELLOW);
                 //改變其他btn為黑
-                g7.setColorFilter(Color.GRAY);
-                g6.setColorFilter(Color.GRAY);
-                g5.setColorFilter(Color.GRAY);
                 g3.setColorFilter(Color.GRAY);
                 g2.setColorFilter(Color.GRAY);
                 g1.setColorFilter(Color.GRAY);
             }
         });
-        //情緒3點擊事件
+        //方法3點擊事件
         L3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 g3.setColorFilter(Color.YELLOW);
                 //改變其他btn為黑
-                g7.setColorFilter(Color.GRAY);
-                g6.setColorFilter(Color.GRAY);
-                g5.setColorFilter(Color.GRAY);
                 g4.setColorFilter(Color.GRAY);
                 g2.setColorFilter(Color.GRAY);
                 g1.setColorFilter(Color.GRAY);
             }
         });
-        //情緒2點擊事件
+        //方法2點擊事件
         L2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 g2.setColorFilter(Color.YELLOW);
                 //改變其他btn為黑
-                g7.setColorFilter(Color.GRAY);
-                g6.setColorFilter(Color.GRAY);
-                g5.setColorFilter(Color.GRAY);
                 g4.setColorFilter(Color.GRAY);
                 g3.setColorFilter(Color.GRAY);
                 g1.setColorFilter(Color.GRAY);
             }
         });
-        //情緒1點擊事件
+        //方法1點擊事件
         L1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 g1.setColorFilter(Color.YELLOW);
                 //改變其他btn為黑
-                g7.setColorFilter(Color.GRAY);
-                g6.setColorFilter(Color.GRAY);
-                g5.setColorFilter(Color.GRAY);
                 g4.setColorFilter(Color.GRAY);
                 g3.setColorFilter(Color.GRAY);
                 g2.setColorFilter(Color.GRAY);
@@ -151,7 +90,7 @@ public class mood_ter_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳至主頁面
-                Intent intent =new Intent(mood_ter_activity2.this,main_activity.class);
+                Intent intent =new Intent(mood_ter_activity3.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
             }
@@ -162,7 +101,7 @@ public class mood_ter_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳至下一頁面
-                Intent intent =new Intent(mood_ter_activity2.this,mood_ter_activity3.class);
+                Intent intent =new Intent(mood_ter_activity3.this,mood_ter_activity4.class);
                 startActivity(intent);
             }
         });
@@ -175,7 +114,6 @@ public class mood_ter_activity2 extends AppCompatActivity {
                 finish();
             }
         });
-
 
 
     }

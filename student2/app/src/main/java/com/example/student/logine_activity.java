@@ -42,6 +42,5 @@ public class logine_activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

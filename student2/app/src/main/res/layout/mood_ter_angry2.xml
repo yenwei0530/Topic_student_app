@@ -10,7 +10,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="90dp"
         android:background="@drawable/bg_diaiy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,9 +37,9 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/zkr"
-        android:text="發生的時間"
+        android:text="當時想法"
         android:textColor="#FFF"
-        android:textSize="40sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,19 +49,20 @@
         android:id="@+id/imageView"
         android:layout_width="132dp"
         android:layout_height="106dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/time"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/puzzle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt1" />
 
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="132dp"
         android:layout_height="106dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/hourglass"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/idea"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
@@ -73,20 +74,20 @@
         android:id="@+id/imageView3"
         android:layout_width="132dp"
         android:layout_height="106dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/man"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/idea2"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.007" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/bg_white"
         android:orientation="vertical"
         android:padding="20dp"
@@ -95,115 +96,70 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.504">
+        app:layout_constraintVertical_bias="0.491">
 
 
-        <LinearLayout
-            android:id="@+id/L1"
-            android:layout_width="150dp"
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_marginBottom="12dp"
+            android:text="想打自己"
+            android:textColor="#3D414E"
+            android:background="@color/white"
+            android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/ib1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="14dp"
-                android:background="@android:drawable/divider_horizontal_dark"
-                android:src="@drawable/morning"
-                app:tint="#00EC00" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="早上"
-                android:textColor="#3D414E"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/L2"
-            android:layout_width="150dp"
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_marginBottom="12dp"
+            android:background="@color/white"
+            android:text="想咬自己"
+            android:textColor="#3D414E"
+            android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/ib2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="14dp"
-                android:background="@android:drawable/divider_horizontal_dark"
-                android:src="@drawable/noon"
-                app:tint="#000000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="中午"
-                android:textColor="#3D414E"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/L3"
-            android:layout_width="150dp"
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_marginBottom="12dp"
+            android:background="@color/white"
+            android:text="想打他"
+            android:textColor="#3D414E"
+            android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/ib3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="14dp"
-                android:background="@android:drawable/divider_horizontal_dark"
-                android:src="@drawable/afternoon"
-                app:tint="#000000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="下午"
-                android:textColor="#3D414E"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/L4"
-            android:layout_width="150dp"
+        <TextView
+            android:id="@+id/t4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="24dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_marginBottom="12dp"
+            android:text="想罵他"
+            android:textColor="#3D414E"
+            android:background="@color/white"
+            android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/ib4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="14dp"
-                android:background="@android:drawable/divider_horizontal_dark"
-                android:src="@drawable/moon"
-                app:tint="#000000" />
+        <TextView
+            android:id="@+id/t5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="想撕掉作業簿"
+            android:textColor="#3D414E"
+            android:background="@color/white"
+            android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="晚上"
-                android:textColor="#3D414E"
-                android:textSize="25sp" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/t6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="想把東西弄壞"
+            android:textColor="#3D414E"
+            android:background="@color/white"
+            android:textSize="20sp" />
+
+
 
         <LinearLayout
             android:layout_width="280dp"
@@ -220,7 +176,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/btn_bg2"
-                android:text="上一頁"
+                android:text="上一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
                 android:textSize="18sp"
@@ -234,7 +190,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/btn_bg2"
-                android:text="下一頁"
+                android:text="下一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
                 android:textSize="18sp"

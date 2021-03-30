@@ -26,6 +26,10 @@
         <activity android:name=".mood_game_activity" />
         <activity android:name=".mood_ter_activity" />
         <activity android:name=".mood_ter_activity2" />
+        <activity android:name=".mood_ter_activity3" />
+        <activity android:name=".mood_ter_activity4" />
+        <activity android:name=".mood_ter_angry_activity" />
+        <activity android:name=".mood_ter_angry_activity2" />
         <activity android:name=".student_information_activity" />
     </application>
 

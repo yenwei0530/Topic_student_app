@@ -10,7 +10,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:background="@drawable/bg_diaiy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/zkr"
-        android:text="二"
+        android:text="三"
         android:textColor="#FFF"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/txt1"
@@ -49,10 +49,9 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/zkr"
-        android:text="從下列選項中選1個\n最符合你現在心情"
-        android:gravity="center"
+        android:text="請挑出可以讓你的心情變好的方式!"
         android:textColor="#FFF"
-        android:textSize="35sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,23 +70,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintTop_toBottomOf="@+id/view"
         app:layout_constraintVertical_bias="0.496">
 
+
         <LinearLayout
-            android:id="@+id/L7"
+            android:id="@+id/L1"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
-            android:background="#ED1111"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/g7"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="left"
+                android:id="@+id/g1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="10dp"
                 app:tint="#FFFF37"
                 android:src="@drawable/ic_baseline_grade_24" />
 
@@ -97,139 +97,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center" >
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/laughing" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/L6"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="24dp"
-            android:background="#FF8000"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/g6"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="left"
-                android:src="@drawable/ic_baseline_grade_24" />
-
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center" >
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/smile" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/L5"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="24dp"
-            android:background="#FFEB3B"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/g5"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="left"
-                android:src="@drawable/ic_baseline_grade_24" />
-
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center" >
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/happy" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/L4"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="24dp"
-            android:background="#00EC00"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/g4"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="left"
-                android:src="@drawable/ic_baseline_grade_24" />
-
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center" >
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/confused" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/L3"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="24dp"
-            android:background="#4A4AFF"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/g3"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="left"
-                android:src="@drawable/ic_baseline_grade_24" />
-
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center" >
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/sad" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="當遇到別人讓我很生氣，我會告訴自己不要理他們就好了"
+                    android:textColor="#3D414E"
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -241,46 +114,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
-            android:background="#5B00AE"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/g2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="left"
-                android:src="@drawable/ic_baseline_grade_24" />
-
-
-            <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/angry" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/L1"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="24dp"
-            android:background="#000079"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/g1"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="left"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="10dp"
                 android:src="@drawable/ic_baseline_grade_24" />
 
 
@@ -289,11 +130,78 @@
                 android:layout_height="wrap_content"
                 android:gravity="center" >
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/angry2" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我會把這件開心的事情和朋友分享，記住這件開心的事"
+                    android:textColor="#3D414E"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/L3"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/g3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:src="@drawable/ic_baseline_grade_24" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我會去找有趣的事去做，讓自己心情好一點"
+                    android:textColor="#3D414E"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/L4"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/g4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:src="@drawable/ic_baseline_grade_24" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我會自己找一個安靜的地方，自己一個人安靜地玩"
+                    android:textColor="#3D414E"
+                    android:textSize="18sp" />
 
             </LinearLayout>
 

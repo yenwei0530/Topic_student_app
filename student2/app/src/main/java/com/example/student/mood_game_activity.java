@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -41,6 +42,7 @@ public class mood_game_activity extends Activity
     public TextView textView29;
     public TextView textView30;
     public TextView textView32;
+    public Button exit;
     public int mode;
     public int total_score = 0;
     public String[] happy;
@@ -116,6 +118,7 @@ public class mood_game_activity extends Activity
         textView30 = (TextView) findViewById(R.id.textView30);
         textView30.setVisibility(View.INVISIBLE);
         textView32 = (TextView) findViewById(R.id.textView32);
+        exit= (Button) findViewById(R.id.exit);
         final ArrayList<String> happyMood = new ArrayList<>();
         happyMood.add("game_ecstasy");
         happyMood.add("game_happy");
@@ -467,6 +470,12 @@ public class mood_game_activity extends Activity
             }
         });
         init_game(mode);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void init_game(int mode){
@@ -785,4 +794,5 @@ public class mood_game_activity extends Activity
                 break;
         }
     }
+
 }
