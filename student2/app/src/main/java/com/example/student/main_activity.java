@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class main_activity extends AppCompatActivity {
 
@@ -31,7 +30,7 @@ public class main_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳至心情溫度計頁面
-                Intent intent =new Intent(main_activity.this,mood_ter_activity.class);
+                Intent intent =new Intent(main_activity.this, mood_ter_step1_activity.class);
                 startActivity(intent);
             }
         });

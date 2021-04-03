@@ -83,7 +83,7 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_marginTop="12dp"
-                       android:text="心情溫度計"
+                       android:text="情緒溫度計"
                        android:textColor="#6f6f6f"
                        android:textSize="18sp" />
 
