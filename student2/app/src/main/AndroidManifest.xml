@@ -9,16 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Student">
-        <activity android:name=".dirary_activity5"/>
-        <activity android:name=".diary_activity4" />
-        <activity android:name=".diary_activity3" />
-        <activity android:name=".diary_activity2" />
         <activity android:name=".main_activity" />
         <activity android:name=".diary_activity" />
+        <activity android:name=".diary_activity2" />
+        <activity android:name=".diary_activity3" />
+        <activity android:name=".diary_activity4" />
+        <activity android:name=".diary_activity5"/>
+        <activity android:name=".diary_activity6"/>
+        <activity android:name=".diary_activity7"/>
+        <activity android:name=".diary_activity8"/>
+        <activity android:name=".diary_activity9"/>
+        <activity android:name=".diary_activity10"/>
         <activity android:name=".logine_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".registered_activity" />
         <activity android:name=".mood_game_activity" />
         <activity android:name=".mood_ter_step1_activity" />
         <activity android:name=".mood_ter_step1_1_activity" />
@@ -45,13 +53,7 @@
         <activity android:name=".mood_ter_step5_6_activity" />
         <activity android:name=".mood_ter_step6_activity" />
         <activity android:name=".mood_ter_step6_1_activity" />
-        <activity android:name=".mood_ter_step7_activity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".mood_ter_step7_activity" />
         <activity android:name=".student_information_activity" />
     </application>
 

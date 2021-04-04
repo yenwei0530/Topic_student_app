@@ -34,7 +34,8 @@ public class mood_ter_step1_4_activity extends AppCompatActivity {
         TextView t5=findViewById(R.id.t5);
         TextView t6=findViewById(R.id.t6);
 
-
+        //預設想打自己
+        t1.setBackgroundColor(Color.GREEN);
 
         //想打自己點擊事件
         t1.setOnClickListener(new View.OnClickListener() {

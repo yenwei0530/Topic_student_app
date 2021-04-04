@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFD0FF"
-    tools:context=".registered_activity">
+    android:background="#FFE66F">
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="170dp"
         android:background="@drawable/bg_diaiy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,34 +20,36 @@
 
     <ImageButton
         android:id="@+id/exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:background="?attr/selectableItemBackground"
         android:src="@drawable/home2"
         app:layout_constraintBottom_toTopOf="@+id/txt1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt1"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="@font/zkr"
+        android:fontFamily="@font/kai08mz"
         android:text="發生的時間"
         android:textColor="#FFF"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="@+id/exit" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="132dp"
-        android:layout_height="106dp"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/time"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,8 +59,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="132dp"
-        android:layout_height="106dp"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/hourglass"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -71,8 +72,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="132dp"
-        android:layout_height="106dp"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/man"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -100,11 +101,11 @@
 
         <LinearLayout
             android:id="@+id/L1"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageButton
@@ -120,18 +121,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="早上"
+                android:fontFamily="@font/kai08mz"
                 android:textColor="#3D414E"
-                android:textSize="25sp" />
+                android:textSize="55sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/L2"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageButton
@@ -145,20 +147,21 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:text="中午"
+                android:fontFamily="@font/kai08mz"
                 android:textColor="#3D414E"
-                android:textSize="25sp" />
+                android:textSize="55sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/L3"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageButton
@@ -175,17 +178,18 @@
                 android:layout_height="wrap_content"
                 android:text="下午"
                 android:textColor="#3D414E"
-                android:textSize="25sp" />
+                android:fontFamily="@font/kai08mz"
+                android:textSize="55sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/L4"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageButton
@@ -202,42 +206,48 @@
                 android:layout_height="wrap_content"
                 android:text="晚上"
                 android:textColor="#3D414E"
-                android:textSize="25sp" />
+                android:fontFamily="@font/kai08mz"
+                android:textSize="55sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="280dp"
+            android:layout_width="600dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t1">
 
             <Button
                 android:id="@+id/uppage"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
                 android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
                 android:text="上一頁"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="18sp"
+                android:textSize="35sp"
                 app:backgroundTint="@null" />
 
             <Button
                 android:id="@+id/nextpage"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_marginLeft="14dp"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1"
                 android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
                 android:text="下一頁"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="18sp"
+                android:textSize="35sp"
                 app:backgroundTint="@null" />
 
         </LinearLayout>

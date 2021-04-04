@@ -19,7 +19,8 @@ public class mood_ter_step1_1_activity extends AppCompatActivity {
         getSupportActionBar().hide();//關閉標題列
 
         //宣告Button物件
-        Button next =findViewById(R.id.next);
+        Button nextpage =findViewById(R.id.nextpage);
+        Button uppage =findViewById(R.id.uppage);
 
         //宣告ImageButton物件
         ImageButton exit =findViewById(R.id.exit);
@@ -145,12 +146,21 @@ public class mood_ter_step1_1_activity extends AppCompatActivity {
         });
 
         //下一步點擊事件
-        next.setOnClickListener(new View.OnClickListener() {
+        nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //跳至下一頁面
                 Intent intent =new Intent(mood_ter_step1_1_activity.this, mood_ter_step1_2_activity.class);
                 startActivity(intent);
+            }
+        });
+
+        //上一頁點擊事件
+        uppage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //關閉目前頁面
+                finish();
             }
         });
 

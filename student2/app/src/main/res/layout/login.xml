@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/longin_background"
-    tools:context=".registered_activity">
+    android:background="@drawable/longin_background">
 
     <TextView
         android:id="@+id/logo"
@@ -13,8 +12,9 @@
         android:layout_height="wrap_content"
         android:text="i好心情2.0"
         android:textColor="@android:color/holo_orange_dark"
-        android:textSize="36sp"
+        android:textSize="100sp"
         android:textStyle="bold"
+        android:fontFamily="@font/kai08mz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -32,6 +32,7 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:fontFamily="@font/kai08mz"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="我的學號"
@@ -41,7 +42,7 @@
         android:paddingBottom="10dp"
         android:textColor="@color/black"
         android:textColorHint="@android:color/darker_gray"
-        android:textSize="14sp"
+        android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
@@ -57,7 +58,8 @@
         android:drawableLeft="@drawable/ic_baseline_password_24"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="我記得住的密碼"
+        android:hint="我的密碼"
+        android:fontFamily="@font/kai08mz"
         android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -65,7 +67,7 @@
         android:paddingBottom="10dp"
         android:textColor="@color/black"
         android:textColorHint="@android:color/darker_gray"
-        android:textSize="14sp"
+        android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/UserId"
         app:layout_constraintHorizontal_bias="0.0"
@@ -82,9 +84,10 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="登入"
+        android:fontFamily="@font/kai08mz"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -92,16 +95,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/Password"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
+        app:layout_constraintVertical_bias="0.711" />
 
     <TextView
         android:id="@+id/Forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:text="忘記密碼了嗎?趕快找輔導老師確認"
+        android:fontFamily="@font/kai08mz"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/sumbit"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,32 +114,6 @@
         app:layout_constraintTop_toBottomOf="@+id/Password"
         app:layout_constraintVertical_bias="0.06999999" />
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/sumbit"
-        app:layout_constraintHorizontal_bias="0.627"
-        app:layout_constraintStart_toStartOf="@+id/sumbit"
-        app:layout_constraintTop_toBottomOf="@+id/sumbit"
-        app:layout_constraintVertical_bias="0.16000003">
 
-        <TextView
-            android:id="@+id/register1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="還沒有帳號嗎?"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/register2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="點我註冊!!"
-            android:textColor="@color/design_default_color_error" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

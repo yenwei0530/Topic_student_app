@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFE66F"
-    tools:context=".registered_activity">
+    android:background="#FFE66F">
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="170dp"
         android:background="@drawable/bg_diaiy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,68 +22,66 @@
         android:id="@+id/exit"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginTop="5dp"
         android:background="?attr/selectableItemBackground"
         android:src="@drawable/home2"
         app:layout_constraintBottom_toTopOf="@+id/txt1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toEndOf="@+id/txt1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt1"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="@font/zkr"
+        android:fontFamily="@font/kai08mz"
         android:text="觀察看看你的身體"
         android:textColor="#FFF"
-        android:textSize="35sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="@+id/exit" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="132dp"
-        android:layout_height="106dp"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/body_scan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="132dp"
-        android:layout_height="106dp"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/medical_checkup"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintTop_toBottomOf="@+id/view"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="132dp"
-        android:layout_height="106dp"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/body_scan2"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintTop_toBottomOf="@+id/view"
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
@@ -97,10 +94,9 @@
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.491">
+        app:layout_constraintVertical_bias="0.483">
 
 
         <TextView
@@ -109,9 +105,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="呼吸變急"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/t2"
@@ -119,9 +116,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="心跳變快"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/t3"
@@ -129,9 +127,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="流汗增加"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/t4"
@@ -139,9 +138,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="臉部變紅"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/t5"
@@ -149,9 +149,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="肌肉變緊張"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/t6"
@@ -159,9 +160,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="聲音變大聲或尖銳"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/t7"
@@ -169,9 +171,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="流淚"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/t8"
@@ -179,9 +182,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="發抖"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/t9"
@@ -189,9 +193,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="想嘔吐"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/t10"
@@ -199,47 +204,52 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
+            android:fontFamily="@font/kai08mz"
             android:text="胃覺得不舒服"
             android:textColor="#3D414E"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
         <LinearLayout
-            android:layout_width="400dp"
+            android:layout_width="600dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t1">
 
             <Button
                 android:id="@+id/uppage"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
                 android:text="上一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="25sp"
+                android:textSize="35sp"
                 app:backgroundTint="@null" />
 
             <Button
                 android:id="@+id/nextpage"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="14dp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
                 android:text="下一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="25sp"
+                android:textSize="35sp"
                 app:backgroundTint="@null" />
 
         </LinearLayout>
-
 
     </LinearLayout>
 

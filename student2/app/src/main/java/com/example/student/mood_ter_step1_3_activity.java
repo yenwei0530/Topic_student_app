@@ -38,6 +38,8 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
         TextView t9=findViewById(R.id.t9);
         TextView t10=findViewById(R.id.t10);
 
+        //預設呼吸變急
+        t1.setBackgroundColor(Color.GREEN);
 
         //呼吸變急點擊事件
         t1.setOnClickListener(new View.OnClickListener() {

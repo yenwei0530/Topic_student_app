@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFE66F"
-    tools:context=".registered_activity">
+    android:background="#FFE66F">
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:background="@drawable/bg_diaiy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,33 +22,32 @@
         android:id="@+id/exit"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginTop="5dp"
         android:background="?attr/selectableItemBackground"
         android:src="@drawable/home2"
         app:layout_constraintBottom_toTopOf="@+id/txt1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toEndOf="@+id/txt1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/txt1"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="@font/zkr"
+        android:fontFamily="@font/kai08mz"
         android:gravity="center"
         android:text="從下列選項中選1個\n最符合你現在心情"
         android:textColor="#FFF"
-        android:textSize="35sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view" />
-
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -63,12 +61,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintTop_toBottomOf="@+id/view"
         app:layout_constraintVertical_bias="0.496">
 
         <LinearLayout
             android:id="@+id/L7"
-            android:layout_width="430dp"
+            android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -77,8 +75,8 @@
 
             <ImageView
                 android:id="@+id/g7"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_grade_24"
                 app:tint="#FFFF37" />
@@ -90,8 +88,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:src="@drawable/laughing" />
 
@@ -101,7 +99,7 @@
 
         <LinearLayout
             android:id="@+id/L6"
-            android:layout_width="430dp"
+            android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -110,8 +108,8 @@
 
             <ImageView
                 android:id="@+id/g6"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_grade_24" />
 
@@ -122,8 +120,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:src="@drawable/smile" />
 
@@ -133,7 +131,7 @@
 
         <LinearLayout
             android:id="@+id/L5"
-            android:layout_width="430dp"
+            android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -142,8 +140,8 @@
 
             <ImageView
                 android:id="@+id/g5"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_grade_24" />
 
@@ -154,8 +152,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:src="@drawable/happy" />
 
@@ -165,7 +163,7 @@
 
         <LinearLayout
             android:id="@+id/L4"
-            android:layout_width="430dp"
+            android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -174,8 +172,8 @@
 
             <ImageView
                 android:id="@+id/g4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_grade_24" />
 
@@ -186,8 +184,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:src="@drawable/confused" />
 
@@ -197,7 +195,7 @@
 
         <LinearLayout
             android:id="@+id/L3"
-            android:layout_width="430dp"
+            android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -206,8 +204,8 @@
 
             <ImageView
                 android:id="@+id/g3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_grade_24" />
 
@@ -218,8 +216,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:src="@drawable/sad" />
 
@@ -229,7 +227,7 @@
 
         <LinearLayout
             android:id="@+id/L2"
-            android:layout_width="430dp"
+            android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -238,8 +236,8 @@
 
             <ImageView
                 android:id="@+id/g2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_grade_24" />
 
@@ -250,8 +248,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:src="@drawable/angry" />
 
@@ -261,7 +259,7 @@
 
         <LinearLayout
             android:id="@+id/L1"
-            android:layout_width="430dp"
+            android:layout_width="700dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -270,8 +268,8 @@
 
             <ImageView
                 android:id="@+id/g1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_grade_24" />
 
@@ -282,8 +280,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:src="@drawable/angry2" />
 
@@ -292,41 +290,47 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="400dp"
+            android:layout_width="600dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t1">
 
             <Button
                 android:id="@+id/uppage"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
                 android:text="上一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="25sp"
+                android:textSize="35sp"
                 app:backgroundTint="@null" />
 
             <Button
                 android:id="@+id/nextpage"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="14dp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
                 android:text="下一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="25sp"
+                android:textSize="35sp"
                 app:backgroundTint="@null" />
 
         </LinearLayout>
+
 
     </LinearLayout>
 

@@ -103,7 +103,7 @@ public class diary_activity4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳至下一頁面
-                Intent intent =new Intent(diary_activity4.this,dirary_activity5.class);
+                Intent intent =new Intent(diary_activity4.this, diary_activity5.class);
                 startActivity(intent);
 
             }

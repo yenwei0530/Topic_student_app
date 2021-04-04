@@ -3,13 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".registered_activity">
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/v1"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="650dp"
         android:background="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,8 +27,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="455dp"
-        android:layout_height="351dp"
+        android:layout_width="687dp"
+        android:layout_height="623dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/like3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,16 +39,17 @@
         android:id="@+id/t1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:gravity="center_horizontal"
         android:lineSpacingExtra="4dp"
-        android:text="好棒喔!你找到解決問題的方法"
+        android:text="好棒喔!\n你找到解決問題的方法"
+        android:layout_marginTop="135dp"
+        android:fontFamily="@font/kai08mz"
+        android:textAlignment="center"
         android:textAllCaps="false"
-        android:layout_marginTop="145dp"
-        android:textSize="40sp"
+        android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <GridLayout
         android:layout_width="match_parent"
@@ -80,8 +80,8 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="88dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:src="@drawable/jigsaw" />
 
                 <TextView
@@ -89,8 +89,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="我要去玩拼圖遊戲"
+                    android:fontFamily="@font/kai08mz"
                     android:textColor="#6f6f6f"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -115,17 +116,18 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="88dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:src="@drawable/home" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:fontFamily="@font/kai08mz"
                     android:text="我要回主頁"
                     android:textColor="#6f6f6f"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -150,8 +152,8 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="88dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:src="@drawable/mood" />
 
                 <TextView
@@ -159,8 +161,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="我要去玩情緒遊戲"
+                    android:fontFamily="@font/kai08mz"
                     android:textColor="#6f6f6f"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
