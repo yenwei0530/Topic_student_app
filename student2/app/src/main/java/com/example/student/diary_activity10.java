@@ -82,8 +82,7 @@ public class diary_activity10 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳至下一頁面
-                Intent intent =new Intent(diary_activity10.this,main_activity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+                Intent intent =new Intent(diary_activity10.this, diary_activity11.class);
                 startActivity(intent);
             }
         });

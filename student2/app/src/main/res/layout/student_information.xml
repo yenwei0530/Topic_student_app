@@ -9,37 +9,38 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
+
         <LinearLayout
-            android:background="@drawable/student_information_bg"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="450dp"
+            android:background="@drawable/student_information_bg"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_marginTop="25dp"
+                android:layout_width="394dp"
+                android:layout_height="265dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_width="96dp"
-                android:layout_height="107dp"
+                android:layout_marginTop="25dp"
                 android:src="@drawable/student" />
 
             <TextView
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/kai08mz"
                 android:text="我的名字"
                 android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="21sp"/>
+                android:textSize="50sp"
+                android:textStyle="bold" />
         </LinearLayout>
-
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_marginRight="40dp"
             android:layout_height="100dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="380dp"
             android:layout_centerHorizontal="true">
 
             <LinearLayout
@@ -59,9 +60,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/kai08mz"
                         android:text="上次心情指數"
                         android:textColor="#6f6f6f"
-                        android:textSize="15sp"
+                        android:textSize="25sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -86,8 +88,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="目前心情指數"
+                        android:fontFamily="@font/kai08mz"
                         android:textColor="#6f6f6f"
-                        android:textSize="15sp"
+                        android:textSize="25sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -111,19 +114,21 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/kai08mz"
                         android:text="是否進步"
-                        android:textSize="15sp"
                         android:textColor="#6f6f6f"
+                        android:textSize="25sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="10dp"
                         android:text="你比上次還要棒"
                         android:textColor="@color/startblue"
-                        android:textSize="15sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -132,273 +137,322 @@
         
     </RelativeLayout>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="300dp"
         android:layout_marginTop="20dp">
 
-    <LinearLayout
-        android:layout_marginTop="50dp"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center">
-
         <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:text="學號："
-                android:textColor="#6f6f6f"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:paddingLeft="25dp">
 
-            <EditText
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="center"
+                    android:text="學號："
+                    android:fontFamily="@font/kai08mz"
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="20dp"
+                    android:text="123"
+                    android:textSize="35sp"
+                    android:textColor="#6f6f6f" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:layout_gravity="center"
+                    android:text="密碼："
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="20dp"
+                    android:textSize="35sp"
+                    android:text="123"
+                    android:textColor="#6f6f6f" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kai08mz"
+                    android:paddingTop="10dp"
+                    android:text="姓名："
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kai08mz"
+                    android:layout_gravity="center"
+                    android:paddingLeft="20dp"
+                    android:text="123"
+                    android:textSize="35sp"
+                    android:textColor="#6f6f6f" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="性別："
+                    android:fontFamily="@font/kai08mz"
+                    android:layout_gravity="center"
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner0"
+                    android:spinnerMode="dialog"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kai08mz"
+                    android:paddingTop="10dp"
+                    android:text="出生年月日："
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/calendar"/>
+
+                <TextView
+                    android:id="@+id/txt_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="123"
+                    android:visibility="invisible"
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:textColor="#6f6f6f"
-                android:text="123"/>
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="爸爸學歷："
+                    android:layout_gravity="center"
+                    android:textColor="#6f6f6f"
+                    android:fontFamily="@font/kai08mz"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:spinnerMode="dialog"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-            <TextView
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:text="密碼："
-                android:textColor="#6f6f6f"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp">
 
-            <EditText
-                android:layout_gravity="center"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="爸爸年齡："
+                    android:layout_gravity="center"
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp"
+                    android:fontFamily="@font/kai08mz"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="20dp"
+                    android:textSize="35sp"
+                    android:text="123"
+                    android:textColor="#6f6f6f" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#6f6f6f"
-                android:paddingLeft="20dp"
-                android:text="123"/>
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="媽媽學歷："
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/kai08mz"
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:spinnerMode="dialog"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-            <TextView
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:text="姓名："
-                android:textColor="#6f6f6f"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp">
 
-            <EditText
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#6f6f6f"
-                android:paddingLeft="20dp"
-                android:text="123"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="媽媽年齡："
+                    android:layout_gravity="center"
+                    android:textColor="#6f6f6f"
+                    android:fontFamily="@font/kai08mz"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
 
-        </LinearLayout>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="20dp"
+                    android:text="123"
+                    android:textSize="35sp"
+                    android:textColor="#6f6f6f" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:text="性別："
-                android:textColor="#6f6f6f"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:textColor="#6f6f6f"
-                android:text="123"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:textColor="#6f6f6f"
-                android:text="出生年月日："
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:textColor="#6f6f6f"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text="123"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:textColor="#6f6f6f"
-                android:text="爸爸學歷："
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#6f6f6f"
-                android:paddingLeft="20dp"
-                android:text="123"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:text="爸爸年齡："
-                android:textColor="#6f6f6f"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#6f6f6f"
-                android:paddingLeft="20dp"
-                android:text="123"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:textColor="#6f6f6f"
-                android:text="媽媽學歷："
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:textColor="#6f6f6f"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text="123"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:text="媽媽年齡："
-                android:textColor="#6f6f6f"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#6f6f6f"
-                android:paddingLeft="20dp"
-                android:text="123"/>
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
 
-    </ScrollView>
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="650dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/save"
-            android:background="@drawable/btn_bg2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            app:backgroundTint="@null"
-            android:text="儲存"/>
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1">
 
         <Button
             android:id="@+id/exit"
-            android:background="@drawable/btn_bg2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            app:backgroundTint="@null"
-            android:layout_marginLeft="20dp"
-            android:text="返回"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg2"
+            android:fontFamily="@font/kai08mz"
+            android:text="我要回主頁"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="35sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/nextpage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg2"
+            android:fontFamily="@font/kai08mz"
+            android:text="儲存"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="35sp"
+            app:backgroundTint="@null" />
 
     </LinearLayout>
 

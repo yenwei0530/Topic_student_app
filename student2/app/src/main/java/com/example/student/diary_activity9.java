@@ -33,6 +33,7 @@ public class diary_activity9 extends AppCompatActivity {
         TextView t1 =findViewById(R.id.t1);
         TextView t3 =findViewById(R.id.t3);
 
+
         //宣告ImageButton物件
         ImageButton exit =findViewById(R.id.exit);
 

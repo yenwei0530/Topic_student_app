@@ -20,6 +20,7 @@
         <activity android:name=".diary_activity8"/>
         <activity android:name=".diary_activity9"/>
         <activity android:name=".diary_activity10"/>
+        <activity android:name=".diary_activity11"/>
         <activity android:name=".logine_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
