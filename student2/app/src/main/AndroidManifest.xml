@@ -10,6 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Student">
         <activity android:name=".main_activity" />
+        <activity android:name=".scale0_activity" />
+        <activity android:name=".scale1_activity" />
+        <activity android:name=".scale2_activity" />
+        <activity android:name=".scale3_activity" />
+        <activity android:name=".scale4_activity" />
+        <activity android:name=".scale5_activity" />
+        <activity android:name=".scale6_activity" />
+        <activity android:name=".scale7_activity" />
+        <activity android:name=".scale8_activity" />
+        <activity android:name=".scale9_activity" />
+        <activity android:name=".scale10_activity" />
         <activity android:name=".diary_activity" />
         <activity android:name=".diary_activity2" />
         <activity android:name=".diary_activity3" />
@@ -55,6 +66,7 @@
         <activity android:name=".mood_ter_step6_activity" />
         <activity android:name=".mood_ter_step6_1_activity" />
         <activity android:name=".mood_ter_step7_activity" />
+        <activity android:name=".explanation1_activity" />
         <activity android:name=".student_information_activity" />
     </application>
 

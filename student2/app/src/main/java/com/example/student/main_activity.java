@@ -24,6 +24,7 @@ public class main_activity extends AppCompatActivity {
         CardView card2=findViewById(R.id.card2);
         CardView card4=findViewById(R.id.card4);
         CardView card5=findViewById(R.id.card5);
+        CardView card6=findViewById(R.id.card6);
 
         //心情溫度計觸發事件
         card1.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +62,16 @@ public class main_activity extends AppCompatActivity {
             public void onClick(View v) {
                 //跳至個人專區頁面
                 Intent intent =new Intent(main_activity.this,student_information_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        //使用說明觸發事件
+        card6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳至個人專區頁面
+                Intent intent =new Intent(main_activity.this,explanation1_activity.class);
                 startActivity(intent);
             }
         });

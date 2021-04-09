@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F8">
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#4B4587"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/kai08mz"
+        android:gravity="center"
+        android:text="能看情況接受或拒絕他人的互動"
+        android:textColor="#FFF"
+        android:textSize="58sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1050dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/bg_white2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2" >
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_marginTop="40dp"
+            android:id="@+id/animationView"
+            android:layout_width="480dp"
+            android:layout_height="480dp"
+            app:lottie_rawRes="@raw/scale7"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1總是這樣"
+            android:textColor="#4B4587"
+            android:lineSpacingExtra="5dp"
+            android:fontFamily="@font/kai08mz"
+            android:layout_marginBottom="50dp"
+            android:textSize="60sp" />
+        
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:min="1"
+            android:progress="1"
+            android:thumb="@drawable/thumb"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/track"/>
+
+
+        <Button
+            android:textStyle="bold"
+            android:id="@+id/nextpage"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:background="@drawable/btn_bg2"
+            android:fontFamily="@font/kai08mz"
+            android:text="下一題"
+            android:layout_marginTop="60dp"
+            android:textColor="#FFF"
+            android:textSize="35sp"
+            app:backgroundTint="@null" />
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
