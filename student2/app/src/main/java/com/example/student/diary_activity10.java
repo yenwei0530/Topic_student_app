@@ -22,6 +22,9 @@ public class diary_activity10 extends AppCompatActivity {
         setContentView(R.layout.diary10);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告Button物件
         Button nextpage =findViewById(R.id.nextpage);
         Button uppage =findViewById(R.id.uppage);
@@ -32,15 +35,15 @@ public class diary_activity10 extends AppCompatActivity {
         //宣告ImageButton物件
         ImageButton exit =findViewById(R.id.exit);
 
-        //宣告EditText物件
-        EditText edt1=findViewById(R.id.edt1);
-
         //宣告seekBar物件
         SeekBar seekBar=findViewById(R.id.seekbar);
+
         //設定seekBar最大值
         seekBar.setMax(7);
+
         //設定seekBar最小值
         seekBar.setMin(1);
+
         //設定seekBar預設值
         seekBar.setProgress(5);
 
@@ -81,6 +84,8 @@ public class diary_activity10 extends AppCompatActivity {
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //將內容存入全域變數
+                gv.setdiary10(Integer.parseInt(t1.getText().toString()));
                 //跳至下一頁面
                 Intent intent =new Intent(diary_activity10.this, diary_activity11.class);
                 startActivity(intent);

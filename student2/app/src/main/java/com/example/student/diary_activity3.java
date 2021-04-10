@@ -18,6 +18,9 @@ public class diary_activity3 extends AppCompatActivity {
         setContentView(R.layout.diary3);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告Button物件
         Button nextpage =findViewById(R.id.nextpage);
         Button uppage =findViewById(R.id.uppage);
@@ -44,6 +47,8 @@ public class diary_activity3 extends AppCompatActivity {
                 ib2.setColorFilter(Color.BLACK);
                 ib3.setColorFilter(Color.BLACK);
                 ib4.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary3("自己");
 
             }
         });
@@ -57,6 +62,8 @@ public class diary_activity3 extends AppCompatActivity {
                 ib1.setColorFilter(Color.BLACK);
                 ib3.setColorFilter(Color.BLACK);
                 ib4.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary3("家人");
 
             }
         });
@@ -70,6 +77,8 @@ public class diary_activity3 extends AppCompatActivity {
                 ib2.setColorFilter(Color.BLACK);
                 ib1.setColorFilter(Color.BLACK);
                 ib4.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary3("朋友");
 
             }
         });
@@ -83,6 +92,8 @@ public class diary_activity3 extends AppCompatActivity {
                 ib2.setColorFilter(Color.BLACK);
                 ib3.setColorFilter(Color.BLACK);
                 ib1.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary3("老師");
 
             }
         });

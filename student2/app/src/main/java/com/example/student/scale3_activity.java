@@ -17,6 +17,9 @@ public class scale3_activity extends AppCompatActivity {
         setContentView(R.layout.scale3);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告TextView物件
         TextView t1 =findViewById(R.id.t1);
 
@@ -62,6 +65,9 @@ public class scale3_activity extends AppCompatActivity {
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //將答案存入全域變數
+                gv.setscale3(t1.getText().toString());
+
                 //跳至下一頁面
                 Intent intent =new Intent(scale3_activity.this, scale4_activity.class);
                 startActivity(intent);

@@ -18,6 +18,9 @@ public class diary_activity extends AppCompatActivity {
         setContentView(R.layout.diary);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告Button物件
         Button next =findViewById(R.id.next);
 
@@ -52,6 +55,8 @@ public class diary_activity extends AppCompatActivity {
                 mood3.setColorFilter(Color.BLACK);
                 mood2.setColorFilter(Color.BLACK);
                 mood1.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary1("非常快樂");
             }
         });
         //情緒6點擊事件
@@ -66,6 +71,8 @@ public class diary_activity extends AppCompatActivity {
                 mood3.setColorFilter(Color.BLACK);
                 mood2.setColorFilter(Color.BLACK);
                 mood1.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary1("興奮");
             }
         });
         //情緒5點擊事件
@@ -80,6 +87,8 @@ public class diary_activity extends AppCompatActivity {
                 mood3.setColorFilter(Color.BLACK);
                 mood2.setColorFilter(Color.BLACK);
                 mood1.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary1("開心");
             }
         });
         //情緒4點擊事件
@@ -94,6 +103,8 @@ public class diary_activity extends AppCompatActivity {
                 mood3.setColorFilter(Color.BLACK);
                 mood2.setColorFilter(Color.BLACK);
                 mood1.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary1("良好");
             }
         });
         //情緒3點擊事件
@@ -108,6 +119,8 @@ public class diary_activity extends AppCompatActivity {
                 mood4.setColorFilter(Color.BLACK);
                 mood2.setColorFilter(Color.BLACK);
                 mood1.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary1("差勁");
             }
         });
         //情緒2點擊事件
@@ -122,6 +135,8 @@ public class diary_activity extends AppCompatActivity {
                 mood4.setColorFilter(Color.BLACK);
                 mood3.setColorFilter(Color.BLACK);
                 mood1.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary1("生氣");
             }
         });
         //情緒1點擊事件
@@ -136,6 +151,8 @@ public class diary_activity extends AppCompatActivity {
                 mood4.setColorFilter(Color.BLACK);
                 mood3.setColorFilter(Color.BLACK);
                 mood2.setColorFilter(Color.BLACK);
+                //將答案存入全域變數
+                gv.setdiary1("惱火");
             }
         });
 

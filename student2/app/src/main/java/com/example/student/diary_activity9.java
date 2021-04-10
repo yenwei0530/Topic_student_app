@@ -25,6 +25,9 @@ public class diary_activity9 extends AppCompatActivity {
         setContentView(R.layout.diary9);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告Button物件
         Button nextpage =findViewById(R.id.nextpage);
         Button uppage =findViewById(R.id.uppage);
@@ -102,6 +105,10 @@ public class diary_activity9 extends AppCompatActivity {
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //將開始時間存入全域變數
+                gv.setdiary9_start(t1.getText().toString());
+                //將結束時間存入全域變數
+                gv.setdiary9_end(t3.getText().toString());
                 //跳至下一頁面
                 Intent intent =new Intent(diary_activity9.this, diary_activity10.class);
                 startActivity(intent);

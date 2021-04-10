@@ -17,6 +17,9 @@ public class scale1_activity extends AppCompatActivity {
         setContentView(R.layout.scale1);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告TextView物件
         TextView t1 =findViewById(R.id.t1);
 
@@ -25,8 +28,6 @@ public class scale1_activity extends AppCompatActivity {
 
         //宣告Button物件
         Button nextpage=findViewById(R.id.nextpage);
-
-
 
         seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -46,7 +47,6 @@ public class scale1_activity extends AppCompatActivity {
                 if(progress==5){
                     t1.setText(progress+"從不這樣");
                 }
-
             }
 
             @Override
@@ -60,9 +60,13 @@ public class scale1_activity extends AppCompatActivity {
             }
         });
 
+        //下一頁點擊事件
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //將答案存入全域變數
+                gv.setscale1(t1.getText().toString());
+
                 //跳至下一頁面
                 Intent intent =new Intent(scale1_activity.this, scale2_activity.class);
                 startActivity(intent);
