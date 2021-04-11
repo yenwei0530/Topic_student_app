@@ -25,6 +25,8 @@ public class main_activity extends AppCompatActivity {
         CardView card4=findViewById(R.id.card4);
         CardView card5=findViewById(R.id.card5);
         CardView card6=findViewById(R.id.card6);
+        CardView card7=findViewById(R.id.card7);
+        CardView card8=findViewById(R.id.card8);
 
         //心情溫度計觸發事件
         card1.setOnClickListener(new View.OnClickListener() {
@@ -56,8 +58,18 @@ public class main_activity extends AppCompatActivity {
             }
         });
 
-        //個人專區觸發事件
+        //上傳影片觸發事件
         card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳至上傳影片頁面
+                Intent intent =new Intent(main_activity.this,video_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        //個人專區觸發事件
+        card7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //跳至個人專區頁面
@@ -67,7 +79,7 @@ public class main_activity extends AppCompatActivity {
         });
 
         //使用說明觸發事件
-        card6.setOnClickListener(new View.OnClickListener() {
+        card8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //跳至個人專區頁面

@@ -6,6 +6,7 @@ import android.text.Editable;
 public class GlobalVariable extends Application {
     private int user;     //帳號
     private String password;  //密碼
+    private String sex;  //性別
     private String scale1;  //心情量表Q1
     private String scale2;  //心情量表Q2
     private String scale3;  //心情量表Q3
@@ -27,6 +28,12 @@ public class GlobalVariable extends Application {
     private String diary9_start;  //心情日記Q9開始時間
     private String diary9_end;  //心情日記Q9結束時間
     private int diary10;  //心情日記Q10結束時間
+    private String ter1_1="7非常快樂";  //心情溫度計sp1_1
+    private String ter1_2="非常快樂";  //心情溫度計sp1_2
+    private String ter1_3="呼吸變急";  //心情溫度計sp1_3
+    private String ter1_4="想打自己";  //心情溫度計sp1_4
+    private String ter3_1="提醒自己的話";  //心情溫度計sp3_1
+    private String ter6_1="7非常快樂";  //心情溫度計sp6_1
 
 
     //修改 變數値
@@ -36,6 +43,10 @@ public class GlobalVariable extends Application {
 
     public void setpassword(String password) {
         this.password = password;
+    }
+
+    public void setsex(String sex) {
+        this.sex = sex;
     }
 
     public void setscale1(String scale1) {
@@ -120,6 +131,30 @@ public class GlobalVariable extends Application {
 
     public void setdiary10(int diary10) {
         this.diary10 = diary10;
+    }
+
+    public void setter1_1(String ter1_1) {
+        this.ter1_1 = ter1_1;
+    }
+
+    public void setter1_2(String ter2) {
+        this.ter1_2 = ter1_2;
+    }
+
+    public void setter1_3(String ter1_3) {
+        this.ter1_3 = ter1_3;
+    }
+
+    public void setter1_4(String ter1_4) {
+        this.ter1_4 = ter1_4;
+    }
+
+    public void setter3_1(String ter3_1) {
+        this.ter3_1 = ter3_1;
+    }
+
+    public void setter6_1(String ter6_1) {
+        this.ter6_1 = ter6_1;
     }
 
     //取得 變數值
@@ -214,4 +249,33 @@ public class GlobalVariable extends Application {
     public int getdiary10() {
         return diary10;
     }
+
+    public String getter1_1() {
+        return ter1_1;
+    }
+
+    public String getter1_2() {
+        return ter1_2;
+    }
+
+    public String getter1_3() {
+        return ter1_3;
+    }
+
+    public String getter1_4() {
+        return ter1_4;
+    }
+
+    public String getter3_1() {
+        return ter3_1;
+    }
+
+    public String getter6_1() {
+        return ter6_1;
+    }
+
+    public String getsex() {
+        return sex;
+    }
+
 }

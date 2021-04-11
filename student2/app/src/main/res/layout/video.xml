@@ -55,7 +55,7 @@
         android:ems="25"
         android:fontFamily="@font/kai08mz"
         android:gravity="start|top"
-        android:hint="把影片連結放這裡....."
+        android:hint="點我能自動貼上連結...."
         android:inputType="textMultiLine"
         android:textColor="@color/black"
         android:textColorHint="@android:color/darker_gray"

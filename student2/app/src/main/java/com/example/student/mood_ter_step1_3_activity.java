@@ -19,6 +19,9 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
         setContentView(R.layout.mood_ter_step1_3);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告Button物件
         Button nextpage =findViewById(R.id.nextpage);
         Button uppage =findViewById(R.id.uppage);
@@ -245,6 +248,71 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ColorDrawable viewColor = (ColorDrawable) t1.getBackground();
+                ColorDrawable viewColor2 = (ColorDrawable) t2.getBackground();
+                ColorDrawable viewColor3 = (ColorDrawable) t3.getBackground();
+                ColorDrawable viewColor4 = (ColorDrawable) t4.getBackground();
+                ColorDrawable viewColor5 = (ColorDrawable) t5.getBackground();
+                ColorDrawable viewColor6 = (ColorDrawable) t6.getBackground();
+                ColorDrawable viewColor7 = (ColorDrawable) t7.getBackground();
+                ColorDrawable viewColor8 = (ColorDrawable) t8.getBackground();
+                ColorDrawable viewColor9 = (ColorDrawable) t9.getBackground();
+                ColorDrawable viewColor10 = (ColorDrawable) t10.getBackground();
+                int colorId = viewColor.getColor();
+                int colorId2 = viewColor2.getColor();
+                int colorId3 = viewColor3.getColor();
+                int colorId4 = viewColor4.getColor();
+                int colorId5 = viewColor5.getColor();
+                int colorId6 = viewColor6.getColor();
+                int colorId7= viewColor7.getColor();
+                int colorId8 = viewColor8.getColor();
+                int colorId9 = viewColor9.getColor();
+                int colorId10 = viewColor10.getColor();
+
+                if(colorId==-1){
+                    //將答案存入全域變數
+                    gv.setter1_3("");
+                }
+                if(colorId==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3("呼吸變急");
+                }
+                if(colorId2==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",心跳變快");
+                }
+                if(colorId3==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",流汗增加");
+                }
+                if(colorId4==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",臉部變紅");
+                }
+                if(colorId5==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",肌肉變緊張");
+                }
+                if(colorId6==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",聲音變大聲或尖銳");
+                }
+                if(colorId7==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",流淚");
+                }
+                if(colorId8==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",發抖");
+                }
+                if(colorId9==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",想嘔吐");
+                }
+                if(colorId10==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",胃覺得不舒服");
+                }
                 //跳至下一頁面
                 Intent intent =new Intent(mood_ter_step1_3_activity.this, mood_ter_step1_4_activity.class);
                 startActivity(intent);

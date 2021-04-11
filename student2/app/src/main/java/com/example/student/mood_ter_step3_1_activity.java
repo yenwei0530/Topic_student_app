@@ -22,6 +22,9 @@ public class mood_ter_step3_1_activity extends AppCompatActivity {
         setContentView(R.layout.mood_ter_step3_1);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告Button物件
         Button nextpage =findViewById(R.id.nextpage);
         Button uppage =findViewById(R.id.uppage);
@@ -117,21 +120,29 @@ public class mood_ter_step3_1_activity extends AppCompatActivity {
                     //如果cool是1，跳至提醒自己的話
                     Intent intent =new Intent(mood_ter_step3_1_activity.this,mood_ter_cool_activity.class);
                     startActivity(intent);
+                    //將答案存入全域變數
+                    gv.setter3_1("提醒自己的話");
                 }
                 if(cool==2){
                     //如果cool是2，跳至放鬆訓練
                     Intent intent =new Intent(mood_ter_step3_1_activity.this,mood_ter_cool_activity2.class);
                     startActivity(intent);
+                    //將答案存入全域變數
+                    gv.setter3_1("放鬆訓練");
                 }
                 if(cool==3){
                     //如果cool是3，跳至想像法
                     Intent intent =new Intent(mood_ter_step3_1_activity.this,mood_ter_cool_activity3.class);
                     startActivity(intent);
+                    //將答案存入全域變數
+                    gv.setter3_1("想像法");
                 }
                 if(cool==4){
                     //如果cool是，跳至轉移注意力
                     Intent intent =new Intent(mood_ter_step3_1_activity.this,mood_ter_cool_activity4.class);
                     startActivity(intent);
+                    //將答案存入全域變數
+                    gv.setter3_1("轉移注意力");
                 }
 
             }

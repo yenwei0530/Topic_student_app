@@ -68,9 +68,7 @@
         <activity android:name=".mood_ter_step6_1_activity" />
         <activity android:name=".mood_ter_step7_activity" />
         <activity android:name=".explanation1_activity" />
-        <activity android:name=".video_activity" >
-
-        </activity>
+        <activity android:name=".video_activity" />
         <activity android:name=".student_information_activity" />
     </application>
 

@@ -1,6 +1,7 @@
 package com.example.student;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -9,6 +10,7 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,8 +24,10 @@ public class student_information_activity extends AppCompatActivity {
         setContentView(R.layout.student_information);
         getSupportActionBar().hide();//關閉標題列
 
+
         //宣告Button物件
         Button exit=findViewById(R.id.exit);
+        Button save=findViewById(R.id.save);
 
         //宣告ImageView物件
         ImageView img1=findViewById(R.id.img1);
@@ -72,6 +76,19 @@ public class student_information_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //關閉頁面
+                finish();
+            }
+        });
+
+        //save點擊事件
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = getApplicationContext();
+                CharSequence text = "完成儲存!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
                 finish();
             }
         });

@@ -19,6 +19,9 @@ public class mood_ter_step1_4_activity extends AppCompatActivity {
         setContentView(R.layout.mood_ter_step1_4);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告Button物件
         Button nextpage =findViewById(R.id.nextpage);
         Button uppage =findViewById(R.id.uppage);
@@ -33,6 +36,7 @@ public class mood_ter_step1_4_activity extends AppCompatActivity {
         TextView t4=findViewById(R.id.t4);
         TextView t5=findViewById(R.id.t5);
         TextView t6=findViewById(R.id.t6);
+
 
         //預設想打自己
         t1.setBackgroundColor(Color.GREEN);
@@ -166,6 +170,46 @@ public class mood_ter_step1_4_activity extends AppCompatActivity {
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ColorDrawable viewColor = (ColorDrawable) t1.getBackground();
+                ColorDrawable viewColor2 = (ColorDrawable) t2.getBackground();
+                ColorDrawable viewColor3 = (ColorDrawable) t3.getBackground();
+                ColorDrawable viewColor4 = (ColorDrawable) t4.getBackground();
+                ColorDrawable viewColor5 = (ColorDrawable) t5.getBackground();
+                ColorDrawable viewColor6 = (ColorDrawable) t6.getBackground();
+                int colorId = viewColor.getColor();
+                int colorId2 = viewColor2.getColor();
+                int colorId3 = viewColor3.getColor();
+                int colorId4 = viewColor4.getColor();
+                int colorId5 = viewColor5.getColor();
+                int colorId6 = viewColor6.getColor();
+                if(colorId==-1){
+                    //將答案存入全域變數
+                    gv.setter1_4("");
+                }
+                if(colorId==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_4("想打自己");
+                }
+                if(colorId2==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_4(gv.getter1_4()+",想咬自己");
+                }
+                if(colorId3==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_4(gv.getter1_4()+",想打他");
+                }
+                if(colorId4==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_4(gv.getter1_4()+",想罵他");
+                }
+                if(colorId5==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_4(gv.getter1_4()+",想撕掉作業簿");
+                }
+                if(colorId6==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_4(gv.getter1_4()+",想把東西弄壞");
+                }
                 //跳至下一頁面
                 Intent intent =new Intent(mood_ter_step1_4_activity.this, mood_ter_step2_activity.class);
                 startActivity(intent);

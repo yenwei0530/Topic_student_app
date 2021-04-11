@@ -83,6 +83,23 @@ public class explanation1_activity extends AppCompatActivity {
                     txt2.startAnimation(atg);
                     txt3.startAnimation(atg);
                 }else if(progress==5){
+                    txt2.setText("上傳影片");
+                    txt3.setText("兒童可以將喜歡的影片或音樂連結上傳至自己的空間");
+                    imageView5.setImageResource(R.drawable.play);
+
+                    imageView5.startAnimation(packageimg);
+                    txt2.startAnimation(atg);
+                    txt3.startAnimation(atg);
+                }
+                else if(progress==6){
+                    txt2.setText("我的收藏");
+                    txt3.setText("兒童可以隨時隨地播放喜歡的影片或音樂，藉此提升兒童快樂的心情");
+                    imageView5.setImageResource(R.drawable.cabinet);
+
+                    imageView5.startAnimation(packageimg);
+                    txt2.startAnimation(atg);
+                    txt3.startAnimation(atg);
+                }else if(progress==7){
                     txt2.setText("個人專區");
                     txt3.setText("將兒童曾經紀錄的心情指數紀錄，並回饋兒童心情進步情形");
                     imageView5.setImageResource(R.drawable.user);
@@ -91,6 +108,7 @@ public class explanation1_activity extends AppCompatActivity {
                     txt2.startAnimation(atg);
                     txt3.startAnimation(atg);
                 }
+
             }
 
             @Override

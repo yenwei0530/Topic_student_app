@@ -19,6 +19,9 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         setContentView(R.layout.mood_ter_step1_2);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告Button物件
         Button nextpage =findViewById(R.id.nextpage);
         Button uppage =findViewById(R.id.uppage);
@@ -57,6 +60,8 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                 g3.setColorFilter(Color.GRAY);
                 g2.setColorFilter(Color.GRAY);
                 g1.setColorFilter(Color.GRAY);
+                //將答案存入全域變數
+                gv.setter1_2("非常快樂");
             }
         });
         //情緒6點擊事件
@@ -71,6 +76,8 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                 g3.setColorFilter(Color.GRAY);
                 g2.setColorFilter(Color.GRAY);
                 g1.setColorFilter(Color.GRAY);
+                //將答案存入全域變數
+                gv.setter1_2("興奮");
             }
         });
         //情緒5點擊事件
@@ -85,6 +92,8 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                 g3.setColorFilter(Color.GRAY);
                 g2.setColorFilter(Color.GRAY);
                 g1.setColorFilter(Color.GRAY);
+                //將答案存入全域變數
+                gv.setter1_2("開心");
             }
         });
         //情緒4點擊事件
@@ -99,6 +108,8 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                 g3.setColorFilter(Color.GRAY);
                 g2.setColorFilter(Color.GRAY);
                 g1.setColorFilter(Color.GRAY);
+                //將答案存入全域變數
+                gv.setter1_2("平靜");
             }
         });
         //情緒3點擊事件
@@ -113,6 +124,8 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                 g4.setColorFilter(Color.GRAY);
                 g2.setColorFilter(Color.GRAY);
                 g1.setColorFilter(Color.GRAY);
+                //將答案存入全域變數
+                gv.setter1_2("不高興");
             }
         });
         //情緒2點擊事件
@@ -127,6 +140,8 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                 g4.setColorFilter(Color.GRAY);
                 g3.setColorFilter(Color.GRAY);
                 g1.setColorFilter(Color.GRAY);
+                //將答案存入全域變數
+                gv.setter1_2("憤怒發脾氣");
             }
         });
         //情緒1點擊事件
@@ -141,6 +156,8 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                 g4.setColorFilter(Color.GRAY);
                 g3.setColorFilter(Color.GRAY);
                 g2.setColorFilter(Color.GRAY);
+                //將答案存入全域變數
+                gv.setter1_2("怒氣沖沖失去理智");
             }
         });
 
