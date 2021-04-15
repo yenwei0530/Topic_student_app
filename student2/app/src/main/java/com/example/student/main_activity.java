@@ -93,8 +93,7 @@ public class main_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳至登入頁面
-                Intent intent =new Intent(main_activity.this,logine_activity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+                Intent intent =new Intent(main_activity.this,exit_mood_ter_step1_1_activity.class);
                 startActivity(intent);
             }
         });

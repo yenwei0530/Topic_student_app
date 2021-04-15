@@ -28,24 +28,25 @@ public class scale1_activity extends AppCompatActivity {
 
         //宣告Button物件
         Button nextpage=findViewById(R.id.nextpage);
+        Button uppage=findViewById(R.id.uppage);
 
         seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if(progress==1){
-                    t1.setText(progress+"總是這樣");
+                    t1.setText(progress+"從不這樣");
                 }
                 if(progress==2){
-                    t1.setText(progress+"經常這樣");
+                    t1.setText(progress+"很少這樣");
                 }
                 if(progress==3){
                     t1.setText(progress+"有時這樣");
                 }
                 if(progress==4){
-                    t1.setText(progress+"很少這樣");
+                    t1.setText(progress+"經常這樣");
                 }
                 if(progress==5){
-                    t1.setText(progress+"從不這樣");
+                    t1.setText(progress+"總是這樣");
                 }
             }
 
@@ -70,6 +71,13 @@ public class scale1_activity extends AppCompatActivity {
                 //跳至下一頁面
                 Intent intent =new Intent(scale1_activity.this, scale2_activity.class);
                 startActivity(intent);
+            }
+        });
+
+        uppage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

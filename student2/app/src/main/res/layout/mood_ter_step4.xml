@@ -44,6 +44,7 @@
         android:lineSpacingExtra="4dp"
         android:text="四\n停一停、想一想\n想想自己的身體語言\n觀察別人的身體語言\n並思考別人的想法、感受"
         android:textAllCaps="false"
+        android:textColor="#3D414E"
         android:fontFamily="@font/kai08mz"
         android:layout_marginTop="135dp"
         android:textSize="45sp"

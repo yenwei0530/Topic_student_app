@@ -42,6 +42,7 @@
         android:gravity="center_horizontal"
         android:lineSpacingExtra="4dp"
         android:text="好棒喔!\n你完成了今天的心情日記!"
+        android:textColor="#3D414E"
         android:layout_marginTop="135dp"
         android:fontFamily="@font/kai08mz"
         android:textAlignment="center"

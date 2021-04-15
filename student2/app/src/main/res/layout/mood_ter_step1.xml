@@ -44,6 +44,7 @@
         android:text="一\n情緒線索辨識\n表達你的想法與感受\n請從1到7說說你現在的心情\n7是心情非常快樂\n1是心情非常不快樂"
         android:textAllCaps="false"
         android:layout_marginTop="130dp"
+        android:textColor="#3D414E"
         android:fontFamily="@font/kai08mz"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -42,6 +42,7 @@
         android:textAlignment="center"
         android:lineSpacingExtra="4dp"
         android:fontFamily="@font/kai08mz"
+        android:textColor="#3D414E"
         android:text="六\n完成後的感受\n恭喜你完成心情溫度計\n最後說說看你現在的心情如何吧!"
         android:textAllCaps="false"
         android:layout_marginTop="135dp"

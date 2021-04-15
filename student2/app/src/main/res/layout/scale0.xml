@@ -77,18 +77,47 @@
             android:fontFamily="@font/kai08mz"
             android:textSize="48sp" />
 
-        <Button
-            android:textStyle="bold"
-            android:id="@+id/nextpage"
-            android:layout_width="350dp"
-            android:layout_height="80dp"
-            android:background="@drawable/btn_bg2"
-            android:fontFamily="@font/kai08mz"
-            android:text="開始吧!"
-            android:textColor="#FFF"
-            android:textSize="35sp"
-            android:layout_marginBottom="20dp"
-            app:backgroundTint="@null" />
+        <LinearLayout
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t1">
+
+            <Button
+                android:id="@+id/uppage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
+                android:text="關閉"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textSize="35sp"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/nextpage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
+                android:text="開始吧!"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textSize="35sp"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
 
 
 

@@ -20,6 +20,7 @@ public class scale0_activity extends AppCompatActivity {
 
         //宣告Button物件
         Button nextpage=findViewById(R.id.nextpage);
+        Button uppage=findViewById(R.id.uppage);
 
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +28,13 @@ public class scale0_activity extends AppCompatActivity {
                 //跳至下一頁面
                 Intent intent =new Intent(scale0_activity.this, scale1_activity.class);
                 startActivity(intent);
+            }
+        });
+
+        uppage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
         

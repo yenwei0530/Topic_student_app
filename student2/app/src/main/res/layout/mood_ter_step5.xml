@@ -42,6 +42,7 @@
         android:textAlignment="center"
         android:lineSpacingExtra="4dp"
         android:text="五\n解決問題的方法\n思考有效解決問題的方法"
+        android:textColor="#3D414E"
         android:textAllCaps="false"
         android:layout_marginTop="135dp"
         android:fontFamily="@font/kai08mz"

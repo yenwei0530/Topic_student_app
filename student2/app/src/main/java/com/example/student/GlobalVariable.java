@@ -34,6 +34,8 @@ public class GlobalVariable extends Application {
     private String ter1_4="想打自己";  //心情溫度計sp1_4
     private String ter3_1="提醒自己的話";  //心情溫度計sp3_1
     private String ter6_1="7非常快樂";  //心情溫度計sp6_1
+    private String exit_ter1_1="7非常快樂";  //離開_心情溫度計sp1_1
+    private String exit_ter1_2="非常快樂";  //離開_心情溫度計sp1_2
 
 
     //修改 變數値
@@ -78,7 +80,7 @@ public class GlobalVariable extends Application {
     }
 
     public void setscale8(String scale8) {
-        this.scale7 = scale8;
+        this.scale8 = scale8;
     }
 
     public void setscale9(String scale9) {
@@ -137,7 +139,7 @@ public class GlobalVariable extends Application {
         this.ter1_1 = ter1_1;
     }
 
-    public void setter1_2(String ter2) {
+    public void setter1_2(String ter1_2) {
         this.ter1_2 = ter1_2;
     }
 
@@ -155,6 +157,14 @@ public class GlobalVariable extends Application {
 
     public void setter6_1(String ter6_1) {
         this.ter6_1 = ter6_1;
+    }
+
+    public void setexit_ter1_1(String exit_ter1_1) {
+        this.exit_ter1_1 = exit_ter1_1;
+    }
+
+    public void setexit_ter1_2(String exit_ter1_2) {
+        this.exit_ter1_2 = exit_ter1_2;
     }
 
     //取得 變數值
@@ -250,12 +260,12 @@ public class GlobalVariable extends Application {
         return diary10;
     }
 
-    public String getter1_1() {
-        return ter1_1;
+    public String getexit_ter1_1() {
+        return exit_ter1_1;
     }
 
-    public String getter1_2() {
-        return ter1_2;
+    public String getexit_ter1_2() {
+        return exit_ter1_2;
     }
 
     public String getter1_3() {
@@ -264,6 +274,14 @@ public class GlobalVariable extends Application {
 
     public String getter1_4() {
         return ter1_4;
+    }
+
+    public String getter1_1() {
+        return ter1_1;
+    }
+
+    public String getter1_2() {
+        return ter1_2;
     }
 
     public String getter3_1() {
@@ -277,5 +295,7 @@ public class GlobalVariable extends Application {
     public String getsex() {
         return sex;
     }
+
+
 
 }

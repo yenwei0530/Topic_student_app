@@ -257,6 +257,7 @@
                     android:id="@+id/spinner0"
                     android:spinnerMode="dialog"
                     android:layout_gravity="center"
+                    android:textColor="#3D414E"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -320,6 +321,7 @@
                     android:id="@+id/spinner"
                     android:spinnerMode="dialog"
                     android:layout_gravity="center"
+                    android:textColor="#3D414E"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -377,6 +379,7 @@
                     android:spinnerMode="dialog"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
+                    android:textColor="#3D414E"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>

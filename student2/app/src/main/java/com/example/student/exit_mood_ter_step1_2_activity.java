@@ -11,12 +11,12 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class mood_ter_step1_2_activity extends AppCompatActivity {
+public class exit_mood_ter_step1_2_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mood_ter_step1_2);
+        setContentView(R.layout.exit_mood_ter_step1_2);
         getSupportActionBar().hide();//關閉標題列
 
         //建立共用變數類別
@@ -48,6 +48,7 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         LinearLayout L7=findViewById(R.id.L7);
 
 
+        //情緒7點擊事件
         //情緒7點擊事件
         L7.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,7 +168,7 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳至主頁面
-                Intent intent =new Intent(mood_ter_step1_2_activity.this,main_activity.class);
+                Intent intent =new Intent(exit_mood_ter_step1_2_activity.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
             }
@@ -178,7 +179,8 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳至下一頁面
-                Intent intent =new Intent(mood_ter_step1_2_activity.this, mood_ter_step1_3_activity.class);
+                Intent intent =new Intent(exit_mood_ter_step1_2_activity.this, logine_activity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
             }
         });

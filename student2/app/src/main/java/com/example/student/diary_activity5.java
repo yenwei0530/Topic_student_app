@@ -2,15 +2,20 @@ package com.example.student;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class diary_activity5 extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,12 @@ public class diary_activity5 extends AppCompatActivity {
         //宣告Button物件
         Button nextpage =findViewById(R.id.nextpage);
         Button uppage =findViewById(R.id.uppage);
+
+        //宣告TextView物件
+        TextView txt2=findViewById(R.id.txt2);
+        TextView txt3=findViewById(R.id.txt3);
+        TextView txt4=findViewById(R.id.txt4);
+
 
         //宣告ImageButton物件
         ImageButton exit =findViewById(R.id.exit);

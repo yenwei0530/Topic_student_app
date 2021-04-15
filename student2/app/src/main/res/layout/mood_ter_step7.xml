@@ -44,6 +44,7 @@
         android:text="好棒喔!\n你找到解決問題的方法"
         android:layout_marginTop="135dp"
         android:fontFamily="@font/kai08mz"
+        android:textColor="#3D414E"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="45sp"

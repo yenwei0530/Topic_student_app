@@ -115,7 +115,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
                 android:paddingRight="10dp"
-                android:src="@drawable/ic_baseline_grade_24"
+                android:src="@drawable/ic_baseline_star_24"
                 app:tint="#FFFF37" />
 
 
@@ -150,7 +150,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
                 android:paddingRight="10dp"
-                android:src="@drawable/ic_baseline_grade_24" />
+                android:src="@drawable/ic_baseline_star_24" />
 
 
             <LinearLayout
@@ -184,7 +184,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
                 android:paddingRight="10dp"
-                android:src="@drawable/ic_baseline_grade_24" />
+                android:src="@drawable/ic_baseline_star_24" />
 
 
             <LinearLayout
@@ -219,7 +219,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
                 android:paddingRight="10dp"
-                android:src="@drawable/ic_baseline_grade_24" />
+                android:src="@drawable/ic_baseline_star_24" />
 
 
             <LinearLayout

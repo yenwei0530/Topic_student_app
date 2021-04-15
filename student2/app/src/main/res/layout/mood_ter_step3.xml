@@ -44,6 +44,7 @@
         android:text="三\n使用冷靜方法\n教你使用冷靜的方法\n如何放鬆、轉移注意力"
         android:textAllCaps="false"
         android:fontFamily="@font/kai08mz"
+        android:textColor="#3D414E"
         android:layout_marginTop="135dp"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -28,6 +28,7 @@ public class scale2_activity extends AppCompatActivity {
 
         //宣告Button物件
         Button nextpage=findViewById(R.id.nextpage);
+        Button uppage=findViewById(R.id.uppage);
 
 
         seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -71,6 +72,13 @@ public class scale2_activity extends AppCompatActivity {
                 //跳至下一頁面
                 Intent intent =new Intent(scale2_activity.this, scale3_activity.class);
                 startActivity(intent);
+            }
+        });
+
+        uppage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

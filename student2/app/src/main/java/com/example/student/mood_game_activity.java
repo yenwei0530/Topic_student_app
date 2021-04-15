@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class mood_game_activity extends Activity
     public ImageButton imageButton12;
     public ImageButton imageButton13;
     public ImageButton imageButton14;
+    public ImageView imageView4;
     public TextView textView16;
     public TextView textView18;
     public TextView textView19;
@@ -120,6 +122,7 @@ public class mood_game_activity extends Activity
         textView30.setVisibility(View.INVISIBLE);
         textView32 = (TextView) findViewById(R.id.textView32);
         exit= (Button) findViewById(R.id.exit);
+        imageView4=(ImageView) findViewById(R.id.imageView4);
         final ArrayList<String> happyMood = new ArrayList<>();
         happyMood.add("game_ecstasy");
         happyMood.add("game_happy");
@@ -505,27 +508,27 @@ public class mood_game_activity extends Activity
 
         if(mode==0){
             TextView title = findViewById(R.id.textView7);
-            title.setText("哪些是難過的心情呢?");
+            imageView4.setImageResource(R.drawable.sad_game);
         }
         else if(mode==1){
             TextView title = findViewById(R.id.textView7);
-            title.setText("哪些是快樂的心情呢?");
+            imageView4.setImageResource(R.drawable.smile_game);
         }
         else if(mode==2){
             TextView title = findViewById(R.id.textView7);
-            title.setText("哪些是生氣的心情呢?");
+            imageView4.setImageResource(R.drawable.angry_game);
         }
         else if(mode==3){
             TextView title = findViewById(R.id.textView7);
-            title.setText("哪些是害怕的心情呢?");
+            imageView4.setImageResource(R.drawable.scare_game);
         }
         else if(mode==4){
             TextView title = findViewById(R.id.textView7);
-            title.setText("哪些是感動的心情呢?");
+            imageView4.setImageResource(R.drawable.thank_you_game);
         }
         else if(mode==5){
             TextView title = findViewById(R.id.textView7);
-            title.setText("哪些是討厭的心情呢?");
+            imageView4.setImageResource(R.drawable.hate_game);
         }
 
 
