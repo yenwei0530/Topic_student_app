@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -572,26 +573,38 @@ public class mood_game_activity extends Activity
                 show_score.setText("總分 : " + Integer.toString(total_score));
                 textView.setVisibility(View.VISIBLE);
                 if(total_score == 6){
+
+                    //實體化layout
+                    LayoutInflater inflater=this.getLayoutInflater();
+                    final View textEntryView = inflater.inflate(R.layout.custom_dialog, null);
+
+                    //用setView把layout放進去
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                    builder.setMessage("是否要繼續下局遊戲？");
-                    builder.setTitle("提示");
-                    builder.setPositiveButton("是，我想繼續", new DialogInterface.OnClickListener() {
+                    builder.setView(textEntryView);
+
+                    //創建一個Dialog
+                    AlertDialog alert = builder.create();
+
+                    //layout中Button結束事件
+                    Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+                    finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            mode = (mode + 1) % 6;
-                            init_game(mode);
-                            dialog.dismiss();
-                        }
-                    });
-                    builder.setNegativeButton("否，我想離開", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
+                        public void onClick(View v) {
                             finish();
                         }
                     });
-                    builder.create().show();
 
+                    //layout中Button繼續事件
+                    Button ag = (Button) textEntryView.findViewById(R.id.ag);
+                    ag.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            mode = (mode + 1) % 6;
+                            init_game(mode);
+                            alert.cancel();
+                        }
+                    });
+                    alert.show();
                 }
                 textView.postDelayed(
                         new Runnable() {

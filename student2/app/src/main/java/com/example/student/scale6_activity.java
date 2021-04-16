@@ -31,6 +31,7 @@ public class scale6_activity extends AppCompatActivity {
         Button uppage=findViewById(R.id.uppage);
 
 
+
         seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {

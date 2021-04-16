@@ -12,7 +12,9 @@
     <color name="startblue">#09c6df</color>
     <color name="endblue">#0bcce6</color>
     <color name="gray">#7B7B7B</color>
-    <color name="green">#28FF28</color>
+    <color name="green">#247b37</color>
+    <color name="red">#CE0000</color>
     <color name="blue">#03A9F4</color>
     <color name="mediumBlue">#1B81AF</color>
+    <color name="colorgreenlight">#abffc0</color>
 </resources>

@@ -1,12 +1,17 @@
 package com.example.student;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +25,11 @@ public class diary_activity7 extends AppCompatActivity {
 
         //建立共用變數類別
         GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
+        //宣告TextView物件
+        TextView txt2=findViewById(R.id.txt2);
+        TextView txt3=findViewById(R.id.txt3);
+        TextView txt4=findViewById(R.id.txt4);
 
         //宣告Button物件
         Button nextpage =findViewById(R.id.nextpage);
@@ -35,6 +45,30 @@ public class diary_activity7 extends AppCompatActivity {
 
         //宣告EditText物件
         EditText edt1=findViewById(R.id.edt1);
+
+        //TextView 旋轉效果
+        ObjectAnimator animTxtRotate = ObjectAnimator.ofFloat(txt4, "rotation", 0, 360);
+        animTxtRotate.setDuration(3000);
+        animTxtRotate.setRepeatCount(1);
+        animTxtRotate.setRepeatMode(ObjectAnimator.REVERSE);
+        animTxtRotate.setInterpolator(new AccelerateDecelerateInterpolator());
+        animTxtRotate.start();
+
+        //TextView 透明度變換效果
+        ObjectAnimator animTxtAlpha = ObjectAnimator.ofFloat(txt3, "alpha", 1, 0);
+        animTxtAlpha.setDuration(3000);
+        animTxtAlpha.setRepeatCount(1);
+        animTxtAlpha.setRepeatMode(ObjectAnimator.REVERSE);
+        animTxtAlpha.setInterpolator(new LinearInterpolator());
+        animTxtAlpha.start();
+
+        //TextView 掉落效果
+        ObjectAnimator animTxtFalling = ObjectAnimator.ofFloat(txt2 ,"y", 0, 430);
+        animTxtFalling.setDuration(3000);
+        animTxtAlpha.setRepeatCount(1);
+        animTxtFalling.setRepeatMode(ObjectAnimator.REVERSE);
+        animTxtFalling.setInterpolator(new BounceInterpolator());
+        animTxtFalling.start();
 
         //ImageView點擊事件
         imageView.setOnClickListener(new View.OnClickListener() {
