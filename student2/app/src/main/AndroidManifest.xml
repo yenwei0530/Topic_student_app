@@ -73,6 +73,12 @@
         <activity android:name=".explanation1_activity" />
         <activity android:name=".video_activity" />
         <activity android:name=".student_information_activity" />
+        <activity android:name=".puzzle_game">
+
+        </activity>
+        <activity android:name=".puzzle_start_activity"/>
+
+
     </application>
 
 </manifest>

@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -508,27 +509,39 @@ public class mood_game_activity extends Activity
 
 
         if(mode==0){
-            TextView title = findViewById(R.id.textView7);
+            TextView title = findViewById(R.id.textView8);
+            title.setText("難過");
+            title.setTextColor(Color.parseColor("#5A5AAD"));
             imageView4.setImageResource(R.drawable.sad_game);
         }
         else if(mode==1){
-            TextView title = findViewById(R.id.textView7);
+            TextView title = findViewById(R.id.textView8);
+            title.setText("快樂");
+            title.setTextColor(Color.parseColor("#FF0000"));
             imageView4.setImageResource(R.drawable.smile_game);
         }
         else if(mode==2){
-            TextView title = findViewById(R.id.textView7);
+            TextView title = findViewById(R.id.textView8);
+            title.setText("生氣");
+            title.setTextColor(Color.parseColor("#000079"));
             imageView4.setImageResource(R.drawable.angry_game);
         }
         else if(mode==3){
-            TextView title = findViewById(R.id.textView7);
+            TextView title = findViewById(R.id.textView8);
+            title.setText("害怕");
+            title.setTextColor(Color.parseColor("#930093"));
             imageView4.setImageResource(R.drawable.scare_game);
         }
         else if(mode==4){
-            TextView title = findViewById(R.id.textView7);
+            TextView title = findViewById(R.id.textView8);
+            title.setText("感動");
+            title.setTextColor(Color.parseColor("#FF0080"));
             imageView4.setImageResource(R.drawable.thank_you_game);
         }
         else if(mode==5){
-            TextView title = findViewById(R.id.textView7);
+            TextView title = findViewById(R.id.textView8);
+            title.setText("討厭");
+            title.setTextColor(Color.parseColor("#009100"));
             imageView4.setImageResource(R.drawable.hate_game);
         }
 

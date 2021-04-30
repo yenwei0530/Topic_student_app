@@ -35,19 +35,19 @@ public class scale5_activity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if(progress==1){
-                    t1.setText(progress+"總是這樣");
+                    t1.setText(progress+"從不這樣");
                 }
                 if(progress==2){
-                    t1.setText(progress+"經常這樣");
+                    t1.setText(progress+"很少這樣");
                 }
                 if(progress==3){
                     t1.setText(progress+"有時這樣");
                 }
                 if(progress==4){
-                    t1.setText(progress+"很少這樣");
+                    t1.setText(progress+"經常這樣");
                 }
                 if(progress==5){
-                    t1.setText(progress+"從不這樣");
+                    t1.setText(progress+"總是這樣");
                 }
 
             }

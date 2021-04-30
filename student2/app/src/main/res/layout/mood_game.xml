@@ -25,16 +25,25 @@
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:text="哪些是"
+                android:fontFamily="@font/kai08mz"
+                android:textColor="#000000"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="難過"
                 android:fontFamily="@font/kai08mz"
                 android:textColor="#000000"
                 android:textSize="50sp" />
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:src="@drawable/sad_game" />
 
         </LinearLayout>
@@ -52,8 +61,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton5"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -80,8 +89,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton11"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -107,8 +116,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton13"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -139,8 +148,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton9"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -166,8 +175,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton12"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -193,8 +202,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton14"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -227,8 +236,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton7"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -254,8 +263,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton6"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -281,8 +290,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton10"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -315,8 +324,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton4"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -342,8 +351,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton8"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"
@@ -369,8 +378,8 @@
 
                 <ImageButton
                     android:id="@+id/imageButton3"
-                    android:layout_width="240dp"
-                    android:layout_height="235dp"
+                    android:layout_width="230dp"
+                    android:layout_height="225dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="15dp"
                     android:background="?android:attr/activatedBackgroundIndicator"

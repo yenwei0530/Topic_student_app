@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -46,12 +48,32 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         LinearLayout L5=findViewById(R.id.L5);
         LinearLayout L6=findViewById(R.id.L6);
         LinearLayout L7=findViewById(R.id.L7);
+        LinearLayout LL1=findViewById(R.id.LL1);
+        LinearLayout LL2=findViewById(R.id.LL2);
+        LinearLayout LL3=findViewById(R.id.LL3);
+        LinearLayout LL4=findViewById(R.id.LL4);
+        LinearLayout LL5=findViewById(R.id.LL5);
+        LinearLayout LL6=findViewById(R.id.LL6);
+        LinearLayout LL7=findViewById(R.id.LL7);
 
+        //閃爍動畫
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha);
+
+        LL7.startAnimation(animation);
 
         //情緒7點擊事件
         L7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //啟用動畫
+                LL7.startAnimation(animation);
+                //關閉其他動畫
+                LL6.clearAnimation();
+                LL5.clearAnimation();
+                LL4.clearAnimation();
+                LL3.clearAnimation();
+                LL2.clearAnimation();
+                LL1.clearAnimation();
                 //顯示
                 g7.setVisibility(View.VISIBLE);
                 //隱藏
@@ -69,6 +91,16 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         L6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //啟用動畫
+                LL6.startAnimation(animation);
+                //關閉其他動畫
+                LL7.clearAnimation();
+                LL5.clearAnimation();
+                LL4.clearAnimation();
+                LL3.clearAnimation();
+                LL2.clearAnimation();
+                LL1.clearAnimation();
+                //顯示
                 g6.setVisibility(View.VISIBLE);
                 //改變其他btn為黑
                 g7.setVisibility(View.INVISIBLE);
@@ -85,6 +117,16 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         L5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //啟用動畫
+                LL5.startAnimation(animation);
+                //關閉其他動畫
+                LL7.clearAnimation();
+                LL6.clearAnimation();
+                LL4.clearAnimation();
+                LL3.clearAnimation();
+                LL2.clearAnimation();
+                LL1.clearAnimation();
+                //顯示
                 g5.setVisibility(View.VISIBLE);
                 //改變其他btn為黑
                 g7.setVisibility(View.INVISIBLE);
@@ -101,6 +143,16 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         L4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //啟用動畫
+                LL4.startAnimation(animation);
+                //關閉其他動畫
+                LL7.clearAnimation();
+                LL5.clearAnimation();
+                LL6.clearAnimation();
+                LL3.clearAnimation();
+                LL2.clearAnimation();
+                LL1.clearAnimation();
+                //顯示
                 g4.setVisibility(View.VISIBLE);
                 //改變其他btn為黑
                 g7.setVisibility(View.INVISIBLE);
@@ -117,6 +169,16 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         L3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //啟用動畫
+                LL3.startAnimation(animation);
+                //關閉其他動畫
+                LL7.clearAnimation();
+                LL5.clearAnimation();
+                LL4.clearAnimation();
+                LL6.clearAnimation();
+                LL2.clearAnimation();
+                LL1.clearAnimation();
+                //顯示
                 g3.setVisibility(View.VISIBLE);
                 //改變其他btn為黑
                 g7.setVisibility(View.INVISIBLE);
@@ -133,6 +195,16 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         L2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //啟用動畫
+                LL2.startAnimation(animation);
+                //關閉其他動畫
+                LL7.clearAnimation();
+                LL5.clearAnimation();
+                LL4.clearAnimation();
+                LL3.clearAnimation();
+                LL6.clearAnimation();
+                LL1.clearAnimation();
+                //顯示
                 g2.setVisibility(View.VISIBLE);
                 //改變其他btn為黑
                 g7.setVisibility(View.INVISIBLE);
@@ -149,6 +221,16 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         L1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //啟用動畫
+                LL1.startAnimation(animation);
+                //關閉其他動畫
+                LL7.clearAnimation();
+                LL5.clearAnimation();
+                LL4.clearAnimation();
+                LL3.clearAnimation();
+                LL2.clearAnimation();
+                LL6.clearAnimation();
+                //顯示
                 g1.setVisibility(View.VISIBLE);
                 //改變其他btn為黑
                 g7.setVisibility(View.INVISIBLE);

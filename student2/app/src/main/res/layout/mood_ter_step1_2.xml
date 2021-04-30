@@ -83,9 +83,10 @@
 
 
             <LinearLayout
+                android:id="@+id/LL7"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="#ED1111"
+                android:background="#FF0000"
                 android:gravity="center">
 
                 <ImageView
@@ -116,6 +117,7 @@
 
 
             <LinearLayout
+                android:id="@+id/LL6"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:background="#FF8000"
@@ -149,6 +151,7 @@
 
 
             <LinearLayout
+                android:id="@+id/LL5"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:background="#FFEB3B"
@@ -182,6 +185,7 @@
 
 
             <LinearLayout
+                android:id="@+id/LL4"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:background="#00EC00"
@@ -215,6 +219,7 @@
 
 
             <LinearLayout
+                android:id="@+id/LL3"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:background="#4A4AFF"
@@ -248,6 +253,7 @@
                 android:visibility="invisible"/>
 
             <LinearLayout
+                android:id="@+id/LL2"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:background="#5B00AE"
@@ -281,6 +287,7 @@
 
 
             <LinearLayout
+                android:id="@+id/LL1"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:background="#000079"

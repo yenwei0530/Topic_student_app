@@ -100,13 +100,13 @@
 
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:background="@color/white"
             android:fontFamily="@font/kai08mz"
             android:gravity="center"
-            android:text="告訴他\n你現在現在的感受\n例如:你這樣做\n我覺得很生氣"
+            android:text="告訴他\n你現在現在的感受\n例如:你這樣做讓我感覺不舒服/生氣/難過"
             android:textColor="#3D414E"
             android:textSize="50sp" />
 

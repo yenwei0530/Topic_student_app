@@ -22,6 +22,7 @@ public class main_activity extends AppCompatActivity {
         //宣告TextView物件
         CardView card1=findViewById(R.id.card1);
         CardView card2=findViewById(R.id.card2);
+        CardView card3=findViewById(R.id.card3);
         CardView card4=findViewById(R.id.card4);
         CardView card5=findViewById(R.id.card5);
         CardView card6=findViewById(R.id.card6);
@@ -48,6 +49,16 @@ public class main_activity extends AppCompatActivity {
             }
         });
 
+        //拼圖遊戲觸發事件
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳至上拼圖遊戲
+                Intent intent =new Intent(main_activity.this,puzzle_start_activity.class);
+                startActivity(intent);
+            }
+        });
+
         //認識情緒觸發事件
         card4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +78,8 @@ public class main_activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
         //個人專區觸發事件
         card7.setOnClickListener(new View.OnClickListener() {

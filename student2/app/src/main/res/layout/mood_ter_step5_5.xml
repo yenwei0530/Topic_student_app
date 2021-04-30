@@ -106,7 +106,7 @@
             android:layout_marginBottom="12dp"
             android:background="@color/white"
             android:gravity="center"
-            android:text="冷靜地與對方溝通\n一起解解決問題!"
+            android:text="冷靜地與對方溝通\n一起解決問題!"
             android:fontFamily="@font/kai08mz"
             android:textColor="#3D414E"
             android:textSize="55sp" />
