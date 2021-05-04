@@ -8,7 +8,7 @@
     <View
         android:id="@+id/v1"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="650dp"
         android:background="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -28,8 +28,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="646dp"
-        android:layout_height="466dp"
+        android:layout_width="671dp"
+        android:layout_height="586dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/jigsaw2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,17 +41,18 @@
         android:id="@+id/t1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:lineSpacingExtra="4dp"
-        android:text="拼圖遊戲規則：\n將所有的拼圖透過交換移動到正確的位置完成拼圖。如想退出遊戲，請按下該裝置的返回鍵，便可離開遊戲。\n遊戲玩法：\n按住任意拼圖，並且拖曳到鄰近拼圖進行交換。"
-        android:textAllCaps="false"
-        android:layout_marginTop="130dp"
-        android:textColor="#3D414E"
+        android:layout_marginTop="192dp"
         android:fontFamily="@font/kai08mz"
+        android:gravity="center_vertical|left"
+        android:lineSpacingExtra="4dp"
+        android:text="遊戲玩法：\n按住任意拼圖，並且拖曳到鄰近拼圖進行交換，將所有的拼圖移動到正確的位置即可成功通關。"
+        android:textAllCaps="false"
+        android:textColor="#3D414E"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        android:gravity="center_vertical|left" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <LinearLayout
         android:layout_width="600dp"

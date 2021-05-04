@@ -21,15 +21,16 @@ public class diary_activity11 extends AppCompatActivity {
         CardView card3=findViewById(R.id.card3);
 
 
-       /* //拼圖遊戲觸發事件
+        //拼圖遊戲觸發事件
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳至心情溫度計頁面
-                Intent intent =new Intent(mood_ter_step7_activity.this, mood_ter_step1_activity.class);
+                //跳至拼圖遊戲
+                Intent intent =new Intent(diary_activity11.this, puzzle_start_activity.class);
                 startActivity(intent);
             }
-        });*/
+        });
+
 
         //回主頁觸發事件
         card2.setOnClickListener(new View.OnClickListener() {

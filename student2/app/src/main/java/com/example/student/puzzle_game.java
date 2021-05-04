@@ -1,8 +1,12 @@
 package com.example.student;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
@@ -30,12 +34,16 @@ public class puzzle_game extends AppCompatActivity {
     public static final String right = "right";
     private static String[] tileList;
     private static int aa;
+    private static Activity activity = null;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.puzzle_game);
         getSupportActionBar().hide();//關閉標題列
+        activity = this;
         //碼表
         chronometer =findViewById(R.id.chronometer);
         chronometer.start();
@@ -354,9 +362,6 @@ public class puzzle_game extends AppCompatActivity {
             }
         }
 
-
-
-
         mGridView.setAdapter(new CustomAdapter(buttons, mColumnWidth, mColumnHeight));
     }
 
@@ -367,7 +372,38 @@ public class puzzle_game extends AppCompatActivity {
         display(context);
 
         if (isSolved()){
-            Toast.makeText(context, "YOU WIN!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(context, "YOU WIN!", Toast.LENGTH_SHORT).show();
+            //實體化layout
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE );
+            final View textEntryView = inflater.inflate(R.layout.custom_dialog, null);
+
+            //用setView把layout放進去
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setView(textEntryView);
+
+            //創建一個Dialog
+            AlertDialog alert = builder.create();
+
+            //layout中Button結束事件
+            Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+            finsh.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    puzzle_game.activity.finish();
+                }
+            });
+
+            //layout中Button繼續事件
+            Button ag = (Button) textEntryView.findViewById(R.id.ag);
+            ag.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context,puzzle_game.class);
+                    puzzle_game.activity.finish();
+                    activity.startActivity(intent);
+                }
+            });
+            alert.show();
             chronometer.stop();
         }
 

@@ -19,21 +19,8 @@ public class puzzle_start_activity extends AppCompatActivity {
         Button nextpage =findViewById(R.id.nextpage);
         Button uppage =findViewById(R.id.uppage);
 
-       /* //宣告ImageButton物件
-        ImageButton exit =findViewById(R.id.exit);
 
-
-
-
-        //離開點擊事件
-        exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               finish();
-            }
-        });*/
-
-        //下一步點擊事件
+        //開始點擊事件
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,8 +34,10 @@ public class puzzle_start_activity extends AppCompatActivity {
         uppage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //關閉目前頁面
-                finish();
+                //跳至主頁面
+                Intent intent =new Intent(puzzle_start_activity.this,main_activity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+                startActivity(intent);
             }
         });
 
