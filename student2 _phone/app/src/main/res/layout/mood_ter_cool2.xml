@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE66F">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/bg_diaiy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/home2"
+        app:layout_constraintBottom_toTopOf="@+id/txt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/kai08mz"
+        android:text="你選擇的方法是放鬆訓練"
+        android:textColor="#FFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/exit" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/sour_lemon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="220dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/lemon"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.43">
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="700px">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/white"
+                    android:gravity="left"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="●一隻手在放肚子上，吸氣時數五秒鐘(1–2–3–4–5)，在吸氣時手要感覺到肚子是鼓出來的不是縮起來，吸氣後停留5~10秒鐘，然後再慢慢地吐氣(數到5，1–2–3–4–5)，吐氣時肚子會慢慢縮回去。"
+                    android:textColor="#3D414E"
+                    android:textSize="45sp" />
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:gravity="left"
+                    android:text="●想像現在擠一杯檸檬汁，你的左手和右手各握著一顆檸檬，請你現在用力地擠檸檬，用力擠─再用力擠─把所有的檸檬汁都擠出來，做得很好唷，現在請把手中的檸檬放開。現在再來擠一次檸檬吧，你的左手和右手現在又各拿了新的一顆檸檬，現在請你用力的擠檸檬，用你的所有力氣用的擠，現在把檸檬鬆開，你做得很好喔，擠了滿滿的一杯檸檬汁了呢。現在請你慢慢地吸氣(1–2–3)，然後慢慢地吐氣(1–2–3)"
+                    android:textColor="#3D414E"
+                    android:textSize="45sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t1">
+
+            <Button
+                android:id="@+id/uppage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
+                android:text="上一步"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textSize="35sp"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/nextpage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg2"
+                android:fontFamily="@font/kai08mz"
+                android:text="下一步"
+                android:textAllCaps="false"
+                android:textColor="#FFF"
+                android:textSize="35sp"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
