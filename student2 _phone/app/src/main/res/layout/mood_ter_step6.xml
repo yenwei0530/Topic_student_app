@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/graylight">
 
     <View
         android:id="@+id/v1"
         android:layout_width="match_parent"
-        android:layout_height="650dp"
+        android:layout_height="450dp"
         android:background="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,7 +18,7 @@
     <ImageView
         android:id="@+id/iv1"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="150dp"
         android:background="@drawable/ic_wave_bg"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,11 +28,12 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="777dp"
-        android:layout_height="611dp"
+        android:layout_width="322dp"
+        android:layout_height="400dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/trophy"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/v1" />
 
@@ -39,24 +41,25 @@
         android:id="@+id/t1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:lineSpacingExtra="4dp"
+        android:layout_marginTop="96dp"
         android:fontFamily="@font/kai08mz"
-        android:textColor="#3D414E"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4dp"
         android:text="六\n完成後的感受\n恭喜你完成心情溫度計\n最後說說看你現在的心情如何吧!"
+        android:textAlignment="center"
         android:textAllCaps="false"
-        android:layout_marginTop="135dp"
-        android:textSize="45sp"
+        android:textColor="#3D414E"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <LinearLayout
-        android:layout_width="600dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +77,7 @@
             android:text="上一步"
             android:textAllCaps="false"
             android:textColor="#FFF"
-            android:textSize="35sp"
+            android:textSize="20sp"
             app:backgroundTint="@null" />
 
         <Button
@@ -89,7 +92,7 @@
             android:text="下一步"
             android:textAllCaps="false"
             android:textColor="#FFF"
-            android:textSize="35sp"
+            android:textSize="20sp"
             app:backgroundTint="@null" />
 
     </LinearLayout>

@@ -39,12 +39,12 @@
                     android:layout_marginRight="20dp"
                     android:textAlignment="center"
                     android:textStyle="bold"
-                    android:textSize="55sp"
+                    android:textSize="30sp"
                     android:gravity="center_horizontal" />
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="200dp"
                     android:src="@drawable/trophy2"
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="20dp"
@@ -60,32 +60,32 @@
                     android:layout_marginRight="20dp"
                     android:textAlignment="center"
                     android:textStyle="bold"
-                    android:textSize="40sp"
+                    android:textSize="20sp"
                     android:gravity="center_horizontal" />
                 
                 <Button
                     android:id="@+id/ag"
-                    android:layout_width="500dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     app:backgroundTint="@null"
                     android:text="是，我要繼續玩"
                     android:fontFamily="@font/kai08mz"
-                    android:textSize="30sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:background="@drawable/button_green"/>
 
                 <Button
                     android:id="@+id/finsh"
-                    android:layout_width="500dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/kai08mz"
                     app:backgroundTint="@null"
                     android:text="否，我離開"
-                    android:textSize="30sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:background="@drawable/button_red"/>
 

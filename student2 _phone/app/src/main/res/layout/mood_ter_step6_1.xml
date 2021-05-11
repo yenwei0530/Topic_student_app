@@ -6,11 +6,10 @@
     android:layout_height="match_parent"
     android:background="#FFE66F">
 
-
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
-        android:layout_height="260dp"
+        android:layout_height="140dp"
         android:background="@drawable/bg_diaiy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,44 +20,45 @@
 
     <ImageButton
         android:id="@+id/exit"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="?attr/selectableItemBackground"
         android:src="@drawable/home2"
         app:layout_constraintBottom_toTopOf="@+id/txt1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/txt1"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/kai08mz"
         android:text="請在下列選擇出你現在的心情"
         android:textColor="#FFF"
-        android:textSize="40sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/exit" />
-
 
     <TextView
         android:id="@+id/txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/kai08mz"
         android:text="1是心情非常不快樂\n7是心情非常快樂"
         android:textColor="#FFF"
-        android:textSize="35sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.383">
+        app:layout_constraintVertical_bias="0.317">
 
 
         <TextView
@@ -87,7 +87,7 @@
             android:fontFamily="@font/kai08mz"
             android:text="7　非常快樂"
             android:textColor="#28FF28"
-            android:textSize="50sp" />
+            android:textSize="23sp" />
 
         <TextView
             android:id="@+id/t6"
@@ -97,7 +97,7 @@
             android:fontFamily="@font/kai08mz"
             android:text="6　興奮"
             android:textColor="#3D414E"
-            android:textSize="50sp" />
+            android:textSize="23sp" />
 
         <TextView
             android:id="@+id/t5"
@@ -107,7 +107,7 @@
             android:fontFamily="@font/kai08mz"
             android:text="5　開心"
             android:textColor="#3D414E"
-            android:textSize="50sp" />
+            android:textSize="23sp" />
 
         <TextView
             android:id="@+id/t4"
@@ -117,7 +117,7 @@
             android:fontFamily="@font/kai08mz"
             android:text="4　平靜"
             android:textColor="#3D414E"
-            android:textSize="50sp" />
+            android:textSize="23sp" />
 
         <TextView
             android:id="@+id/t3"
@@ -127,7 +127,7 @@
             android:fontFamily="@font/kai08mz"
             android:text="3　不高興"
             android:textColor="#3D414E"
-            android:textSize="50sp" />
+            android:textSize="23sp" />
 
         <TextView
             android:id="@+id/t2"
@@ -137,7 +137,7 @@
             android:fontFamily="@font/kai08mz"
             android:text="2　憤怒發脾氣"
             android:textColor="#3D414E"
-            android:textSize="50sp" />
+            android:textSize="23sp" />
 
         <TextView
             android:id="@+id/t1"
@@ -147,10 +147,10 @@
             android:fontFamily="@font/kai08mz"
             android:text="1　怒氣沖沖失去理智"
             android:textColor="#3D414E"
-            android:textSize="50sp" />
+            android:textSize="23sp" />
 
         <LinearLayout
-            android:layout_width="600dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
@@ -171,7 +171,7 @@
                 android:text="上一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 app:backgroundTint="@null" />
 
             <Button
@@ -186,7 +186,7 @@
                 android:text="下一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 app:backgroundTint="@null" />
 
         </LinearLayout>

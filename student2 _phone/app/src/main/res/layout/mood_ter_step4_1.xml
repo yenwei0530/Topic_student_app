@@ -9,7 +9,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="100dp"
         android:background="@drawable/bg_diaiy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,8 +21,8 @@
 
     <ImageButton
         android:id="@+id/exit"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="?attr/selectableItemBackground"
         android:src="@drawable/home2"
         app:layout_constraintBottom_toTopOf="@+id/txt1"
@@ -30,28 +30,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/txt1"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/kai08mz"
         android:text="觀察看看別人的外表"
         android:textColor="#FFF"
-        android:textSize="40sp"
+        android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/exit" />
 
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="220dp"
-        android:layout_height="190dp"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/reaction"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,8 +61,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="220dp"
-        android:layout_height="190dp"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/protection"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -74,8 +73,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="220dp"
-        android:layout_height="190dp"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/voice"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -91,13 +90,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@drawable/bg_white"
+        android:gravity="center"
         android:orientation="vertical"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.491">
+        app:layout_constraintVertical_bias="0.364">
 
 
         <TextView
@@ -109,11 +110,11 @@
             android:gravity="center"
             android:text="看看別人\n身體姿勢臉部表情\n語調、字詞"
             android:textColor="#3D414E"
-            android:textSize="55sp" />
+            android:textSize="27sp" />
 
 
         <LinearLayout
-            android:layout_width="600dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
@@ -134,7 +135,7 @@
                 android:text="上一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 app:backgroundTint="@null" />
 
             <Button
@@ -149,7 +150,7 @@
                 android:text="下一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 app:backgroundTint="@null" />
 
         </LinearLayout>

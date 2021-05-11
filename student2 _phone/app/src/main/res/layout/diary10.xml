@@ -10,7 +10,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
-        android:layout_height="260dp"
+        android:layout_height="150dp"
         android:background="@drawable/bg_diaiy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,8 +21,8 @@
 
     <ImageButton
         android:id="@+id/exit"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="?attr/selectableItemBackground"
         android:src="@drawable/home2"
         app:layout_constraintBottom_toTopOf="@+id/txt1"
@@ -36,15 +36,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/kai08mz"
         android:text="給自己的表現打分數吧!"
         android:textColor="#FFF"
-        android:textSize="45sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/exit" />
 
@@ -58,7 +58,7 @@
         android:fontFamily="@font/kai08mz"
         android:text="7是滿分喔!!!"
         android:textColor="#FFF"
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
             android:fontFamily="@font/kai08mz"
             android:text="1"
             android:textColor="#3D414E"
-            android:textSize="150sp" />
+            android:textSize="75sp" />
 
         <SeekBar
             android:layout_width="match_parent"
@@ -99,7 +99,7 @@
             android:background="@null" />
 
         <LinearLayout
-            android:layout_width="600dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
@@ -117,10 +117,10 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_bg2"
                 android:fontFamily="@font/kai08mz"
-                android:text="上一步"
+                android:text="上一頁"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 app:backgroundTint="@null" />
 
             <Button
@@ -132,13 +132,14 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_bg2"
                 android:fontFamily="@font/kai08mz"
-                android:text="下一步"
+                android:text="下一頁"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 app:backgroundTint="@null" />
 
         </LinearLayout>
+
 
     </LinearLayout>
 

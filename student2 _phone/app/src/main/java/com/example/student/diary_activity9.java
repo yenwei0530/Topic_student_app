@@ -73,7 +73,7 @@ public class diary_activity9 extends AppCompatActivity {
         animTxtAlpha.start();
 
         //TextView 掉落效果
-        ObjectAnimator animTxtFalling = ObjectAnimator.ofFloat(txt4, "y", 0, 430);
+        ObjectAnimator animTxtFalling = ObjectAnimator.ofFloat(txt4, "y", 0, 660);
         animTxtFalling.setDuration(3000);
         animTxtAlpha.setRepeatCount(1);
         animTxtFalling.setRepeatMode(ObjectAnimator.REVERSE);

@@ -9,7 +9,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:background="@drawable/bg_diaiy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,13 +20,12 @@
 
     <ImageButton
         android:id="@+id/exit"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="?attr/selectableItemBackground"
         android:src="@drawable/home2"
         app:layout_constraintBottom_toTopOf="@+id/txt1"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +42,7 @@
         android:gravity="center"
         android:text="從下列選項中選1個\n最符合你現在心情"
         android:textColor="#FFF"
-        android:textSize="40sp"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,17 +65,16 @@
 
         <LinearLayout
             android:id="@+id/L7"
-            android:layout_width="700dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
-
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/g7"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_gravity="left"
                 android:visibility="invisible"
                 android:src="@drawable/ic_baseline_favorite_24" />
@@ -90,8 +88,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
                     android:src="@drawable/laughing" />
 
@@ -101,7 +99,7 @@
 
         <LinearLayout
             android:id="@+id/L6"
-            android:layout_width="700dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -109,8 +107,8 @@
 
             <ImageView
                 android:id="@+id/g6"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_favorite_24"
                 android:visibility="invisible" />
@@ -124,8 +122,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
                     android:src="@drawable/smile" />
 
@@ -135,7 +133,7 @@
 
         <LinearLayout
             android:id="@+id/L5"
-            android:layout_width="700dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -143,8 +141,8 @@
 
             <ImageView
                 android:id="@+id/g5"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_favorite_24"
                 android:visibility="invisible"/>
@@ -158,8 +156,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
                     android:src="@drawable/happy" />
 
@@ -169,7 +167,7 @@
 
         <LinearLayout
             android:id="@+id/L4"
-            android:layout_width="700dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -177,8 +175,8 @@
 
             <ImageView
                 android:id="@+id/g4"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_favorite_24"
                 android:visibility="invisible"/>
@@ -192,8 +190,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
                     android:src="@drawable/confused" />
 
@@ -203,7 +201,7 @@
 
         <LinearLayout
             android:id="@+id/L3"
-            android:layout_width="700dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -211,8 +209,8 @@
 
             <ImageView
                 android:id="@+id/g3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_favorite_24"
                 android:visibility="invisible"/>
@@ -226,8 +224,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
                     android:src="@drawable/sad" />
 
@@ -237,7 +235,7 @@
 
         <LinearLayout
             android:id="@+id/L2"
-            android:layout_width="700dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -246,8 +244,8 @@
 
             <ImageView
                 android:id="@+id/g2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_favorite_24"
                 android:visibility="invisible"/>
@@ -260,8 +258,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
                     android:src="@drawable/angry" />
 
@@ -271,7 +269,7 @@
 
         <LinearLayout
             android:id="@+id/L1"
-            android:layout_width="700dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="24dp"
@@ -279,8 +277,8 @@
 
             <ImageView
                 android:id="@+id/g1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_gravity="left"
                 android:src="@drawable/ic_baseline_favorite_24"
                 android:visibility="invisible"/>
@@ -294,8 +292,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="center"
                     android:src="@drawable/angry2" />
 
@@ -304,7 +302,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="600dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
@@ -325,7 +323,7 @@
                 android:text="上一步"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 app:backgroundTint="@null" />
 
             <Button
@@ -340,7 +338,7 @@
                 android:text="完成"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 app:backgroundTint="@null" />
 
         </LinearLayout>
