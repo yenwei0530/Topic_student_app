@@ -64,6 +64,7 @@ public class student_information_activity extends AppCompatActivity {
                 new DatePickerDialog(student_information_activity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        month=month+1;
                         txt_day.setText(year+"-"+month+"-"+dayOfMonth);
                         txt_day.setVisibility(View.VISIBLE);
                     }
