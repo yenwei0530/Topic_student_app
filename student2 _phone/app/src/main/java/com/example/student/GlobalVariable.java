@@ -4,19 +4,19 @@ import android.app.Application;
 import android.text.Editable;
 
 public class GlobalVariable extends Application {
-    private int user;     //帳號
+    private String user;     //帳號
     private String password;  //密碼
     private String sex;  //性別
-    private String scale1;  //心情量表Q1
-    private String scale2;  //心情量表Q2
-    private String scale3;  //心情量表Q3
-    private String scale4;  //心情量表Q4
-    private String scale5;  //心情量表Q5
-    private String scale6;  //心情量表Q6
-    private String scale7;  //心情量表Q7
-    private String scale8;  //心情量表Q8
-    private String scale9;  //心情量表Q9
-    private String scale10;  //心情量表Q10
+    private String scale1;  //社會適應表Q1
+    private String scale2;  //社會適應表Q2
+    private String scale3;  //社會適應表Q3
+    private String scale4;  //社會適應表Q4
+    private String scale5;  //社會適應表Q5
+    private String scale6;  //社會適應表Q6
+    private String scale7;  //社會適應表Q7
+    private String scale8;  //社會適應表Q8
+    private String scale9;  //社會適應表Q9
+    private String scale10;  //社會適應表Q10
     private String diary1="非常快樂";  //心情日記Q1
     private String diary2="晴天";  //心情日記Q2
     private String diary3="自己";  //心情日記Q3
@@ -39,7 +39,7 @@ public class GlobalVariable extends Application {
 
 
     //修改 變數値
-    public void setuser(int user) {
+    public void setuser(String user) {
         this.user = user;
     }
 
@@ -168,7 +168,7 @@ public class GlobalVariable extends Application {
     }
 
     //取得 變數值
-    public int getuser() {
+    public String getuser() {
         return user;
     }
 

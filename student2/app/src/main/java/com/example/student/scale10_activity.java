@@ -1,7 +1,9 @@
 package com.example.student;
 
 import android.content.Intent;
+import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -68,7 +70,18 @@ public class scale10_activity extends AppCompatActivity {
             public void onClick(View v) {
                 //將答案存入全域變數
                 gv.setscale10(t1.getText().toString());
+                SimpleDateFormat sDateFormat = null;
 
+
+
+                new Thread(new Runnable(){
+                    @Override
+                    public void run(){
+                        MysqlCon con = new MysqlCon();
+                        con.insertscale(gv.getuser(),gv.getscale1(),gv.getscale2(),gv.getscale3(),gv.getscale4(),gv.getscale5(),gv.getscale6(),gv.getscale7(),gv.getscale8(),gv.getscale9(),gv.getscale10());
+                    }
+                }).start();
+                Log.v("OK",gv.getscale1());
                 //跳至下一頁面
                 Intent intent =new Intent(scale10_activity.this, main_activity.class);
                 startActivity(intent);

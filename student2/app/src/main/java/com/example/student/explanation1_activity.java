@@ -1,15 +1,11 @@
 package com.example.student;
 
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -42,8 +38,8 @@ public class explanation1_activity extends AppCompatActivity {
         //宣告SeekBar物件
         seek_bar=findViewById(R.id.seek_bar);
 
-        atg= AnimationUtils.loadAnimation(this,R.anim.atg);
-        packageimg= AnimationUtils.loadAnimation(this,R.anim.packageimg);
+        atg= AnimationUtils.loadAnimation(this, R.anim.atg);
+        packageimg= AnimationUtils.loadAnimation(this, R.anim.packageimg);
 
 
         seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {

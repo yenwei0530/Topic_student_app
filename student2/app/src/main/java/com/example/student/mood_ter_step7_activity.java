@@ -21,6 +21,19 @@ public class mood_ter_step7_activity extends AppCompatActivity {
         CardView card2=findViewById(R.id.card2);
         CardView card3=findViewById(R.id.card3);
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
+
+        //寫入資料
+        new Thread(new Runnable(){
+            @Override
+            public void run(){
+                MysqlCon con = new MysqlCon();
+                con.insertthermometer(gv.getuser(),gv.getter1_1(),gv.getter1_2(),gv.getter1_3(),gv.getter1_4(),gv.getter3_1(),gv.getter6_1());
+            }
+        }).start();
+
 
         //拼圖遊戲觸發事件
         card1.setOnClickListener(new View.OnClickListener() {

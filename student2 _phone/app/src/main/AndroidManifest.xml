@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.student">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".GlobalVariable"
         android:allowBackup="true"
@@ -11,7 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Student">
 
-        <activity android:name=".main_activity"/>
+        <activity android:name=".start_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".main_activity" />
         <activity android:name=".scale0_activity" />
         <activity android:name=".scale1_activity" />
         <activity android:name=".scale2_activity" />
@@ -34,13 +44,7 @@
         <activity android:name=".diary_activity9" />
         <activity android:name=".diary_activity10" />
         <activity android:name=".diary_activity11" />
-        <activity android:name=".logine_activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".logine_activity"></activity>
         <activity android:name=".mood_game_activity" />
         <activity android:name=".mood_ter_step1_activity" />
         <activity android:name=".mood_ter_step1_1_activity" />
@@ -73,10 +77,8 @@
         <activity android:name=".explanation1_activity" />
         <activity android:name=".video_activity" />
         <activity android:name=".student_information_activity" />
-        <activity android:name=".puzzle_game"/>
-        <activity android:name=".puzzle_start_activity"/>
-
-
+        <activity android:name=".puzzle_game" />
+        <activity android:name=".puzzle_start_activity" />
     </application>
 
 </manifest>
