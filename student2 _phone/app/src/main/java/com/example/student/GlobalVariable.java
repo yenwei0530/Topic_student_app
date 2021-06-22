@@ -27,7 +27,7 @@ public class GlobalVariable extends Application {
     private String diary8;  //心情日記Q8
     private String diary9_start;  //心情日記Q9開始時間
     private String diary9_end;  //心情日記Q9結束時間
-    private int diary10;  //心情日記Q10結束時間
+    private int diary10;  //心情日記Q10
     private String ter1_1="7非常快樂";  //心情溫度計sp1_1
     private String ter1_2="非常快樂";  //心情溫度計sp1_2
     private String ter1_3="呼吸變急";  //心情溫度計sp1_3

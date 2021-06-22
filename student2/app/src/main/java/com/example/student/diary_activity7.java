@@ -1,8 +1,10 @@
 package com.example.student;
 
 import android.animation.ObjectAnimator;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.BounceInterpolator;
@@ -120,9 +122,33 @@ public class diary_activity7 extends AppCompatActivity {
             public void onClick(View v) {
                 //將內容存入全域變數
                 gv.setdiary7(edt1.getText().toString());
-                //跳至下一頁面
-                Intent intent =new Intent(diary_activity7.this, diary_activity8.class);
-                startActivity(intent);
+
+                if(edt1.getText().toString().matches("")){
+                    //實體化layout
+                    LayoutInflater inflater=getLayoutInflater();
+                    final View textEntryView = inflater.inflate(R.layout.custom_dialog3, null);
+
+                    //用setView把layout放進去
+                    AlertDialog.Builder builder = new AlertDialog.Builder(diary_activity7.this);
+                    builder.setView(textEntryView);
+
+                    //創建一個Dialog
+                    AlertDialog alert = builder.create();
+
+                    //layout中Button結束事件
+                    Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+                    finsh.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            alert.cancel();
+                        }
+                    });
+                    alert.show();
+                }else {
+                    //跳至下一頁面
+                    Intent intent = new Intent(diary_activity7.this, diary_activity8.class);
+                    startActivity(intent);
+                }
             }
         });
 

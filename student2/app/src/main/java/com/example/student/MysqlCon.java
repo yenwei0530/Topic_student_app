@@ -155,6 +155,30 @@ public class MysqlCon {
             Log.e("DB", e.toString());
         }
     }
+    //寫入心情日記
+    public void insertdiary(String id, String diary1, String diary2, String diary3, String diary4, String diary5, String diary6, String diary7, String diary8, String diary9_start, String diary9_end, int diary10) {
+        try {
+            SimpleDateFormat sDateFormat = null;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                sDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            }
+            String date = null;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                date = sDateFormat.format(new java.util.Date());
+            }
+
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "INSERT INTO `diary`(`student_id`, `mood`, `weather`, `person`, `time`, `content`, `content2`, `content3`, `content4`, `write_time_start`, `write_time_end`, `fraction`, `write_diary_time`) VALUES ('" + id + "','" + diary1 + "','" + diary2 + "','" + diary3 + "','" + diary4 + "','" + diary5 + "','" + diary6 + "','" +  diary7 + "','" + diary8 + "','" + diary9_start + "','" + diary9_end +"','" + diary10 + "','" + date +"')";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+            st.close();
+            Log.v("DB", "寫入資料完成：" + sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Log.e("DB", "寫入資料失敗");
+            Log.e("DB", e.toString());
+        }
+    }
 
 
 
