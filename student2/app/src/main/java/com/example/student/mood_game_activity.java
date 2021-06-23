@@ -4,13 +4,16 @@ package com.example.student;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -56,6 +59,7 @@ public class mood_game_activity extends Activity
     public String[] moving;
     public String[] hate;
     public ArrayList<Integer> have_seen;
+    private static Chronometer chronometer;
 
     private static Handler handler;
     private static Runnable runner;
@@ -64,6 +68,9 @@ public class mood_game_activity extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mood_game);
+        chronometer =findViewById(R.id.chronometer);
+        chronometer.start();
+
         Random rnd = new Random();
         mode = rnd.nextInt(6);
         happy = new String[] {"game_ecstasy","game_happy","game_glad","game_jolly","game_pleasant","game_surprise","game_tension","game_panic","game_fear","game_confound","game_guilt","game_hate"};
@@ -585,6 +592,8 @@ public class mood_game_activity extends Activity
                 show_score.setText("總分 : " + Integer.toString(total_score));
                 textView.setVisibility(View.VISIBLE);
                 if(total_score == 6){
+                    //停止計時
+                    chronometer.stop();
 
                     //實體化layout
                     LayoutInflater inflater=this.getLayoutInflater();
@@ -596,12 +605,26 @@ public class mood_game_activity extends Activity
 
                     //創建一個Dialog
                     AlertDialog alert = builder.create();
+                    //建立共用變數類別
+                    GlobalVariable gv = (GlobalVariable)getApplicationContext();
+                    //時間計算
+                    int temp0 = Integer. parseInt (chronometer.getText().toString().split( ":" )[ 0 ]);
+                    int temp1 =Integer. parseInt (chronometer.getText().toString().split( ":" )[ 1 ]);
+                    int temp=temp0* 60 +temp1;
 
                     //layout中Button結束事件
                     Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            //寫入資料
+                            new Thread(new Runnable(){
+                                @Override
+                                public void run(){
+                                    MysqlCon con = new MysqlCon();
+                                    con.insertgame(gv.getuser(),"2",String.valueOf(temp));
+                                }
+                            }).start();
                             finish();
                         }
                     });
@@ -611,6 +634,16 @@ public class mood_game_activity extends Activity
                     ag.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            //寫入資料
+                            new Thread(new Runnable(){
+                                @Override
+                                public void run(){
+                                    MysqlCon con = new MysqlCon();
+                                    con.insertgame(gv.getuser(),"2",String.valueOf(temp));
+                                }
+                            }).start();
+                            chronometer.setBase(SystemClock.elapsedRealtime());
+                            chronometer.start();
                             mode = (mode + 1) % 6;
                             init_game(mode);
                             alert.cancel();
@@ -649,7 +682,7 @@ public class mood_game_activity extends Activity
         if (ResourceID == 0)
         {
 
-           throw new IllegalArgumentException("No resource string found with name " + resName);
+            throw new IllegalArgumentException("No resource string found with name " + resName);
         }
         else
         {

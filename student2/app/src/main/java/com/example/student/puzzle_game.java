@@ -3,6 +3,7 @@ package com.example.student;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -42,10 +43,14 @@ public class puzzle_game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.puzzle_game);
         getSupportActionBar().hide();//關閉標題列
+
+
+
         activity = this;
         //碼表
         chronometer =findViewById(R.id.chronometer);
         chronometer.start();
+
 
         Button exit  =findViewById(R.id.btn_exit);
 
@@ -383,11 +388,26 @@ public class puzzle_game extends AppCompatActivity {
             //創建一個Dialog
             AlertDialog alert = builder.create();
 
+            //建立共用變數類別
+            GlobalVariable gv = (GlobalVariable)context.getApplicationContext();
+            //時間計算
+            int temp0 = Integer. parseInt ( chronometer.getText().toString().split( ":" )[ 0 ]);
+            int temp1 =Integer. parseInt ( chronometer.getText().toString().split( ":" )[ 1 ]);
+            int temp=temp0* 60 +temp1;
+
             //layout中Button結束事件
             Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
             finsh.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    //寫入資料
+                    new Thread(new Runnable(){
+                        @Override
+                        public void run(){
+                            MysqlCon con = new MysqlCon();
+                            con.insertgame(gv.getuser(),"1",String.valueOf(temp));
+                        }
+                    }).start();
                     puzzle_game.activity.finish();
                 }
             });
@@ -397,6 +417,14 @@ public class puzzle_game extends AppCompatActivity {
             ag.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    //寫入資料
+                    new Thread(new Runnable(){
+                        @Override
+                        public void run(){
+                            MysqlCon con = new MysqlCon();
+                            con.insertgame(gv.getuser(),"1",String.valueOf(temp));
+                        }
+                    }).start();
                     Intent intent = new Intent(context,puzzle_game.class);
                     puzzle_game.activity.finish();
                     activity.startActivity(intent);

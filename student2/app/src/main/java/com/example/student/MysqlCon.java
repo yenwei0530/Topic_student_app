@@ -179,6 +179,30 @@ public class MysqlCon {
             Log.e("DB", e.toString());
         }
     }
+    //寫入遊戲
+    public void insertgame(String id, String game, String play_time) {
+        try {
+            SimpleDateFormat sDateFormat = null;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                sDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            }
+            String date = null;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                date = sDateFormat.format(new java.util.Date());
+            }
+
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "INSERT INTO `play_history`( `student_id`, `game`, `play_date`, `play_time`) VALUES ('" + id + "','" + game + "','" + date + "','" + play_time  +"')";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+            st.close();
+            Log.v("DB", "寫入資料完成：" + sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Log.e("DB", "寫入資料失敗");
+            Log.e("DB", e.toString());
+        }
+    }
 
 
 
