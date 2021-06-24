@@ -26,6 +26,9 @@ public class video_activity extends AppCompatActivity {
         setContentView(R.layout.video);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告Button物件
         Button up =findViewById(R.id.up);
         Button exit2 =findViewById(R.id.exit2);
@@ -77,6 +80,15 @@ public class video_activity extends AppCompatActivity {
         up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //寫入資料
+                new Thread(new Runnable(){
+                    @Override
+                    public void run(){
+                        MysqlCon con = new MysqlCon();
+                        con.insertvideo(gv.getuser(),edt1.getText().toString());
+                    }
+                }).start();
+
                 Context context = getApplicationContext();
                 CharSequence text = "上傳完成!";
                 int duration = Toast.LENGTH_SHORT;
