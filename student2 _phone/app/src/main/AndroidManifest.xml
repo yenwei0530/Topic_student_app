@@ -12,7 +12,7 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.Student">
-
+        <activity android:name=".video_select_activity"></activity>
         <activity android:name=".start_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".main_activity" />
         <activity android:name=".scale0_activity" />
         <activity android:name=".scale1_activity" />
@@ -44,7 +43,7 @@
         <activity android:name=".diary_activity9" />
         <activity android:name=".diary_activity10" />
         <activity android:name=".diary_activity11" />
-        <activity android:name=".logine_activity"></activity>
+        <activity android:name=".logine_activity" />
         <activity android:name=".mood_game_activity" />
         <activity android:name=".mood_ter_step1_activity" />
         <activity android:name=".mood_ter_step1_1_activity" />

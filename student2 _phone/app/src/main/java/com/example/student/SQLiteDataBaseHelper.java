@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -32,10 +33,21 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
                 "mom_year varchar(11)," +
                 "father_year varchar(11)," +
                 "birthday date," +
-                "sex varchar(5)" +
+                "sex varchar(5)," +
+                "adaptation_scale varchar(2)," +
+                "MAX_DATE date" +
+                ");";
+
+        String SQLTable2 = "CREATE TABLE IF NOT EXISTS video  ( " +
+                "video_id varchar(11)  PRIMARY KEY , " +
+                "student_id varchar(20), " +
+                "video text," +
+                "video_url text" +
                 ");";
 
         db.execSQL(SQLTable);
+
+        db.execSQL(SQLTable2);
     }
 
     @Override
@@ -45,7 +57,7 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
     }
 
     //新增資料
-    public void addData(String student_id, String password, String student_name, String student_year,String student_class,String mom_year,String father_year,String birthday,String sex) {
+    public void addData(String student_id, String password, String student_name, String student_year,String student_class,String mom_year,String father_year,String birthday,String sex,String adaptation_scale,String MAX_DATE) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("student_id", student_id);
@@ -57,12 +69,35 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
         values.put("father_year", father_year);
         values.put("birthday", birthday);
         values.put("sex", sex);
+        values.put("adaptation_scale", adaptation_scale);
+        values.put("MAX_DATE", MAX_DATE);
         db.insert("student", null, values);
+    }
+    //新增影片
+    public void addvideo(String video_id, String student_id, String video, String video_url) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("video_id", video_id);
+        values.put("student_id", student_id);
+        values.put("video", video);
+        values.put("video_url", video_url);
+        db.insert("video", null, values);
     }
     //刪除student
     public void deletestudent(){
         SQLiteDatabase db = getWritableDatabase();
         db.delete("student","1" ,null);
+    }
+    //刪除video
+    public void deletevideo(){
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete("video","1" ,null);
+    }
+
+    //以videoid刪除資料(簡單)
+    public void deletevideoid(String id){
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(TableName,"video_id = " + id,null);
     }
 
     //判斷student帳號密碼
@@ -71,15 +106,70 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
         Cursor c = db.rawQuery(" SELECT * FROM  student"
                 + " WHERE student_id =" + "'" + student_id + "'"
                 + " AND password =" + "'" + password + "'", null);
-        String count = " SELECT * FROM  student"
-                + " WHERE student_id =" + "'" + student_id + "'"
-                + " AND password =" + "'" + password + "'";
+        String count = "";
         if (c.moveToNext()) {
             count = "T";
         }else{
             count = "F";
         }
         return count;
+    }
+
+    //取得student
+    public ArrayList<HashMap<String, String>> student(String student_id) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery(" SELECT * FROM  student"
+                + " WHERE student_id =" + "'" + student_id + "'", null);
+        ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
+        while (c.moveToNext()) {
+            HashMap<String, String> hashMap = new HashMap<>();
+
+            String id = c.getString(0);
+            String password = c.getString(1);
+            String name = c.getString(2);
+            String sex = c.getString(8);
+            String adaptation_scale = c.getString(9);
+            String MAX_DATE = c.getString(10);
+
+            hashMap.put("id", id);
+            hashMap.put("name", name);
+            hashMap.put("password", password);
+            hashMap.put("sex", sex);
+            hashMap.put("adaptation_scale", adaptation_scale);
+            hashMap.put("MAX_DATE", MAX_DATE);
+
+            arrayList.add(hashMap);
+        }
+        return arrayList;
+    }
+    //取得video
+    public ArrayList<HashMap<String, String>> video(String student_id) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery(" SELECT * FROM  video"
+                + " WHERE student_id =" + "'" + student_id + "'", null);
+        ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
+        while (c.moveToNext()) {
+            HashMap<String, String> hashMap = new HashMap<>();
+
+            String video_id = c.getString(0);
+            String video = c.getString(2);
+            String video_url = c.getString(3);
+
+            hashMap.put("video_id", video_id);
+            hashMap.put("video", video);
+            hashMap.put("video_url", video_url);
+
+            arrayList.add(hashMap);
+        }
+        return arrayList;
+    }
+
+    //修改社會適應量表時間(簡單)
+    public void updatescale(String id, String MAX_DATE) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MAX_DATE", MAX_DATE);
+        db.update(TableName, values, "student_id = " + id, null);
     }
 
 
@@ -144,11 +234,6 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
     }
 
 
-    //以id刪除資料(簡單)
-    public void deleteByIdEZ(String id){
-        SQLiteDatabase db = getWritableDatabase();
-        db.delete(TableName,"_id = " + id,null);
-    }
 
     //檢查資料表狀態，若無指定資料表則新增
     public void chickTable(){

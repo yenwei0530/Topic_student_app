@@ -4,6 +4,7 @@ import android.app.Application;
 import android.text.Editable;
 
 public class GlobalVariable extends Application {
+    private String name;     //帳號
     private String user;     //帳號
     private String password;  //密碼
     private String sex;  //性別
@@ -36,9 +37,14 @@ public class GlobalVariable extends Application {
     private String ter6_1="7非常快樂";  //心情溫度計sp6_1
     private String exit_ter1_1="7非常快樂";  //離開_心情溫度計sp1_1
     private String exit_ter1_2="非常快樂";  //離開_心情溫度計sp1_2
+    private String abc="T";     //帳號
 
 
     //修改 變數値
+    public void setname(String name) {
+        this.name = name;
+    }
+
     public void setuser(String user) {
         this.user = user;
     }
@@ -167,10 +173,14 @@ public class GlobalVariable extends Application {
         this.exit_ter1_2 = exit_ter1_2;
     }
 
-    //取得 變數值
-    public String getuser() {
-        return user;
+    public void setabc(String abc) {
+        this.abc = abc;
     }
+
+    //取得 變數值
+    public String getname() { return name;  }
+
+    public String getuser() { return user;  }
 
     public String getpassword() {
         return password;
@@ -294,6 +304,10 @@ public class GlobalVariable extends Application {
 
     public String getsex() {
         return sex;
+    }
+
+    public String getabc() {
+        return abc;
     }
 
 

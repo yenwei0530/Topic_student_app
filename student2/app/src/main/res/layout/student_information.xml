@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/graylight"
+    android:background="#FFE66F"
     android:orientation="vertical">
     
     <RelativeLayout
@@ -25,6 +25,7 @@
                 android:src="@drawable/student" />
 
             <TextView
+                android:id="@+id/name2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -38,8 +39,8 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_marginRight="40dp"
-            android:layout_height="100dp"
+            android:layout_marginRight="120dp"
+            android:layout_height="150dp"
             android:layout_marginTop="380dp"
             android:layout_centerHorizontal="true">
 
@@ -47,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:weightSum="3">
+                android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -58,12 +59,13 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/t1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/kai08mz"
-                        android:text="上次心情指數"
+                        android:text="上次心情"
                         android:textColor="#6f6f6f"
-                        android:textSize="25sp"
+                        android:textSize="35sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -72,7 +74,7 @@
                         android:layout_marginTop="10dp"
                         android:text="7"
                         android:textColor="@color/startblue"
-                        android:textSize="20sp"
+                        android:textSize="40sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -90,7 +92,7 @@
                         android:text="目前心情指數"
                         android:fontFamily="@font/kai08mz"
                         android:textColor="#6f6f6f"
-                        android:textSize="25sp"
+                        android:textSize="35sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -99,11 +101,11 @@
                         android:layout_marginTop="10dp"
                         android:text="1"
                         android:textColor="@color/startblue"
-                        android:textSize="20sp"
+                        android:textSize="40sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <LinearLayout
+                <!--<LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -129,7 +131,7 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                </LinearLayout>
+                </LinearLayout>-->
 
             </LinearLayout>
 
@@ -138,10 +140,11 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="550dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp">
+        android:background="#FFFFFF"
+        android:layout_marginTop="40dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -153,65 +156,67 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingLeft="25dp">
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
                     android:layout_gravity="center"
-                    android:text="學號："
                     android:fontFamily="@font/kai08mz"
+                    android:paddingTop="10dp"
+                    android:text="學號："
                     android:textColor="#6f6f6f"
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
-                <EditText
+                <TextView
+                    android:id="@+id/id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingLeft="20dp"
                     android:text="123"
-                    android:textSize="35sp"
-                    android:textColor="#6f6f6f" />
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="10dp"
-                android:paddingLeft="25dp">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:fontFamily="@font/kai08mz"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/kai08mz"
+                    android:paddingTop="10dp"
                     android:text="密碼："
                     android:textColor="#6f6f6f"
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
-                <EditText
+                <TextView
+                    android:id="@+id/password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingLeft="20dp"
-                    android:textSize="35sp"
                     android:text="123"
-                    android:textColor="#6f6f6f" />
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="10dp"
-                android:paddingLeft="25dp">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -223,53 +228,86 @@
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
-                <EditText
+                <TextView
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/kai08mz"
                     android:layout_gravity="center"
                     android:paddingLeft="20dp"
                     android:text="123"
-                    android:textSize="35sp"
-                    android:textColor="#6f6f6f" />
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="10dp"
-                android:paddingLeft="25dp">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/kai08mz"
                     android:paddingTop="10dp"
                     android:text="性別："
-                    android:fontFamily="@font/kai08mz"
-                    android:layout_gravity="center"
                     android:textColor="#6f6f6f"
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
-                <Spinner
-                    android:id="@+id/spinner0"
-                    android:spinnerMode="dialog"
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textColor="#3D414E"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:paddingLeft="20dp"
+                    android:text="123"
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/kai08mz"
+                    android:paddingTop="10dp"
+                    android:text="注音輔助："
+                    android:textColor="#6f6f6f"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/switch_Below"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:showText="true"
+                    android:textOff="關閉"
+                    android:textOn="打開"
+                    android:thumb="@drawable/ex2_switch_thumb"
+                    android:track="@drawable/ex2_switch_track" />
+
+            </LinearLayout>
+
+
+            <!--<LinearLayout
                 android:layout_width="600dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
-                android:paddingLeft="25dp">
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -297,167 +335,166 @@
                     android:textSize="35sp" />
 
 
-            </LinearLayout>
+            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="25dp">
+            <!--<LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="10dp"
+               android:paddingLeft="25dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:text="爸爸學歷："
-                    android:layout_gravity="center"
-                    android:textColor="#6f6f6f"
-                    android:fontFamily="@font/kai08mz"
-                    android:textSize="35sp"
-                    android:textStyle="bold" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:text="爸爸學歷："
+                   android:layout_gravity="center"
+                   android:textColor="#6f6f6f"
+                   android:fontFamily="@font/kai08mz"
+                   android:textSize="35sp"
+                   android:textStyle="bold" />
 
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:spinnerMode="dialog"
-                    android:layout_gravity="center"
-                    android:textColor="#3D414E"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+               <Spinner
+                   android:id="@+id/spinner"
+                   android:spinnerMode="dialog"
+                   android:layout_gravity="center"
+                   android:textColor="#3D414E"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
 
-            </LinearLayout>
+           </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="25dp">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="10dp"
+               android:paddingLeft="25dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:text="爸爸年齡："
-                    android:layout_gravity="center"
-                    android:textColor="#6f6f6f"
-                    android:textSize="35sp"
-                    android:fontFamily="@font/kai08mz"
-                    android:textStyle="bold" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:text="爸爸年齡："
+                   android:layout_gravity="center"
+                   android:textColor="#6f6f6f"
+                   android:textSize="35sp"
+                   android:fontFamily="@font/kai08mz"
+                   android:textStyle="bold" />
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="20dp"
-                    android:textSize="35sp"
-                    android:text="123"
-                    android:textColor="#6f6f6f" />
+               <EditText
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:paddingLeft="20dp"
+                   android:textSize="35sp"
+                   android:text="123"
+                   android:textColor="#6f6f6f" />
 
-            </LinearLayout>
+           </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="25dp">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="10dp"
+               android:paddingLeft="25dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:text="媽媽學歷："
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/kai08mz"
-                    android:textColor="#6f6f6f"
-                    android:textSize="35sp"
-                    android:textStyle="bold" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:text="媽媽學歷："
+                   android:layout_gravity="center"
+                   android:fontFamily="@font/kai08mz"
+                   android:textColor="#6f6f6f"
+                   android:textSize="35sp"
+                   android:textStyle="bold" />
 
-                <Spinner
-                    android:id="@+id/spinner2"
-                    android:spinnerMode="dialog"
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:textColor="#3D414E"
-                    android:layout_height="wrap_content" />
+               <Spinner
+                   android:id="@+id/spinner2"
+                   android:spinnerMode="dialog"
+                   android:layout_gravity="center"
+                   android:layout_width="match_parent"
+                   android:textColor="#3D414E"
+                   android:layout_height="wrap_content" />
 
-            </LinearLayout>
+           </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="25dp">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="10dp"
+               android:paddingLeft="25dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:text="媽媽年齡："
-                    android:layout_gravity="center"
-                    android:textColor="#6f6f6f"
-                    android:fontFamily="@font/kai08mz"
-                    android:textSize="35sp"
-                    android:textStyle="bold" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:text="媽媽年齡："
+                   android:layout_gravity="center"
+                   android:textColor="#6f6f6f"
+                   android:fontFamily="@font/kai08mz"
+                   android:textSize="35sp"
+                   android:textStyle="bold" />
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="20dp"
-                    android:text="123"
-                    android:textSize="35sp"
-                    android:textColor="#6f6f6f" />
+               <EditText
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:paddingLeft="20dp"
+                   android:text="123"
+                   android:textSize="35sp"
+                   android:textColor="#6f6f6f" />
 
-            </LinearLayout>
+           </LinearLayout>-->
 
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="650dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/t1">
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_marginTop="30dp"
+       android:gravity="center_vertical"
+       android:orientation="horizontal"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/t1">
 
-        <Button
-            android:id="@+id/exit"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            android:background="@drawable/btn_bg2"
-            android:fontFamily="@font/kai08mz"
-            android:text="我要回主頁"
-            android:textAllCaps="false"
-            android:textColor="#FFF"
-            android:textSize="35sp"
-            app:backgroundTint="@null" />
+       <Button
+           android:id="@+id/exit"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:background="@drawable/btn_bg2"
+           android:fontFamily="@font/kai08mz"
+           android:text="回主頁"
+           android:textAllCaps="false"
+           android:textColor="#FFF"
+           android:textSize="35sp"
+           app:backgroundTint="@null" />
 
-        <Button
-            android:id="@+id/save"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="14dp"
-            android:layout_weight="1"
-            android:background="@drawable/btn_bg2"
-            android:fontFamily="@font/kai08mz"
-            android:text="儲存"
-            android:textAllCaps="false"
-            android:textColor="#FFF"
-            android:textSize="35sp"
-            app:backgroundTint="@null" />
+       <!--<Button
+           android:id="@+id/save"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginLeft="14dp"
+           android:layout_weight="1"
+           android:background="@drawable/btn_bg2"
+           android:fontFamily="@font/kai08mz"
+           android:text="儲存"
+           android:textAllCaps="false"
+           android:textColor="#FFF"
+           android:textSize="35sp"
+           app:backgroundTint="@null" />-->
 
-    </LinearLayout>
+   </LinearLayout>
 
 
 

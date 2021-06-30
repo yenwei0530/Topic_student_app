@@ -2,6 +2,7 @@ package com.example.student;
 
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,15 +10,21 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class scale10_activity extends AppCompatActivity {
+    private final String DB_NAME = "treatment.db";
+    private String TABLE_NAME = "student";
+    private final int DB_VERSION = 1;
+    SQLiteDataBaseHelper mDBHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scale10);
         getSupportActionBar().hide();//關閉標題列
+        mDBHelper = new SQLiteDataBaseHelper(this, DB_NAME, null, DB_VERSION, TABLE_NAME);//初始化資料庫
 
         //建立共用變數類別
         GlobalVariable gv = (GlobalVariable)getApplicationContext();
@@ -66,6 +73,7 @@ public class scale10_activity extends AppCompatActivity {
         });
 
         nextpage.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
                 //將答案存入全域變數
@@ -79,6 +87,13 @@ public class scale10_activity extends AppCompatActivity {
                         con.insertscale(gv.getuser(),gv.getscale1(),gv.getscale2(),gv.getscale3(),gv.getscale4(),gv.getscale5(),gv.getscale6(),gv.getscale7(),gv.getscale8(),gv.getscale9(),gv.getscale10());
                     }
                 }).start();
+
+                //定義好時間字串的格式
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                //系統時間
+                String date = sdf.format(new java.util.Date());
+                //修改社會適應量表時間
+                mDBHelper.updatescale(gv.getuser(),date);
 
                 //跳至下一頁面
                 Intent intent =new Intent(scale10_activity.this, main_activity.class);

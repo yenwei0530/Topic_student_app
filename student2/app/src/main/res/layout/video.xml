@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     android:background="#FFE66F">
 
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="invisible"/>
+
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -46,6 +58,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/exit" />
 
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="8dp"
+        android:width="500dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/kai08mz"
+        android:singleLine="true"
+        android:text="影片名稱"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/exit" />
 
     <EditText
         android:id="@+id/edt1"

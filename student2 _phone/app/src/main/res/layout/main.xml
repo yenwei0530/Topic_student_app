@@ -24,10 +24,10 @@
                 android:text="我的名字"
                 android:fontFamily="@font/kai08mz"
                 android:textColor="#000"
-                android:textSize="30sp"
+                android:textSize="40sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <!--<TextView
                 android:layout_marginTop="6dp"
                 android:layout_below="@id/text_name"
                 android:text="累積點數:12"
@@ -37,7 +37,7 @@
                 android:textColor="#000"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"/>-->
 
             <ImageView
                 android:id="@+id/exit"
@@ -80,6 +80,7 @@
                        android:src="@drawable/thermometer" />
 
                    <TextView
+                       android:id="@+id/t1"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_marginTop="12dp"
@@ -116,6 +117,7 @@
                         android:src="@drawable/diary" />
 
                     <TextView
+                        android:id="@+id/t2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -152,6 +154,7 @@
                         android:src="@drawable/jigsaw" />
 
                     <TextView
+                        android:id="@+id/t3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -188,6 +191,7 @@
                         android:src="@drawable/mood" />
 
                     <TextView
+                        android:id="@+id/t4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -224,6 +228,7 @@
                         android:src="@drawable/play" />
 
                     <TextView
+                        android:id="@+id/t5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -260,6 +265,7 @@
                         android:src="@drawable/cabinet" />
 
                     <TextView
+                        android:id="@+id/t6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -296,6 +302,7 @@
                         android:src="@drawable/user" />
 
                     <TextView
+                        android:id="@+id/t7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -332,6 +339,7 @@
                         android:src="@drawable/file" />
 
                     <TextView
+                        android:id="@+id/t8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"

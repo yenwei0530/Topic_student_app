@@ -32,8 +32,8 @@ public class logine_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         getSupportActionBar().hide();//關閉標題列
-
         mDBHelper = new SQLiteDataBaseHelper(this, DB_NAME, null, DB_VERSION, TABLE_NAME);//初始化資料庫
+
 
         //刪除student
         //mDBHelper.deletestudent();
@@ -72,8 +72,18 @@ public class logine_activity extends AppCompatActivity {
                 if( mDBHelper.checkstudent(UserId.getText().toString(),Password.getText().toString())=="T"){
                     gv.setuser(UserId.getText().toString());
                     gv.setpassword(Password.getText().toString());
-                    Intent intent =new Intent(logine_activity.this,scale0_activity.class);
-                    startActivity(intent);
+                    arrayList = mDBHelper.student(UserId.getText().toString());
+                    gv.setname(arrayList.get(0).get("name"));
+                    gv.setsex(arrayList.get(0).get("sex"));
+                    //判斷是否填寫過第一次社會適應量表
+                    if(arrayList.get(0).get("MAX_DATE") == null || arrayList.get(0).get("MAX_DATE").equals("")){
+                        Intent intent =new Intent(logine_activity.this,scale0_activity.class);
+                        startActivity(intent);
+                    }else{
+                        Intent intent =new Intent(logine_activity.this,main_activity.class);
+                        startActivity(intent);
+                    }
+
                 }else {
                     Toast.makeText(logine_activity.this, "帳號密碼錯誤!!!", Toast.LENGTH_LONG).show();
                 }

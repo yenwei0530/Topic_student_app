@@ -76,6 +76,7 @@
         <activity android:name=".exit_mood_ter_step1_2_activity" />
         <activity android:name=".explanation1_activity" />
         <activity android:name=".video_activity" />
+        <activity android:name=".video_select_activity" />
         <activity android:name=".student_information_activity" />
         <activity android:name=".puzzle_game" />
         <activity android:name=".puzzle_start_activity" />

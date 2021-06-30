@@ -1,12 +1,13 @@
 package com.example.student;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
+import android.widget.TextView;
 
 public class main_activity extends AppCompatActivity {
 
@@ -19,7 +20,14 @@ public class main_activity extends AppCompatActivity {
         //宣告imageview物件
         ImageView exit=findViewById(R.id.exit);
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
         //宣告TextView物件
+        TextView text_name=findViewById(R.id.text_name);
+        text_name.setText(gv.getname());
+
+        //宣告CardView物件
         CardView card1=findViewById(R.id.card1);
         CardView card2=findViewById(R.id.card2);
         CardView card3=findViewById(R.id.card3);
@@ -75,6 +83,16 @@ public class main_activity extends AppCompatActivity {
             public void onClick(View v) {
                 //跳至上傳影片頁面
                 Intent intent =new Intent(main_activity.this,video_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        //我的收藏庫事件
+        card6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳至我的收藏庫頁面
+                Intent intent =new Intent(main_activity.this,video_select_activity.class);
                 startActivity(intent);
             }
         });

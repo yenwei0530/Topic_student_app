@@ -1,13 +1,9 @@
 package com.example.student;
 
 import android.icu.text.SimpleDateFormat;
-import android.os.Build;
 import android.util.Log;
 
-import androidx.annotation.RequiresApi;
-
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -52,7 +48,7 @@ public class MysqlCon {
         ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
         try {
             Connection con = DriverManager.getConnection(url, db_user, db_password);
-            String sql = "SELECT * FROM student ";
+            String sql = "SELECT a.*, b.MAX_DATE FROM `student` as a LEFT JOIN (SELECT A.student_id , MAX(A.write_time) AS MAX_DATE FROM adaptation_scale_w as A GROUP BY A.student_id) as b on a.student_id = b.student_id";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
 
@@ -69,6 +65,8 @@ public class MysqlCon {
                 String father_year = rs.getString("father_year");
                 String birthday = rs.getString("birthday");
                 String sex = rs.getString("sex");
+                String adaptation_scale = rs.getString("adaptation_scale");
+                String MAX_DATE = rs.getString("MAX_DATE");
 
                 hashMap.put("student_id", student_id);
                 hashMap.put("password", password);
@@ -79,6 +77,8 @@ public class MysqlCon {
                 hashMap.put("father_year", father_year);
                 hashMap.put("birthday", birthday);
                 hashMap.put("sex", sex);
+                hashMap.put("adaptation_scale", adaptation_scale);
+                hashMap.put("MAX_DATE", MAX_DATE);
 
                 arrayList.add(hashMap);
             }
@@ -86,7 +86,76 @@ public class MysqlCon {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        Log.v("DB", "寫入資料完成：" + arrayList);
         return arrayList;
+    }
+
+    //取得影片
+    public ArrayList<HashMap<String, String>> getvideo() {
+        ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "SELECT * FROM video " ;
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+
+            while (rs.next())
+            {
+                HashMap<String, String> hashMap = new HashMap<>();
+
+                String video_id = rs.getString("video_id");
+                String student_id = rs.getString("student_id");
+                String video = rs.getString("video");
+                String video_url = rs.getString("video_url");
+
+                hashMap.put("video_id", video_id);
+                hashMap.put("student_id", student_id);
+                hashMap.put("video", video);
+                hashMap.put("video_url", video_url);
+
+                arrayList.add(hashMap);
+            }
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        Log.v("DB", "寫入資料完成：" + arrayList);
+        return arrayList;
+    }
+
+    //刪除影片
+    public String deletvideoid(String id) {
+        String data = "";
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "DELETE FROM `video` WHERE `video_id` = '" +  id + "'";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+            st.close();
+            Log.v("DB", "刪除資料完成：" + sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
+
+    //取得videoid最大值
+    public String getvideomax() {
+        String data = "";
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "SELECT MAX(`video_id`) FROM `video` ";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                String count = rs.getString("MAX(`video_id`)");
+                data = count;
+            }
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return data;
     }
 
     //取得student數量
@@ -204,7 +273,7 @@ public class MysqlCon {
         }
     }
     //寫入影片
-    public void insertvideo(String id, String video) {
+    public void insertvideo(String id,String video ,String video_url) {
         try {
             SimpleDateFormat sDateFormat = null;
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
@@ -216,7 +285,7 @@ public class MysqlCon {
             }
 
             Connection con = DriverManager.getConnection(url, db_user, db_password);
-            String sql = "INSERT INTO `video`( `student_id`, `video_url`, `write_time`) VALUES ('" + id + "','" + video + "','" + date +"')";
+            String sql = "INSERT INTO `video`( `student_id`, `video` ,`video_url`, `write_time`) VALUES ('" + id + "','" + video + "','" + video_url + "','" + date +"')";
             Statement st = con.createStatement();
             st.executeUpdate(sql);
             st.close();
