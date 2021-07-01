@@ -1,8 +1,10 @@
 package com.example.student;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -15,13 +17,31 @@ public class diary_activity11 extends AppCompatActivity {
         setContentView(R.layout.diary11);
         getSupportActionBar().hide();//關閉標題列
 
-        //宣告TextView物件
+        //宣告CardView物件
         CardView card1=findViewById(R.id.card1);
         CardView card2=findViewById(R.id.card2);
         CardView card3=findViewById(R.id.card3);
 
+        //宣告TextView物件
+        TextView t1=findViewById(R.id.t1);
+        TextView t2=findViewById(R.id.t2);
+        TextView t3=findViewById(R.id.t3);
+        TextView t4=findViewById(R.id.t4);
+
         //建立共用變數類別
         GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
+        if(gv.getabc().equals("T")){
+            t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            t3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            t4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+        }else {
+            t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            t3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            t4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
 
         //寫入資料
         new Thread(new Runnable(){

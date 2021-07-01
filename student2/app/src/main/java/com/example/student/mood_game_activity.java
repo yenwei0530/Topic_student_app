@@ -4,9 +4,9 @@ package com.example.student;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -68,6 +68,15 @@ public class mood_game_activity extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mood_game);
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
+        //宣告TextView物件
+        TextView textView7=findViewById(R.id.textView7);
+        TextView textView8=findViewById(R.id.textView8);
+        TextView textView9=findViewById(R.id.textView9);
+
+
         chronometer =findViewById(R.id.chronometer);
         chronometer.start();
 
@@ -131,6 +140,22 @@ public class mood_game_activity extends Activity
         textView32 = (TextView) findViewById(R.id.textView32);
         exit= (Button) findViewById(R.id.exit);
         imageView4=(ImageView) findViewById(R.id.imageView4);
+
+
+        if(gv.getabc().equals("T")){
+            textView7.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            textView8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            textView9.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            textView32.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+        }else {
+            textView7.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            textView8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            textView9.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            textView32.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
+
         final ArrayList<String> happyMood = new ArrayList<>();
         happyMood.add("game_ecstasy");
         happyMood.add("game_happy");
@@ -613,7 +638,22 @@ public class mood_game_activity extends Activity
                     int temp=temp0* 60 +temp1;
 
                     //layout中Button結束事件
+                    TextView t1=(TextView) textEntryView.findViewById(R.id.t1);
+                    TextView t2=(TextView) textEntryView.findViewById(R.id.t2);
                     Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+                    Button ag = (Button) textEntryView.findViewById(R.id.ag);
+
+                    if(gv.getabc().equals("T")){
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        ag.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    }else {
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        ag.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    }
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -630,7 +670,6 @@ public class mood_game_activity extends Activity
                     });
 
                     //layout中Button繼續事件
-                    Button ag = (Button) textEntryView.findViewById(R.id.ag);
                     ag.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -682,7 +721,7 @@ public class mood_game_activity extends Activity
         if (ResourceID == 0)
         {
 
-            throw new IllegalArgumentException("No resource string found with name " + resName);
+           throw new IllegalArgumentException("No resource string found with name " + resName);
         }
         else
         {

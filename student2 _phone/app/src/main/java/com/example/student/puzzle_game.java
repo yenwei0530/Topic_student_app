@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,15 +45,21 @@ public class puzzle_game extends AppCompatActivity {
         setContentView(R.layout.puzzle_game);
         getSupportActionBar().hide();//關閉標題列
 
-
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
 
         activity = this;
         //碼表
         chronometer =findViewById(R.id.chronometer);
         chronometer.start();
 
-
         Button exit  =findViewById(R.id.btn_exit);
+
+        if(gv.getabc().equals("T")){
+            exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+        }else {
+            exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
 
         init();
         scramble();

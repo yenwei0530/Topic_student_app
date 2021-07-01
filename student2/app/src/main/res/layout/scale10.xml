@@ -19,20 +19,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/t2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="76dp"
         android:fontFamily="@font/kai08mz"
         android:gravity="center"
         android:text="會主動幫助或照顧別人"
         android:textColor="#FFF"
         android:textSize="53sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
+
 
     <LinearLayout
+        android:id="@+id/linearLayout7"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:layout_width="match_parent"

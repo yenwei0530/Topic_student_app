@@ -2,6 +2,7 @@ package com.example.student;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.icu.text.SimpleDateFormat;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +20,6 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 public class mood_ter_step7_activity extends AppCompatActivity {
@@ -45,6 +46,24 @@ public class mood_ter_step7_activity extends AppCompatActivity {
         //建立共用變數類別
         GlobalVariable gv = (GlobalVariable)getApplicationContext();
 
+        //宣告TextView物件
+        TextView t1=findViewById(R.id.t1);
+        TextView t2=findViewById(R.id.t2);
+        TextView t3=findViewById(R.id.t3);
+        TextView t4=findViewById(R.id.t4);
+
+        if(gv.getabc().equals("T")){
+            t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            t3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            t4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+        }else {
+            t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            t3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            t4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
+
         arrayList = mDBHelper.student(gv.getuser());
 
 
@@ -69,42 +88,44 @@ public class mood_ter_step7_activity extends AppCompatActivity {
         //新增一個Calendar,並且指定時間
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(dt);
-        calendar.add(Calendar.DATE, Integer.parseInt(arrayList.get(0).get("adaptation_scale")));//日期+2
+        int add =Integer.parseInt(arrayList.get(0).get("adaptation_scale"))*7;
+        Log.v("DB", "寫入資料完成：" + add);
+        calendar.add(Calendar.DATE, add);//日期+2
         Date tdt=calendar.getTime();//取得加減過後的Date
 
         //依照設定格式取得字串
         String time=sdf.format(tdt);
         //系統時間
-        String date = sdf.format(new java.util.Date());
+        String date = sdf.format(new Date());
 
         try {
             Date sdate=sdf.parse(time);//第一個日期（字符串）
             Date edate=sdf.parse(date);//第二個日期（字符串）
-            //如果時間到跳出前往社會適應量表
-            if(sdate.getTime()<=edate.getTime()){
-                //實體化layout
-                LayoutInflater inflater=getLayoutInflater();
-                final View textEntryView = inflater.inflate(R.layout.custom_dialog4, null);
+        //如果時間到跳出前往社會適應量表
+        if(sdate.getTime()<=edate.getTime()){
+            //實體化layout
+            LayoutInflater inflater=getLayoutInflater();
+            final View textEntryView = inflater.inflate(R.layout.custom_dialog4, null);
 
-                //用setView把layout放進去
-                AlertDialog.Builder builder = new AlertDialog.Builder(mood_ter_step7_activity.this);
-                builder.setView(textEntryView);
+            //用setView把layout放進去
+            AlertDialog.Builder builder = new AlertDialog.Builder(mood_ter_step7_activity.this);
+            builder.setView(textEntryView);
 
-                //創建一個Dialog
-                AlertDialog alert = builder.create();
+            //創建一個Dialog
+            AlertDialog alert = builder.create();
 
-                //layout中Button結束事件
-                Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
-                finsh.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent =new Intent(mood_ter_step7_activity.this,scale0_activity.class);
-                        startActivity(intent);
-                    }
-                });
-                alert.show();
+            //layout中Button結束事件
+            Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+            finsh.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent =new Intent(mood_ter_step7_activity.this,scale0_activity.class);
+                    startActivity(intent);
+                }
+            });
+            alert.show();
 
-            }
+         }
         } catch (ParseException e) {
             e.printStackTrace();
         }

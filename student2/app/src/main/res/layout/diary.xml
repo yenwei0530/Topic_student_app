@@ -116,6 +116,7 @@
                 app:tint="#00EC00" />
 
             <TextView
+                android:id="@+id/txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="非常快樂"
@@ -144,10 +145,11 @@
                 app:tint="#000000" />
 
             <TextView
+                android:id="@+id/txt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="興奮"
                 android:fontFamily="@font/kai08mz"
+                android:text="興奮"
                 android:textColor="#3D414E"
                 android:textSize="55sp" />
 
@@ -172,6 +174,7 @@
                 app:tint="#000000" />
 
             <TextView
+                android:id="@+id/txt4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kai08mz"
@@ -200,6 +203,7 @@
                 app:tint="#000000" />
 
             <TextView
+                android:id="@+id/txt5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="良好"
@@ -228,6 +232,7 @@
                 app:tint="#000000" />
 
             <TextView
+                android:id="@+id/txt6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="差勁"
@@ -256,6 +261,7 @@
                 app:tint="#000000" />
 
             <TextView
+                android:id="@+id/txt7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="生氣"
@@ -284,6 +290,7 @@
                 app:tint="#000000" />
 
             <TextView
+                android:id="@+id/txt8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="惱火"

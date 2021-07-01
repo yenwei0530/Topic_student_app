@@ -55,6 +55,7 @@
             app:lottie_rawRes="@raw/scale0" />
 
         <TextView
+            android:id="@+id/t2"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,6 +67,7 @@
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/t3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

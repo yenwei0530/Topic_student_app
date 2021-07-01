@@ -3,6 +3,7 @@ package com.example.student;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -57,6 +59,19 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
         LinearLayout LL5=findViewById(R.id.LL5);
         LinearLayout LL6=findViewById(R.id.LL6);
         LinearLayout LL7=findViewById(R.id.LL7);
+
+        //宣告TextView物件
+        TextView txt1=findViewById(R.id.txt1);
+
+        if(gv.getabc().equals("T")){
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+        }else {
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
 
         //閃爍動畫
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha);
@@ -136,7 +151,19 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                     AlertDialog alert = builder.create();
 
                     //layout中Button結束事件
+                    TextView t1=(TextView) textEntryView.findViewById(R.id.t1);
+                    TextView t2=(TextView) textEntryView.findViewById(R.id.t2);
                     Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+
+                    if(gv.getabc().equals("T")){
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    }else {
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    }
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -185,7 +212,19 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                     AlertDialog alert = builder.create();
 
                     //layout中Button結束事件
+                    TextView t1=(TextView) textEntryView.findViewById(R.id.t1);
+                    TextView t2=(TextView) textEntryView.findViewById(R.id.t2);
                     Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+
+                    if(gv.getabc().equals("T")){
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    }else {
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    }
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -234,7 +273,19 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                     AlertDialog alert = builder.create();
 
                     //layout中Button結束事件
+                    TextView t1=(TextView) textEntryView.findViewById(R.id.t1);
+                    TextView t2=(TextView) textEntryView.findViewById(R.id.t2);
                     Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+
+                    if(gv.getabc().equals("T")){
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    }else {
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    }
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -283,7 +334,19 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                     AlertDialog alert = builder.create();
 
                     //layout中Button結束事件
+                    TextView t1=(TextView) textEntryView.findViewById(R.id.t1);
+                    TextView t2=(TextView) textEntryView.findViewById(R.id.t2);
                     Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+
+                    if(gv.getabc().equals("T")){
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    }else {
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    }
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -332,7 +395,19 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                     AlertDialog alert = builder.create();
 
                     //layout中Button結束事件
+                    TextView t1=(TextView) textEntryView.findViewById(R.id.t1);
+                    TextView t2=(TextView) textEntryView.findViewById(R.id.t2);
                     Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+
+                    if(gv.getabc().equals("T")){
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    }else {
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    }
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -381,7 +456,19 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                     AlertDialog alert = builder.create();
 
                     //layout中Button結束事件
+                    TextView t1=(TextView) textEntryView.findViewById(R.id.t1);
+                    TextView t2=(TextView) textEntryView.findViewById(R.id.t2);
                     Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+
+                    if(gv.getabc().equals("T")){
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    }else {
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    }
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -430,7 +517,19 @@ public class mood_ter_step1_2_activity extends AppCompatActivity {
                     AlertDialog alert = builder.create();
 
                     //layout中Button結束事件
+                    TextView t1=(TextView) textEntryView.findViewById(R.id.t1);
+                    TextView t2=(TextView) textEntryView.findViewById(R.id.t2);
                     Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+
+                    if(gv.getabc().equals("T")){
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    }else {
+                        t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                        finsh.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    }
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class diary_activity3 extends AppCompatActivity {
 
@@ -37,6 +39,31 @@ public class diary_activity3 extends AppCompatActivity {
         ImageButton ib2 =findViewById(R.id.ib2);
         ImageButton ib3 =findViewById(R.id.ib3);
         ImageButton ib4 =findViewById(R.id.ib4);
+
+        //宣告TextView物件
+        TextView txt1 =findViewById(R.id.txt1);
+        TextView txt2 =findViewById(R.id.txt2);
+        TextView txt3 =findViewById(R.id.txt3);
+        TextView txt4 =findViewById(R.id.txt4);
+        TextView txt5 =findViewById(R.id.txt5);
+
+        if(gv.getabc().equals("T")){
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            txt2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            txt3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            txt4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            txt5.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+        }else {
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            txt2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            txt3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            txt4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            txt5.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
 
         //who1點擊事件
         L1.setOnClickListener(new View.OnClickListener() {

@@ -4,13 +4,11 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -50,6 +48,7 @@ public class video_activity extends AppCompatActivity {
         EditText edt1 =findViewById(R.id.edt1);
 
         //宣告TextView物件
+        TextView txt1 =findViewById(R.id.txt1);
         TextView txt2 =findViewById(R.id.txt2);
 
         //宣告ImageButton物件
@@ -62,6 +61,20 @@ public class video_activity extends AppCompatActivity {
         //宣告web_view物件
         WebView web_view = (WebView) findViewById(R.id.web_view);
         web_view.getSettings().setJavaScriptEnabled(true);
+
+        if(gv.getabc().equals("T")){
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            txt2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            edt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            up.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            exit2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+        }else {
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            txt2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            edt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            up.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            exit2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
 
         //宣告剪貼簿物件
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
@@ -92,7 +105,7 @@ public class video_activity extends AppCompatActivity {
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+               finish();
             }
         });
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="#FFF8D7">
 
     <ImageView
         android:id="@+id/imageView6"
@@ -16,4 +16,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/accompany_interaction" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

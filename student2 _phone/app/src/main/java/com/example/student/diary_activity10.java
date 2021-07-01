@@ -1,6 +1,7 @@
 package com.example.student;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -31,12 +32,27 @@ public class diary_activity10 extends AppCompatActivity {
 
         //宣告TextView物件
         TextView t1 =findViewById(R.id.t1);
+        TextView txt1 =findViewById(R.id.txt1);
+        TextView txt2 =findViewById(R.id.txt2);
 
         //宣告ImageButton物件
         ImageButton exit =findViewById(R.id.exit);
 
         //宣告seekBar物件
         SeekBar seekBar=findViewById(R.id.seekbar);
+
+
+        if(gv.getabc().equals("T")){
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            txt2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+        }else {
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            txt2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
 
         //設定seekBar最大值
         seekBar.setMax(7);

@@ -117,6 +117,7 @@
                 app:tint="#00EC00" />
 
             <TextView
+                android:id="@+id/txt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="晴天"
@@ -145,6 +146,7 @@
                 app:tint="#000000" />
 
             <TextView
+                android:id="@+id/txt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="陰涼"
@@ -173,6 +175,7 @@
                 app:tint="#000000" />
 
             <TextView
+                android:id="@+id/txt4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="雨天"
@@ -201,6 +204,7 @@
                 app:tint="#000000" />
 
             <TextView
+                android:id="@+id/txt5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="雷雨交加"

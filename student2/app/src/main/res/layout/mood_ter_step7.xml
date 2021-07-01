@@ -86,6 +86,7 @@
                     android:src="@drawable/jigsaw" />
 
                 <TextView
+                    android:id="@+id/t2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -122,6 +123,7 @@
                     android:src="@drawable/home" />
 
                 <TextView
+                    android:id="@+id/t3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
@@ -158,6 +160,7 @@
                     android:src="@drawable/mood" />
 
                 <TextView
+                    android:id="@+id/t4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"

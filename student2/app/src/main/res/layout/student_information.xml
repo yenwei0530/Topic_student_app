@@ -87,6 +87,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/t2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="目前心情指數"
@@ -159,6 +160,7 @@
                 android:padding="10dp">
 
                 <TextView
+                    android:id="@+id/t3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -189,6 +191,7 @@
                 android:padding="10dp">
 
                 <TextView
+                    android:id="@+id/t4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -219,6 +222,7 @@
                 android:padding="10dp">
 
                 <TextView
+                    android:id="@+id/t5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
@@ -248,6 +252,7 @@
                 android:padding="10dp">
 
                 <TextView
+                    android:id="@+id/t6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -278,6 +283,7 @@
                 android:padding="10dp">
 
                 <TextView
+                    android:id="@+id/t7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -295,6 +301,7 @@
                     android:showText="true"
                     android:textOff="關閉"
                     android:textOn="打開"
+                    android:checked = "true"
                     android:thumb="@drawable/ex2_switch_thumb"
                     android:track="@drawable/ex2_switch_track" />
 

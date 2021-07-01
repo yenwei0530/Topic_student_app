@@ -1,7 +1,6 @@
 package com.example.student;
 
 import android.app.Application;
-import android.text.Editable;
 
 public class GlobalVariable extends Application {
     private String name;     //帳號
@@ -174,7 +173,7 @@ public class GlobalVariable extends Application {
     }
 
     public void setabc(String abc) {
-        this.name = abc;
+        this.abc = abc;
     }
 
     //取得 變數值

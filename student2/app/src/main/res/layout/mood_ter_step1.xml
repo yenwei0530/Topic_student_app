@@ -8,7 +8,7 @@
     <View
         android:id="@+id/v1"
         android:layout_width="match_parent"
-        android:layout_height="650dp"
+        android:layout_height="550dp"
         android:background="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,8 +27,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="666dp"
-        android:layout_height="620dp"
+        android:layout_width="583dp"
+        android:layout_height="474dp"
         android:layout_marginTop="60dp"
         android:src="@drawable/shuttle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,14 +43,15 @@
         android:lineSpacingExtra="4dp"
         android:text="一\n情緒線索辨識\n表達你的想法與感受\n請從1到7說說你現在的心情\n7是心情非常快樂\n1是心情非常不快樂"
         android:textAllCaps="false"
-        android:layout_marginTop="130dp"
-        android:textColor="#3D414E"
+        android:layout_marginTop="160dp"
         android:fontFamily="@font/kai08mz"
+        android:textColor="#3D414E"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         android:gravity="center_horizontal" />
+
 
     <LinearLayout
         android:layout_width="600dp"

@@ -2,6 +2,7 @@ package com.example.student;
 
 import android.content.Intent;
 import android.graphics.Canvas;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -54,6 +55,10 @@ public class video_select_activity extends AppCompatActivity {
         //建立共用變數類別
         GlobalVariable gv = (GlobalVariable)getApplicationContext();
 
+        //宣告TextView物件
+        TextView txt1 =findViewById(R.id.txt1);
+
+
         //填資料
         mDBHelper = new SQLiteDataBaseHelper(this, DB_NAME, null, DB_VERSION, TABLE_NAME);//初始化資料庫
         arrayList1 = mDBHelper.video(gv.getuser());
@@ -72,6 +77,13 @@ public class video_select_activity extends AppCompatActivity {
         recyclerView.setAdapter(myAdapter);
         //設置RecyclerView滑動事件
         recyclerViewAction(recyclerView, arrayList, myAdapter);
+
+        if(gv.getabc().equals("T")){
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+
+        }else {
+            txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
 
         //離開點擊事件
         exit.setOnClickListener(new View.OnClickListener() {
@@ -93,8 +105,15 @@ public class video_select_activity extends AppCompatActivity {
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
+                //建立共用變數類別
+                GlobalVariable gv = (GlobalVariable)getApplicationContext();
                 textView = itemView.findViewById(R.id.textView_item);
                 mView  = itemView;
+                if(gv.getabc().equals("T")){
+                    textView.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                }else {
+                    textView.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                }
             }
         }
 

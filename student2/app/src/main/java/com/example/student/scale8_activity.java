@@ -1,6 +1,7 @@
 package com.example.student;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,9 @@ public class scale8_activity extends AppCompatActivity {
 
         //宣告TextView物件
         TextView t1 =findViewById(R.id.t1);
+        TextView t2=findViewById(R.id.t2);
+        TextView tt=findViewById(R.id.tt);
+        TextView tt2=findViewById(R.id.tt2);
 
         //宣告SeekBar物件
         SeekBar seek_bar=findViewById(R.id.seek_bar);
@@ -29,6 +33,22 @@ public class scale8_activity extends AppCompatActivity {
         //宣告Button物件
         Button nextpage=findViewById(R.id.nextpage);
         Button uppage=findViewById(R.id.uppage);
+
+        if(gv.getabc().equals("T")){
+            t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            tt.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            tt2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+        }else {
+            t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            tt.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            tt2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+        }
 
 
         seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {

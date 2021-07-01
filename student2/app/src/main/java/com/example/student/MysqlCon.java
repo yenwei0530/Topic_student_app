@@ -238,7 +238,7 @@ public class MysqlCon {
 
             Connection con = DriverManager.getConnection(url, db_user, db_password);
             String sql = "INSERT INTO `diary`(`student_id`, `mood`, `weather`, `person`, `time`, `content`, `content2`, `content3`, `content4`, `write_time_start`, `write_time_end`, `fraction`, `write_diary_time`) VALUES ('" + id + "','" + diary1 + "','" + diary2 + "','" + diary3 + "','" + diary4 + "','" + diary5 + "','" + diary6 + "','" +  diary7 + "','" + diary8 + "','" + diary9_start + "','" + diary9_end +"','" + diary10 + "','" + date +"')";
-            Statement st = con.createStatement();
+           Statement st = con.createStatement();
             st.executeUpdate(sql);
             st.close();
             Log.v("DB", "寫入資料完成：" + sql);

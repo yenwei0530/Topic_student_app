@@ -124,6 +124,7 @@
                 android:layout_gravity="center_vertical">
 
                 <TextView
+                    android:id="@+id/t1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
@@ -158,6 +159,7 @@
                 android:layout_gravity="center">
 
                 <TextView
+                    android:id="@+id/t2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
@@ -193,6 +195,7 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/t3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
@@ -228,6 +231,7 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/t4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
