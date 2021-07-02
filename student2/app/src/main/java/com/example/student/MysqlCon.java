@@ -158,6 +158,26 @@ public class MysqlCon {
         return data;
     }
 
+    //取得上次心情
+    public String getupmood(String id) {
+        String mood = "";
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "SELECT `tmmt_mood3` FROM `mood_thermometer`WHERE `student_id` = '"+ id +"' ORDER BY `write_time` DESC LIMIT 1 ";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                String count = rs.getString("tmmt_mood3");
+                mood = count;
+            }
+
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return mood;
+    }
+
     //取得student數量
     public String getstudentcount() {
         String data = "";
@@ -176,6 +196,64 @@ public class MysqlCon {
         }
         return data;
     }
+
+    //取得心情溫度計數量
+    public String getthermometercount(String id) {
+        String data = "";
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "SELECT count(*) FROM (SELECT * FROM `mood_thermometer` WHERE `student_id` = '"+ id +"' GROUP by `write_time`) as a";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                String count = rs.getString("count(*)");
+                data = count;
+            }
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
+
+    //取得心情日記數量
+    public String getdiarycount(String id) {
+        String data = "";
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "SELECT count(*) FROM (SELECT * FROM `diary` WHERE `student_id` = '"+ id +"' GROUP by `write_diary_time`) as a";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                String count = rs.getString("count(*)");
+                data = count;
+            }
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
+
+    //取得獎品紀錄
+    public String getprizecount(String id) {
+        String data = "";
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "SELECT sum(`point`) FROM `prize` WHERE `student_id` = '"+ id +"'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                String count = rs.getString("sum(`point`)");
+                data = count;
+            }
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
+
     //寫入社會適應量表
     public void insertscale(String id, String q1, String q2, String q3, String q4, String q5, String q6, String q7, String q8, String q9, String q10) {
         try {

@@ -84,9 +84,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_margin="30dp"
         android:background="@drawable/bg_white"
         android:orientation="vertical"
         android:padding="20dp"
@@ -99,7 +100,7 @@
 
         <LinearLayout
             android:id="@+id/L7"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"

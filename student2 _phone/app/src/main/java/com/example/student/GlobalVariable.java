@@ -37,7 +37,8 @@ public class GlobalVariable extends Application {
     private String ter6_1="7非常快樂";  //心情溫度計sp6_1
     private String exit_ter1_1="7非常快樂";  //離開_心情溫度計sp1_1
     private String exit_ter1_2="非常快樂";  //離開_心情溫度計sp1_2
-    private String abc="T";     //帳號
+    private String abc="T";     //注音
+    private String upmood;     //上次心情
 
 
     //修改 變數値
@@ -177,6 +178,10 @@ public class GlobalVariable extends Application {
         this.abc = abc;
     }
 
+    public void setupmood(String upmood) {
+        this.upmood = upmood;
+    }
+
     //取得 變數值
     public String getname() { return name;  }
 
@@ -310,6 +315,9 @@ public class GlobalVariable extends Application {
         return abc;
     }
 
+    public String getupmood() {
+        return upmood;
+    }
 
 
 }

@@ -110,7 +110,6 @@
         android:layout_height="190dp"
         android:layout_marginTop="30dp"
         android:src="@drawable/quill"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,6 +134,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -162,12 +162,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:ems="10"
+                android:fontFamily="@font/kai08mz"
                 android:gravity="start|top"
                 android:hint="我當時的想法....."
                 android:inputType="textMultiLine"
                 android:textColor="@color/black"
                 android:textColorHint="@android:color/darker_gray"
-                android:fontFamily="@font/kai08mz"
                 android:textSize="40sp" />
 
         </LinearLayout>
@@ -216,6 +216,21 @@
 
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="267dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="104dp"
+        android:src="@drawable/ic_baseline_mic_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.516" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

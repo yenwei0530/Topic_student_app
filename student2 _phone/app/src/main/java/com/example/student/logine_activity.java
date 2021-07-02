@@ -69,12 +69,24 @@ public class logine_activity extends AppCompatActivity {
         sumbit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 if( mDBHelper.checkstudent(UserId.getText().toString(),Password.getText().toString())=="T"){
                     gv.setuser(UserId.getText().toString());
                     gv.setpassword(Password.getText().toString());
                     arrayList = mDBHelper.student(UserId.getText().toString());
                     gv.setname(arrayList.get(0).get("name"));
                     gv.setsex(arrayList.get(0).get("sex"));
+                    //上次心情
+                    new Thread(new Runnable(){
+                        @Override
+                        public void run(){
+                            MysqlCon con = new MysqlCon();
+                            con.run();
+                            //學生資料
+                            gv.setupmood(con.getupmood(UserId.getText().toString()));
+                        }
+                    }).start();
                     //判斷是否填寫過第一次社會適應量表
                     if(arrayList.get(0).get("MAX_DATE") == null || arrayList.get(0).get("MAX_DATE").equals("")){
                         Intent intent =new Intent(logine_activity.this,scale0_activity.class);

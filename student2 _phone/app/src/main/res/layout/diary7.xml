@@ -130,6 +130,7 @@
         app:layout_constraintTop_toTopOf="@+id/txt2" />
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -157,9 +158,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:ems="25"
+                android:fontFamily="@font/kai08mz"
                 android:gravity="start|top"
                 android:hint="這件事你有什麼新的想法..."
-                android:fontFamily="@font/kai08mz"
                 android:inputType="textMultiLine"
                 android:textColor="@color/black"
                 android:textColorHint="@android:color/darker_gray"
@@ -211,6 +212,17 @@
 
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="117dp"
+        android:layout_height="134dp"
+        android:src="@drawable/ic_baseline_mic_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.371" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,9 +2,11 @@ package com.example.student;
 
 import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -15,8 +17,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 public class diary_activity7 extends AppCompatActivity {
 
@@ -46,6 +51,7 @@ public class diary_activity7 extends AppCompatActivity {
         ImageView imageView=findViewById(R.id.imageView);
         ImageView imageView2=findViewById(R.id.imageView2);
         ImageView imageView3=findViewById(R.id.imageView3);
+        ImageView imageView8=findViewById(R.id.imageView8);
 
         //宣告EditText物件
         EditText edt1=findViewById(R.id.edt1);
@@ -193,5 +199,30 @@ public class diary_activity7 extends AppCompatActivity {
             }
         });
 
+        //語音輸入
+        imageView8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "請說～");
+                try{
+                    startActivityForResult(intent,200);
+                }catch (ActivityNotFoundException a){
+                    Toast.makeText(getApplicationContext(),"Intent problem", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        EditText edt1=findViewById(R.id.edt1);
+        if(requestCode == 200){
+            if(resultCode == RESULT_OK && data != null){
+                ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                edt1.setText(result.get(0));
+            }
+        }
     }
 }

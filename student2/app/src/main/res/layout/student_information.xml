@@ -69,6 +69,8 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/upmood"
+                        android:fontFamily="@font/kai08mz"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -90,13 +92,15 @@
                         android:id="@+id/t2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="目前心情指數"
+                        android:text="目前點數"
                         android:fontFamily="@font/kai08mz"
                         android:textColor="#6f6f6f"
                         android:textSize="35sp"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/point"
+                        android:fontFamily="@font/kai08mz"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"

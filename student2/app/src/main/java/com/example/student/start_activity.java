@@ -34,6 +34,7 @@ public class start_activity extends AppCompatActivity {
         setContentView(R.layout.start);
         getSupportActionBar().hide();//關閉標題列
 
+
         AlphaAnimation fadeout = new AlphaAnimation(1,0);
         fadeout.setInterpolator(new AccelerateInterpolator());
         fadeout.setStartOffset(500);

@@ -20,6 +20,9 @@ public class student_information_activity extends AppCompatActivity {
         setContentView(R.layout.student_information);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
 
         //宣告Button物件
         Button exit=findViewById(R.id.exit);
@@ -30,9 +33,32 @@ public class student_information_activity extends AppCompatActivity {
 
         //宣告TextView物件
         //TextView txt_day =findViewById(R.id.txt_day);
+        TextView point =findViewById(R.id.point);
+        new Thread(new Runnable(){
+            @Override
+            public void run(){
+                MysqlCon con = new MysqlCon();
+                con.run();
+                int data = Integer.parseInt(con.getthermometercount(gv.getuser()));
+                int data2 = Integer.parseInt(con.getdiarycount(gv.getuser()));
+                int data3 = Integer.parseInt(con.getprizecount(gv.getuser()));
+                String dd =String.valueOf(data+data2-data3);
+                //點數
+                point.post(new Runnable() {
+                    public void run() {
+                        point.setText(dd);
+                    }
+                });
+            }
+        }).start();
+        TextView upmood =findViewById(R.id.upmood);
+        //上次心情
+        if (gv.getupmood() != null && !gv.getupmood().equals("")) {
+            upmood.setText(gv.getupmood());
+        }else {
+            upmood.setText("無紀錄");
+        }
 
-        //建立共用變數類別
-        GlobalVariable gv = (GlobalVariable)getApplicationContext();
 
         //宣告Switch物件
         Switch switch_Below=findViewById(R.id.switch_Below);
@@ -109,6 +135,8 @@ public class student_information_activity extends AppCompatActivity {
             password.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             name2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            point.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            upmood.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
         }else {
             switch_Below.setChecked(false);
@@ -124,6 +152,8 @@ public class student_information_activity extends AppCompatActivity {
             password.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             name2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            point.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            upmood.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
 
@@ -143,6 +173,8 @@ public class student_information_activity extends AppCompatActivity {
                     password.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
                     name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
                     name2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    point.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    upmood.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
                     exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
                 }else{
                     gv.setabc("F");
@@ -157,6 +189,8 @@ public class student_information_activity extends AppCompatActivity {
                     password.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
                     name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
                     name2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    point.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    upmood.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
                     exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
                 }
             }
