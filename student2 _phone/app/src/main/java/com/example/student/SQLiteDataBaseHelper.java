@@ -35,7 +35,7 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
                 "birthday date," +
                 "sex varchar(5)," +
                 "adaptation_scale varchar(2)," +
-                "MAX_DATE date" +
+                "MAX_DATE varchar(50)" +
                 ");";
 
         String SQLTable2 = "CREATE TABLE IF NOT EXISTS video  ( " +
@@ -70,7 +70,12 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
         values.put("birthday", birthday);
         values.put("sex", sex);
         values.put("adaptation_scale", adaptation_scale);
-        values.put("MAX_DATE", MAX_DATE);
+        if (MAX_DATE != null && !MAX_DATE.equals("")) {
+            values.put("MAX_DATE", MAX_DATE);
+        }else{
+            values.put("MAX_DATE", "0000-00-00");
+        }
+
         db.insert("student", null, values);
     }
     //新增影片
@@ -165,11 +170,11 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
     }
 
     //修改社會適應量表時間(簡單)
-    public void updatescale(String id, String MAX_DATE) {
+    public void updatescale(String id, String MAX_DATE1) {
         SQLiteDatabase db = getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put("MAX_DATE", MAX_DATE);
-        db.update(TableName, values, "student_id = " + id, null);
+        ContentValues cv = new ContentValues();
+        cv.put("MAX_DATE",MAX_DATE1);
+        db.update(TableName, cv, "student_id = ?", new String[]{id});
     }
 
 

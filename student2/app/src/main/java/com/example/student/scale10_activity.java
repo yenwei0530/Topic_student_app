@@ -23,9 +23,8 @@ public class scale10_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scale10);
-        getSupportActionBar().hide();//關閉標題列
+        getSupportActionBar().hide();//關閉標題
         mDBHelper = new SQLiteDataBaseHelper(this, DB_NAME, null, DB_VERSION, TABLE_NAME);//初始化資料庫
-
         //建立共用變數類別
         GlobalVariable gv = (GlobalVariable)getApplicationContext();
 
@@ -95,8 +94,9 @@ public class scale10_activity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
+
                 //將答案存入全域變數
-                gv.setscale10(t1.getText().toString());
+                gv.setscale10(t1.getText().toString().substring(0,1));
 
 
                 new Thread(new Runnable(){
@@ -107,7 +107,7 @@ public class scale10_activity extends AppCompatActivity {
                     }
                 }).start();
 
-                //定義好時間字串的格式
+               //定義好時間字串的格式
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 //系統時間
                 String date = sdf.format(new java.util.Date());

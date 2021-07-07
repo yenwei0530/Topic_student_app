@@ -3,7 +3,6 @@ package com.example.student;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -12,6 +11,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -403,7 +403,22 @@ public class puzzle_game extends AppCompatActivity {
             int temp=temp0* 60 +temp1;
 
             //layout中Button結束事件
+            TextView t1=(TextView) textEntryView.findViewById(R.id.t1);
+            TextView t2=(TextView) textEntryView.findViewById(R.id.t2);
             Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+            Button ag = (Button) textEntryView.findViewById(R.id.ag);
+
+            if(gv.getabc().equals("T")){
+                t1.setTypeface(Typeface.createFromAsset(context.getAssets(),"fonts/kai08mz.TTC"));
+                t2.setTypeface(Typeface.createFromAsset(context.getAssets(),"fonts/kai08mz.TTC"));
+                finsh.setTypeface(Typeface.createFromAsset(context.getAssets(),"fonts/kai08mz.TTC"));
+                ag.setTypeface(Typeface.createFromAsset(context.getAssets(),"fonts/kai08mz.TTC"));
+            }else {
+                t1.setTypeface(Typeface.createFromAsset(context.getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                t2.setTypeface(Typeface.createFromAsset(context.getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                finsh.setTypeface(Typeface.createFromAsset(context.getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                ag.setTypeface(Typeface.createFromAsset(context.getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            }
             finsh.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -420,7 +435,6 @@ public class puzzle_game extends AppCompatActivity {
             });
 
             //layout中Button繼續事件
-            Button ag = (Button) textEntryView.findViewById(R.id.ag);
             ag.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

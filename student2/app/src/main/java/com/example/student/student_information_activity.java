@@ -1,16 +1,25 @@
 package com.example.student;
 
+import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Calendar;
 
 public class student_information_activity extends AppCompatActivity {
 
@@ -41,7 +50,11 @@ public class student_information_activity extends AppCompatActivity {
                 con.run();
                 int data = Integer.parseInt(con.getthermometercount(gv.getuser()));
                 int data2 = Integer.parseInt(con.getdiarycount(gv.getuser()));
-                int data3 = Integer.parseInt(con.getprizecount(gv.getuser()));
+                int data3=0;
+                if (con.getprizecount(gv.getuser()) != null && !con.getprizecount(gv.getuser()).equals("")) {
+                    data3 = Integer.parseInt(con.getprizecount(gv.getuser()));
+                }
+
                 String dd =String.valueOf(data+data2-data3);
                 //點數
                 point.post(new Runnable() {

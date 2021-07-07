@@ -3,6 +3,7 @@ package com.example.student;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -87,7 +88,8 @@ public class scale3_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //將答案存入全域變數
-                gv.setscale3(t1.getText().toString());
+                gv.setscale3(t1.getText().toString().substring(0,1));
+
 
                 //跳至下一頁面
                 Intent intent =new Intent(scale3_activity.this, scale4_activity.class);

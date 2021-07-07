@@ -88,7 +88,7 @@ public class logine_activity extends AppCompatActivity {
                         }
                     }).start();
                     //判斷是否填寫過第一次社會適應量表
-                    if(arrayList.get(0).get("MAX_DATE") == null || arrayList.get(0).get("MAX_DATE").equals("")){
+                    if( arrayList.get(0).get("MAX_DATE").equals("0000-00-00")){
                         Intent intent =new Intent(logine_activity.this,scale0_activity.class);
                         startActivity(intent);
                     }else{

@@ -251,6 +251,7 @@ public class MysqlCon {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        Log.v("DB", "寫入資料完成：" + data);
         return data;
     }
 
@@ -274,7 +275,7 @@ public class MysqlCon {
             Log.v("DB", "寫入資料完成：" + sql);
         } catch (SQLException e) {
             e.printStackTrace();
-            Log.e("DB", "寫入資料失敗");
+            Log.e("DB", "寫入資料失敗" );
             Log.e("DB", e.toString());
         }
     }

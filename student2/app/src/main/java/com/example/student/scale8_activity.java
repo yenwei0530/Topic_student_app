@@ -87,7 +87,8 @@ public class scale8_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //將答案存入全域變數
-                gv.setscale8(t1.getText().toString());
+                gv.setscale8(t1.getText().toString().substring(0,1));
+
 
                 //跳至下一頁面
                 Intent intent =new Intent(scale8_activity.this, scale9_activity.class);

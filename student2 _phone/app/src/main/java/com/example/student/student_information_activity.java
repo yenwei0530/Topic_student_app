@@ -50,7 +50,11 @@ public class student_information_activity extends AppCompatActivity {
                 con.run();
                 int data = Integer.parseInt(con.getthermometercount(gv.getuser()));
                 int data2 = Integer.parseInt(con.getdiarycount(gv.getuser()));
-                int data3 = Integer.parseInt(con.getprizecount(gv.getuser()));
+                int data3=0;
+                if (con.getprizecount(gv.getuser()) != null && !con.getprizecount(gv.getuser()).equals("")) {
+                    data3 = Integer.parseInt(con.getprizecount(gv.getuser()));
+                }
+
                 String dd =String.valueOf(data+data2-data3);
                 //點數
                 point.post(new Runnable() {
