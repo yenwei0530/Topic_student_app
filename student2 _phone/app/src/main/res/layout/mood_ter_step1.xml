@@ -9,7 +9,7 @@
     <View
         android:id="@+id/v1"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="@dimen/dp_260"
         android:background="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
     <ImageView
         android:id="@+id/iv1"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/dp_130"
         android:background="@drawable/ic_wave_bg"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,11 +28,12 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="322dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_200"
+        android:layout_marginTop="@dimen/dp_60"
         android:src="@drawable/shuttle"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/v1" />
 
@@ -40,24 +41,24 @@
         android:id="@+id/t1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="@dimen/dp_80"
         android:fontFamily="@font/kai08mz"
         android:gravity="center_horizontal"
-        android:lineSpacingExtra="4dp"
+        android:lineSpacingExtra="@dimen/dp_4"
         android:text="一\n情緒線索辨識\n表達你的想法與感受\n請從1到7說說你現在的心情\n7是心情非常快樂\n1是心情非常不快樂"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#3D414E"
-        android:textSize="20sp"
+        android:textSize="@dimen/sp_17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     <LinearLayout
-        android:layout_width="300dp"
+        android:layout_width="@dimen/dp_300"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/dp_30"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +67,7 @@
 
         <Button
             android:id="@+id/uppage"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
@@ -75,22 +76,22 @@
             android:text="回主頁"
             android:textAllCaps="false"
             android:textColor="#FFF"
-            android:textSize="20sp"
+            android:textSize="@dimen/sp_20"
             app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/nextpage"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="14dp"
+            android:layout_marginLeft="@dimen/dp_14"
             android:layout_weight="1"
             android:background="@drawable/btn_bg2"
             android:fontFamily="@font/kai08mz"
             android:text="開始"
             android:textAllCaps="false"
             android:textColor="#FFF"
-            android:textSize="20sp"
+            android:textSize="@dimen/sp_20"
             app:backgroundTint="@null" />
 
     </LinearLayout>

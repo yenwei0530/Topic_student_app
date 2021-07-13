@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.icu.text.SimpleDateFormat;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -63,6 +64,9 @@ public class mood_ter_step7_activity extends AppCompatActivity {
             t3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             t4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw. mood_ter_step7);
+        mp.start();
 
         arrayList = mDBHelper.student(gv.getuser());
 
@@ -139,6 +143,7 @@ public class mood_ter_step7_activity extends AppCompatActivity {
                 //跳至拼圖遊戲
                 Intent intent =new Intent(mood_ter_step7_activity.this, puzzle_start_activity.class);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -150,6 +155,7 @@ public class mood_ter_step7_activity extends AppCompatActivity {
                 Intent intent =new Intent(mood_ter_step7_activity.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -160,6 +166,7 @@ public class mood_ter_step7_activity extends AppCompatActivity {
                 //跳至心情溫度計頁面
                 Intent intent =new Intent(mood_ter_step7_activity.this, mood_game_activity.class);
                 startActivity(intent);
+                mp.pause();
             }
         });
 

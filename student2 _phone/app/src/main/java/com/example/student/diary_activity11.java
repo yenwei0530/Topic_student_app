@@ -2,6 +2,7 @@ package com.example.student;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -42,6 +43,9 @@ public class diary_activity11 extends AppCompatActivity {
             t3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             t4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.diary11);
+        mp.start();
 
         //寫入資料
         new Thread(new Runnable(){
@@ -60,6 +64,7 @@ public class diary_activity11 extends AppCompatActivity {
                 //跳至拼圖遊戲
                 Intent intent =new Intent(diary_activity11.this, puzzle_start_activity.class);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -72,6 +77,7 @@ public class diary_activity11 extends AppCompatActivity {
                 Intent intent =new Intent(diary_activity11.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -82,6 +88,7 @@ public class diary_activity11 extends AppCompatActivity {
                 //跳至心情溫度計頁面
                 Intent intent =new Intent(diary_activity11.this, mood_game_activity.class);
                 startActivity(intent);
+                mp.pause();
             }
         });
 

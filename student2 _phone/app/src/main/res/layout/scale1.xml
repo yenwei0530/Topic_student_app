@@ -11,7 +11,7 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="@dimen/dp_280"
         android:background="#4B4587"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -22,10 +22,10 @@
         android:id="@+id/t2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="@dimen/dp_30"
         android:text="對喜歡的人露出微笑"
         android:textColor="#FFF"
-        android:textSize="26sp"
+        android:textSize="@dimen/sp_20"
         android:fontFamily="@font/kai08mz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,10 +35,10 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="700dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="@dimen/dp_472"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_80"
+        android:layout_marginEnd="@dimen/dp_20"
         android:background="@drawable/bg_white2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -46,26 +46,26 @@
         app:layout_constraintTop_toTopOf="@+id/view2" >
 
         <com.airbnb.lottie.LottieAnimationView
-            android:layout_marginTop="40dp"
             android:id="@+id/animationView"
-            android:layout_width="350dp"
-            android:layout_height="350dp"
-            app:lottie_rawRes="@raw/scale1"
+            android:layout_width="@dimen/dp_250"
+            android:layout_height="@dimen/dp_250"
+            android:layout_marginTop="@dimen/dp_40"
             app:lottie_autoPlay="true"
-            app:lottie_loop="true"/>
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/scale1" />
 
         <TextView
             android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="@dimen/dp_10"
             android:text="1從不這樣"
             android:textColor="#4B4587"
             android:fontFamily="@font/kai08mz"
-            android:textSize="30sp"/>
+            android:textSize="@dimen/sp_20"/>
 
         <LinearLayout
-            android:layout_marginVertical="25dp"
+            android:layout_marginVertical="@dimen/dp_20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -73,24 +73,24 @@
             <TextView
                 android:gravity="left"
                 android:id="@+id/tt"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dp_0"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kai08mz"
                 android:text="從不這樣"
                 android:textColor="#4B4587"
-                android:textSize="20sp" />
+                android:textSize="@dimen/sp_20" />
 
             <TextView
                 android:gravity="right"
                 android:id="@+id/tt2"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dp_0"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kai08mz"
                 android:text="總是這樣"
                 android:textColor="#4B4587"
-                android:textSize="20sp" />
+                android:textSize="@dimen/sp_20" />
 
         </LinearLayout>
 
@@ -106,10 +106,10 @@
             android:progressDrawable="@drawable/track"/>
 
         <LinearLayout
-            android:layout_width="350dp"
+            android:layout_width="@dimen/dp_300"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/dp_10"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +118,7 @@
 
             <Button
                 android:id="@+id/uppage"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dp_0"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
@@ -127,22 +127,22 @@
                 android:text="返回"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="20sp"
+                android:textSize="@dimen/sp_20"
                 app:backgroundTint="@null" />
 
             <Button
                 android:id="@+id/nextpage"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dp_0"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="14dp"
+                android:layout_marginLeft="@dimen/dp_14"
                 android:layout_weight="1"
                 android:background="@drawable/btn_bg2"
                 android:fontFamily="@font/kai08mz"
                 android:text="下一題"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="20sp"
+                android:textSize="@dimen/sp_20"
                 app:backgroundTint="@null" />
 
         </LinearLayout>

@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.LayoutInflater;
@@ -97,6 +98,9 @@ public class diary_activity8 extends AppCompatActivity {
             nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.diary8);
+        mp.start();
 
         //ImageView點擊事件
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -139,6 +143,7 @@ public class diary_activity8 extends AppCompatActivity {
                 Intent intent =new Intent(diary_activity8.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -186,6 +191,7 @@ public class diary_activity8 extends AppCompatActivity {
                     //跳至下一頁面
                     Intent intent = new Intent(diary_activity8.this, diary_activity9.class);
                     startActivity(intent);
+                    mp.pause();
                 }
             }
         });
@@ -196,6 +202,7 @@ public class diary_activity8 extends AppCompatActivity {
             public void onClick(View v) {
                 //關閉目前頁面
                 finish();
+                mp.pause();
             }
         });
 

@@ -3,13 +3,16 @@ package com.example.student;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -75,14 +78,20 @@ public class diary_activity5 extends AppCompatActivity {
         animTxtAlpha.setInterpolator(new LinearInterpolator());
         animTxtAlpha.start();
 
-        //TextView 掉落效果
-        ObjectAnimator animTxtFalling = ObjectAnimator.ofFloat(txt4, "y", 0, 680);
-        animTxtFalling.setDuration(3000);
-        animTxtAlpha.setRepeatCount(1);
-        animTxtFalling.setRepeatMode(ObjectAnimator.REVERSE);
-        animTxtFalling.setInterpolator(new BounceInterpolator());
-        animTxtFalling.start();
-
+        //TextView 放大效果
+        ValueAnimator animTxtScale = ValueAnimator.ofInt(0, 50);
+        animTxtScale.setDuration(500);
+        animTxtScale.setRepeatCount(1);
+        animTxtScale.setRepeatMode(ObjectAnimator.REVERSE);
+        animTxtScale.setInterpolator(new LinearInterpolator());
+        animTxtScale.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                int val = (Integer) animation.getAnimatedValue();
+                txt4.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20 + val);
+            }
+        });
+        animTxtScale.start();
 
         if(gv.getabc().equals("T")){
             txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
@@ -101,6 +110,9 @@ public class diary_activity5 extends AppCompatActivity {
             nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.diary5);
+        mp.start();
 
         //ImageView點擊事件
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -144,6 +156,7 @@ public class diary_activity5 extends AppCompatActivity {
                 Intent intent =new Intent(diary_activity5.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -192,6 +205,7 @@ public class diary_activity5 extends AppCompatActivity {
                     //跳至下一頁面
                     Intent intent =new Intent(diary_activity5.this, diary_activity6.class);
                     startActivity(intent);
+                    mp.pause();
                 }
             }
         });
@@ -202,6 +216,7 @@ public class diary_activity5 extends AppCompatActivity {
             public void onClick(View v) {
                 //關閉目前頁面
                 finish();
+                mp.pause();
             }
         });
 

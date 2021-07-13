@@ -15,15 +15,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="@dimen/dp_200"
             android:background="@drawable/student_information_bg"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="122dp"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:src="@drawable/student" />
 
             <TextView
@@ -31,20 +31,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:fontFamily="@font/kai08mz"
                 android:text="我的名字"
                 android:textColor="#fff"
-                android:textSize="25sp"
+                android:textSize="@dimen/sp_25"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dp_60"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="200dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginTop="@dimen/dp_170"
+            android:layout_marginRight="@dimen/dp_10">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                 android:weightSum="2">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@android:drawable/screen_background_light"
@@ -67,7 +67,7 @@
                         android:fontFamily="@font/kai08mz"
                         android:text="上次心情"
                         android:textColor="#6f6f6f"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/sp_17"
                         android:textStyle="bold" />
 
                     <TextView
@@ -78,12 +78,13 @@
                         android:text="7"
                         android:fontFamily="@font/kai08mz"
                         android:textColor="@color/startblue"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/sp_20"
                         android:textStyle="bold" />
+
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@android:drawable/screen_background_light"
@@ -97,7 +98,7 @@
                         android:fontFamily="@font/kai08mz"
                         android:text="目前點數"
                         android:textColor="#6f6f6f"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/sp_17"
                         android:textStyle="bold" />
 
                     <TextView
@@ -108,12 +109,12 @@
                         android:text="--"
                         android:fontFamily="@font/kai08mz"
                         android:textColor="@color/startblue"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/sp_20"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <!--<LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@android:drawable/screen_background_light"
@@ -126,7 +127,7 @@
                         android:fontFamily="@font/kai08mz"
                         android:text="是否進步"
                         android:textColor="#6f6f6f"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/sp_17"
                         android:textStyle="bold" />
 
                     <TextView
@@ -135,7 +136,7 @@
                         android:layout_marginTop="15dp"
                         android:text="你比上次還要棒"
                         android:textColor="@color/startblue"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/sp_15"
                         android:textStyle="bold" />
 
                 </LinearLayout>-->
@@ -147,10 +148,10 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="350dp"
+        android:layout_width="@dimen/dp_326"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="@dimen/dp_10">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -163,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/t3"
@@ -171,10 +172,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="學號："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_17"
                     android:textStyle="bold" />
 
                 <TextView
@@ -182,19 +183,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="@dimen/dp_20"
                     android:text="123"
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/sp_17" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/t4"
@@ -202,10 +203,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="密碼："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_17"
                     android:textStyle="bold" />
 
                 <TextView
@@ -213,29 +214,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="@dimen/dp_20"
                     android:text="123"
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/sp_17" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/t5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="姓名："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_17"
                     android:textStyle="bold" />
 
                 <TextView
@@ -243,19 +244,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="@dimen/dp_20"
                     android:text="123"
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/sp_17" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/t6"
@@ -263,10 +264,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="性別："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_17"
                     android:textStyle="bold" />
 
                 <TextView
@@ -274,19 +275,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="@dimen/dp_20"
                     android:text="123"
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/sp_17" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/t7"
@@ -294,13 +295,15 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="注音輔助："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_17"
                     android:textStyle="bold" />
 
                 <Switch
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
                     android:id="@+id/switch_Below"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -317,7 +320,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
                 android:paddingLeft="25dp">
 
@@ -325,10 +328,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="出生年月日："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_20"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -343,7 +346,7 @@
                     android:layout_height="wrap_content"
                     android:text="123"
                     android:textColor="#6f6f6f"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/sp_15"
                     android:visibility="invisible" />
 
 
@@ -352,7 +355,7 @@
             <!--<LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
                 android:paddingLeft="25dp">
 
@@ -361,10 +364,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="爸爸學歷："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_20"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -380,7 +383,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
                 android:paddingLeft="25dp">
 
@@ -389,27 +392,27 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="爸爸年齡："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_20"
                     android:textStyle="bold" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="@dimen/dp_20"
                     android:text="123"
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/sp_20" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
                 android:paddingLeft="25dp">
 
@@ -418,10 +421,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="媽媽學歷："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_20"
                     android:textStyle="bold" />
 
                 <Spinner
@@ -437,7 +440,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
                 android:paddingLeft="25dp">
 
@@ -446,20 +449,20 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/kai08mz"
-                    android:paddingTop="10dp"
+                    android:paddingTop="@dimen/dp_10"
                     android:text="媽媽年齡："
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/sp_20"
                     android:textStyle="bold" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="@dimen/dp_20"
                     android:text="123"
                     android:textColor="#6f6f6f"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/sp_20" />
 
             </LinearLayout>-->
 
@@ -471,7 +474,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -488,22 +491,22 @@
             android:text="回主頁"
             android:textAllCaps="false"
             android:textColor="#FFF"
-            android:textSize="20sp"
+            android:textSize="@dimen/sp_20"
             app:backgroundTint="@null" />
 
         <!--<Button
             android:id="@+id/save"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="14dp"
+            android:layout_marginLeft="@dimen/dp_14"
             android:layout_weight="1"
             android:background="@drawable/btn_bg2"
             android:fontFamily="@font/kai08mz"
             android:text="儲存"
             android:textAllCaps="false"
             android:textColor="#FFF"
-            android:textSize="20sp"
+            android:textSize="@dimen/sp_20"
             app:backgroundTint="@null" />-->
 
     </LinearLayout>

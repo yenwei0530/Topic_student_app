@@ -3,6 +3,7 @@ package com.example.student;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -77,6 +78,9 @@ public class diary_activity extends AppCompatActivity {
             txt8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             next.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.diary);
+        mp.start();
 
         //情緒7點擊事件
         L7.setOnClickListener(new View.OnClickListener() {
@@ -196,6 +200,7 @@ public class diary_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                finish();
+                mp.pause();
             }
         });
 
@@ -206,6 +211,7 @@ public class diary_activity extends AppCompatActivity {
                 //跳至下一頁面
                 Intent intent =new Intent(diary_activity.this,diary_activity2.class);
                 startActivity(intent);
+                mp.pause();
             }
         });
 

@@ -189,7 +189,7 @@ public class video_select_activity extends AppCompatActivity {
                         Log.v("DB", "刪除資料完成：" + sql);*/
                         //延遲一秒
                         try {
-                            Thread.sleep(1500);
+                            Thread.sleep(3000);
                         } catch (InterruptedException e) {
                             return;
                         }

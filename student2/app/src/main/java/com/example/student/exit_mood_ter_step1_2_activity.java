@@ -3,6 +3,7 @@ package com.example.student;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -71,6 +72,9 @@ public class exit_mood_ter_step1_2_activity extends AppCompatActivity {
             nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.mood_ter_step1_2);
+        mp.start();
 
         //閃爍動畫
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.alpha);
@@ -549,6 +553,7 @@ public class exit_mood_ter_step1_2_activity extends AppCompatActivity {
                 Intent intent =new Intent(exit_mood_ter_step1_2_activity.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -560,6 +565,7 @@ public class exit_mood_ter_step1_2_activity extends AppCompatActivity {
                 Intent intent =new Intent(exit_mood_ter_step1_2_activity.this, logine_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -569,6 +575,7 @@ public class exit_mood_ter_step1_2_activity extends AppCompatActivity {
             public void onClick(View v) {
                 //關閉目前頁面
                 finish();
+                mp.pause();
             }
         });
 

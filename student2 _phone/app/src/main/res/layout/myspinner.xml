@@ -7,7 +7,7 @@
     android:ellipsize="marquee"
     android:fontFamily="@font/kai08mz"
     android:gravity="center"
-    android:paddingLeft="8dip"
+    android:paddingLeft="@dimen/dp_8"
     android:singleLine="true"
     android:textColor="#000000"
-    android:textSize="20sp"></TextView>
+    android:textSize="@dimen/sp_20"></TextView>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,6 +27,7 @@ public class diary_activity extends AppCompatActivity {
 
         //宣告Button物件
         Button next =findViewById(R.id.next);
+        Button uppage =findViewById(R.id.uppage);
 
         //宣告LinearLayout物件
         LinearLayout L1=findViewById(R.id.L1);
@@ -67,6 +69,7 @@ public class diary_activity extends AppCompatActivity {
             txt7.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             txt8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             next.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
         }else {
             txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             txt2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
@@ -77,7 +80,11 @@ public class diary_activity extends AppCompatActivity {
             txt7.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             txt8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             next.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.diary);
+        mp.start();
 
         //情緒7點擊事件
         L7.setOnClickListener(new View.OnClickListener() {
@@ -197,6 +204,7 @@ public class diary_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                finish();
+                mp.pause();
             }
         });
 
@@ -207,6 +215,17 @@ public class diary_activity extends AppCompatActivity {
                 //跳至下一頁面
                 Intent intent =new Intent(diary_activity.this,diary_activity2.class);
                 startActivity(intent);
+                mp.pause();
+            }
+        });
+
+        //上一頁點擊事件
+        uppage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //關閉目前頁面
+                finish();
+                mp.pause();
             }
         });
 

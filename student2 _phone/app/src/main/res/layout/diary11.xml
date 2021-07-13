@@ -9,7 +9,7 @@
     <View
         android:id="@+id/v1"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="@dimen/dp_280"
         android:background="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
     <ImageView
         android:id="@+id/iv1"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/dp_130"
         android:background="@drawable/ic_wave_bg"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,9 +28,9 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_200"
+        android:layout_marginTop="@dimen/dp_60"
         android:src="@drawable/good_job"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,15 +40,15 @@
         android:id="@+id/t1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="@dimen/dp_120"
         android:fontFamily="@font/kai08mz"
         android:gravity="center_horizontal"
-        android:lineSpacingExtra="4dp"
+        android:lineSpacingExtra="@dimen/dp_4"
         android:text="好棒喔!\n你完成了今天的心情日記!"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#3D414E"
-        android:textSize="20sp"
+        android:textSize="@dimen/sp_17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
@@ -69,9 +69,9 @@
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="3dp"
-            app:cardCornerRadius="12dp"
-            app:cardMaxElevation="6dp">
+            android:layout_margin="@dimen/dp_3"
+            app:cardCornerRadius="@dimen/dp_12"
+            app:cardMaxElevation="@dimen/dp_6">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,22 +79,22 @@
                 android:background="@android:drawable/screen_background_light"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="5dp">
+                android:padding="@dimen/dp_5">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
                     android:src="@drawable/jigsaw" />
 
                 <TextView
                     android:id="@+id/t2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dp_12"
                     android:fontFamily="@font/kai08mz"
                     android:text="我要去玩拼圖遊戲"
                     android:textColor="#6f6f6f"
-                    android:textSize="10sp" />
+                    android:textSize="@dimen/sp_8" />
 
             </LinearLayout>
 
@@ -106,9 +106,9 @@
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="3dp"
-            app:cardCornerRadius="12dp"
-            app:cardMaxElevation="6dp">
+            android:layout_margin="@dimen/dp_3"
+            app:cardCornerRadius="@dimen/dp_12"
+            app:cardMaxElevation="@dimen/dp_6">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -116,22 +116,22 @@
                 android:background="@android:drawable/screen_background_light"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="5dp">
+                android:padding="@dimen/dp_5">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
                     android:src="@drawable/home" />
 
                 <TextView
                     android:id="@+id/t3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dp_12"
                     android:fontFamily="@font/kai08mz"
                     android:text="我要回主頁"
                     android:textColor="#6f6f6f"
-                    android:textSize="10sp" />
+                    android:textSize="@dimen/sp_8" />
 
             </LinearLayout>
 
@@ -143,9 +143,9 @@
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="3dp"
-            app:cardCornerRadius="12dp"
-            app:cardMaxElevation="6dp">
+            android:layout_margin="@dimen/dp_3"
+            app:cardCornerRadius="@dimen/dp_12"
+            app:cardMaxElevation="@dimen/dp_6">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -153,22 +153,22 @@
                 android:background="@android:drawable/screen_background_light"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="5dp">
+                android:padding="@dimen/dp_5">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/dp_50"
+                    android:layout_height="@dimen/dp_50"
                     android:src="@drawable/mood" />
 
                 <TextView
                     android:id="@+id/t4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dp_12"
                     android:fontFamily="@font/kai08mz"
                     android:text="我要去玩情緒遊戲"
                     android:textColor="#6f6f6f"
-                    android:textSize="10sp" />
+                    android:textSize="@dimen/sp_8" />
 
             </LinearLayout>
 

@@ -2,6 +2,7 @@ package com.example.student;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,6 +38,10 @@ public class mood_ter_step1_activity extends AppCompatActivity {
             uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
 
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.mood_ter_step1);
+        mp.start();
+
        /* //宣告ImageButton物件
         ImageButton exit =findViewById(R.id.exit);
 
@@ -52,12 +57,14 @@ public class mood_ter_step1_activity extends AppCompatActivity {
         });*/
 
         //下一步點擊事件
+
         nextpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //跳至下一頁面
                 Intent intent =new Intent(mood_ter_step1_activity.this, mood_ter_step1_1_activity.class);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -67,6 +74,7 @@ public class mood_ter_step1_activity extends AppCompatActivity {
             public void onClick(View v) {
                 //關閉目前頁面
                 finish();
+                mp.pause();
             }
         });
 

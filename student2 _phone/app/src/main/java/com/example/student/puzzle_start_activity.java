@@ -2,6 +2,7 @@ package com.example.student;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,9 @@ public class puzzle_start_activity extends AppCompatActivity {
             nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.puzzle_start);
+        mp.start();
 
 
         //開始點擊事件
@@ -45,6 +49,7 @@ public class puzzle_start_activity extends AppCompatActivity {
                 //跳至下一頁面
                 Intent intent =new Intent(puzzle_start_activity.this, puzzle_game.class);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -56,6 +61,7 @@ public class puzzle_start_activity extends AppCompatActivity {
                 Intent intent =new Intent(puzzle_start_activity.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
+                mp.pause();
             }
         });
 

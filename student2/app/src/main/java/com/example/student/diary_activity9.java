@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -104,6 +105,9 @@ public class diary_activity9 extends AppCompatActivity {
             nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+        //語音
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.diary9);
+        mp.start();
 
         //ImageView點擊事件
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -155,6 +159,7 @@ public class diary_activity9 extends AppCompatActivity {
                 Intent intent =new Intent(diary_activity9.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
+                mp.pause();
             }
         });
 
@@ -203,6 +208,7 @@ public class diary_activity9 extends AppCompatActivity {
                     //跳至下一頁面
                     Intent intent = new Intent(diary_activity9.this, diary_activity10.class);
                     startActivity(intent);
+                    mp.pause();
                 }
             }
         });
@@ -213,6 +219,7 @@ public class diary_activity9 extends AppCompatActivity {
             public void onClick(View v) {
                 //關閉目前頁面
                 finish();
+                mp.pause();
             }
         });
 

@@ -11,8 +11,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteX="@dimen/dp_0"
+        tools:layout_editor_absoluteY="@dimen/dp_0">
 
 
         <LinearLayout
@@ -27,7 +27,7 @@
                 android:fontFamily="@font/kai08mz"
                 android:text="哪些是"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="@dimen/sp_20" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -37,12 +37,12 @@
                 android:fontFamily="@font/kai08mz"
                 android:text="難過"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="@dimen/sp_20" />
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
                 android:src="@drawable/sad_game" />
 
             <TextView
@@ -53,7 +53,7 @@
                 android:fontFamily="@font/kai08mz"
                 android:text="的心情?"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="@dimen/sp_20" />
 
         </LinearLayout>
 
@@ -70,11 +70,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton5"
-                    android:layout_width="130dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_happy" />
@@ -83,11 +83,11 @@
                     android:id="@+id/textView30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
 
             </FrameLayout>
@@ -99,11 +99,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton11"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_angry" />
@@ -112,11 +112,11 @@
                     android:id="@+id/textView24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -127,10 +127,10 @@
 
                 <ImageButton
                     android:id="@+id/imageButton13"
-                    android:layout_width="130dp"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_guilt" />
@@ -139,11 +139,11 @@
                     android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#EA1E1E"
-                    android:textSize="40sp" />
+                    android:textSize="@dimen/sp_40" />
             </FrameLayout>
         </LinearLayout>
 
@@ -159,11 +159,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton9"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_ecstasy" />
@@ -172,11 +172,11 @@
                     android:id="@+id/textView20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -187,11 +187,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton12"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_sad" />
@@ -200,11 +200,11 @@
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -215,11 +215,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton14"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_glad" />
@@ -228,11 +228,11 @@
                     android:id="@+id/textView16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -250,11 +250,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton7"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_happy" />
@@ -263,11 +263,11 @@
                     android:id="@+id/textView26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -278,11 +278,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton6"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_awkward"/>
@@ -291,11 +291,11 @@
                     android:id="@+id/textView25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -306,11 +306,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton10"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_anger" />
@@ -319,11 +319,11 @@
                     android:id="@+id/textView23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -341,11 +341,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton4"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_jolly" />
@@ -354,11 +354,11 @@
                     android:id="@+id/textView28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -369,11 +369,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton8"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_surprise" />
@@ -382,11 +382,11 @@
                     android:id="@+id/textView27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -397,11 +397,11 @@
 
                 <ImageButton
                     android:id="@+id/imageButton3"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:background="?android:attr/activatedBackgroundIndicator"
                     android:scaleType="centerCrop"
                     android:src="@drawable/game_pleasant" />
@@ -410,11 +410,11 @@
                     android:id="@+id/textView29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_45"
                     android:text="+0"
                     android:textColor="#E62323"
-                    android:textSize="40sp"
+                    android:textSize="@dimen/sp_40"
                     android:visibility="visible" />
             </FrameLayout>
 
@@ -424,7 +424,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="@dimen/dp_10"
             android:orientation="vertical">
 
             <TextView
@@ -432,31 +432,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/kai08mz"
+                android:layout_gravity="center"
                 android:text="總分：0"
                 android:textColor="#000000"
-                android:textSize="35sp" />
+                android:textSize="@dimen/sp_25" />
 
             <Button
                 android:id="@+id/exit"
-                android:layout_width="200dp"
+                android:layout_width="@dimen/dp_200"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:background="@drawable/btn_bg2"
                 android:fontFamily="@font/kai08mz"
                 android:text="離開遊戲"
                 android:textAllCaps="false"
                 android:textColor="#FFF"
-                android:textSize="20sp"
+                android:textSize="@dimen/sp_20"
                 app:backgroundTint="@null" />
 
             <Chronometer
                 android:id="@+id/chronometer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dp_10"
                 android:textColor="@android:color/transparent"
-                android:textSize="10sp"
+                android:textSize="@dimen/sp_6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/grid" />

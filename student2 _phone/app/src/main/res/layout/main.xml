@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/dp_32"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -24,11 +24,11 @@
                 android:text="我的名字"
                 android:fontFamily="@font/kai08mz"
                 android:textColor="#000"
-                android:textSize="40sp"
+                android:textSize="@dimen/sp_40"
                 android:textStyle="bold" />
 
             <!--<TextView
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="@dimen/dp_6"
                 android:layout_below="@id/text_name"
                 android:text="累積點數:12"
                 android:layout_centerHorizontal="true"
@@ -43,8 +43,8 @@
                 android:id="@+id/exit"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_baseline_logout_24"
-                android:layout_width="45dp"
-                android:layout_height="45dp"/>
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"/>
 
         </RelativeLayout>
 
@@ -56,52 +56,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-           <androidx.cardview.widget.CardView
-               android:id="@+id/card1"
-               android:layout_rowWeight="1"
-               android:layout_columnWeight="1"
-               android:layout_height="wrap_content"
-               android:layout_width="wrap_content"
-               app:cardMaxElevation="6dp"
-               app:cardCornerRadius="12dp"
-               android:layout_margin="12dp">
-
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   android:background="@android:drawable/screen_background_light"
-                   android:gravity="center"
-                   android:orientation="vertical"
-                   android:padding="5dp">
-
-                   <ImageView
-                       android:layout_width="80dp"
-                       android:layout_height="80dp"
-                       android:src="@drawable/thermometer" />
-
-                   <TextView
-                       android:id="@+id/t1"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_marginTop="12dp"
-                       android:text="情緒溫度計"
-                       android:textColor="#6f6f6f"
-                       android:fontFamily="@font/kai08mz"
-                       android:textSize="20sp" />
-
-               </LinearLayout>
-
-           </androidx.cardview.widget.CardView>
-
             <androidx.cardview.widget.CardView
-                android:id="@+id/card2"
+                android:id="@+id/card1"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:cardMaxElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardMaxElevation="@dimen/dp_6"
+                app:cardCornerRadius="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_12">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -109,22 +72,59 @@
                     android:background="@android:drawable/screen_background_light"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="5dp">
+                    android:padding="@dimen/dp_5">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
+                        android:src="@drawable/thermometer" />
+
+                    <TextView
+                        android:id="@+id/t1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="情緒溫度計"
+                        android:textColor="#6f6f6f"
+                        android:fontFamily="@font/kai08mz"
+                        android:textSize="@dimen/sp_15"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:cardMaxElevation="@dimen/dp_6"
+                app:cardCornerRadius="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_12">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/screen_background_light"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_5">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
                         android:src="@drawable/diary" />
 
                     <TextView
                         android:id="@+id/t2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="@dimen/dp_12"
                         android:text="心情日記"
                         android:textColor="#6f6f6f"
                         android:fontFamily="@font/kai08mz"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/sp_15" />
 
                 </LinearLayout>
 
@@ -136,9 +136,9 @@
                 android:layout_columnWeight="1"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:cardMaxElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardMaxElevation="@dimen/dp_6"
+                app:cardCornerRadius="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_12">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -146,22 +146,22 @@
                     android:background="@android:drawable/screen_background_light"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="5dp">
+                    android:padding="@dimen/dp_5">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
                         android:src="@drawable/jigsaw" />
 
                     <TextView
                         android:id="@+id/t3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="@dimen/dp_12"
                         android:text="拼圖遊戲"
                         android:textColor="#6f6f6f"
                         android:fontFamily="@font/kai08mz"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/sp_15" />
 
                 </LinearLayout>
 
@@ -173,9 +173,9 @@
                 android:layout_columnWeight="1"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:cardMaxElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardMaxElevation="@dimen/dp_6"
+                app:cardCornerRadius="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_12">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -183,22 +183,22 @@
                     android:background="@android:drawable/screen_background_light"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="5dp">
+                    android:padding="@dimen/dp_5">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
                         android:src="@drawable/mood" />
 
                     <TextView
                         android:id="@+id/t4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="@dimen/dp_12"
                         android:text="認識情緒"
                         android:fontFamily="@font/kai08mz"
                         android:textColor="#6f6f6f"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/sp_15" />
 
                 </LinearLayout>
 
@@ -210,9 +210,9 @@
                 android:layout_columnWeight="1"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:cardMaxElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardMaxElevation="@dimen/dp_6"
+                app:cardCornerRadius="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_12">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -220,22 +220,22 @@
                     android:background="@android:drawable/screen_background_light"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="5dp">
+                    android:padding="@dimen/dp_5">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
                         android:src="@drawable/play" />
 
                     <TextView
                         android:id="@+id/t5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="@dimen/dp_12"
                         android:text="上傳影片"
                         android:fontFamily="@font/kai08mz"
                         android:textColor="#6f6f6f"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/dp_15" />
 
                 </LinearLayout>
 
@@ -247,9 +247,9 @@
                 android:layout_columnWeight="1"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:cardMaxElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardMaxElevation="@dimen/dp_6"
+                app:cardCornerRadius="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_12">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -257,22 +257,22 @@
                     android:background="@android:drawable/screen_background_light"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="5dp">
+                    android:padding="@dimen/dp_5">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
                         android:src="@drawable/cabinet" />
 
                     <TextView
                         android:id="@+id/t6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="@dimen/dp_12"
                         android:text="我的收藏"
                         android:fontFamily="@font/kai08mz"
                         android:textColor="#6f6f6f"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/sp_15" />
 
                 </LinearLayout>
 
@@ -284,9 +284,9 @@
                 android:layout_columnWeight="1"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:cardMaxElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardMaxElevation="@dimen/dp_6"
+                app:cardCornerRadius="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_12">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -294,22 +294,22 @@
                     android:background="@android:drawable/screen_background_light"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="5dp">
+                    android:padding="@dimen/dp_5">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
                         android:src="@drawable/user" />
 
                     <TextView
                         android:id="@+id/t7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="@dimen/dp_12"
                         android:fontFamily="@font/kai08mz"
                         android:text="個人專區"
                         android:textColor="#6f6f6f"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/sp_15" />
 
                 </LinearLayout>
 
@@ -321,9 +321,9 @@
                 android:layout_columnWeight="1"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:cardMaxElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="12dp">
+                app:cardMaxElevation="@dimen/dp_6"
+                app:cardCornerRadius="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_12">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -331,22 +331,22 @@
                     android:background="@android:drawable/screen_background_light"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="5dp">
+                    android:padding="@dimen/dp_5">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
                         android:src="@drawable/file" />
 
                     <TextView
                         android:id="@+id/t8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="@dimen/dp_12"
                         android:text="使用說明"
                         android:fontFamily="@font/kai08mz"
                         android:textColor="#6f6f6f"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/sp_15" />
 
                 </LinearLayout>
 
