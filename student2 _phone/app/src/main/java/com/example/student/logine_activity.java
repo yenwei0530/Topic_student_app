@@ -70,13 +70,10 @@ public class logine_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 if( mDBHelper.checkstudent(UserId.getText().toString(),Password.getText().toString())=="T"){
                     gv.setuser(UserId.getText().toString());
                     gv.setpassword(Password.getText().toString());
                     arrayList = mDBHelper.student(UserId.getText().toString());
-                    gv.setname(arrayList.get(0).get("name"));
-                    gv.setsex(arrayList.get(0).get("sex"));
                     //上次心情
                     new Thread(new Runnable(){
                         @Override
@@ -89,13 +86,12 @@ public class logine_activity extends AppCompatActivity {
                     }).start();
                     //判斷是否填寫過第一次社會適應量表
                     if( arrayList.get(0).get("MAX_DATE").equals("0000-00-00")){
-                        Intent intent =new Intent(logine_activity.this,scale0_activity.class);
+                        Intent intent =new Intent(logine_activity.this,one_student_information_activity.class);
                         startActivity(intent);
                     }else{
                         Intent intent =new Intent(logine_activity.this,main_activity.class);
                         startActivity(intent);
                     }
-
                 }else {
                     Toast.makeText(logine_activity.this, "帳號密碼錯誤!!!", Toast.LENGTH_LONG).show();
                 }

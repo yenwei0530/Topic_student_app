@@ -25,7 +25,9 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String SQLTable = "CREATE TABLE IF NOT EXISTS student  ( " +
-                "student_id varchar(11) PRIMARY KEY , " +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT  , " +
+                "student_id varchar(11)  , " +
+                "user_id varchar(50) , " +
                 "password varchar(50), " +
                 "student_name varchar(10)," +
                 "student_year varchar(5)," +
@@ -57,10 +59,11 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
     }
 
     //新增資料
-    public void addData(String student_id, String password, String student_name, String student_year,String student_class,String mom_year,String father_year,String birthday,String sex,String adaptation_scale,String MAX_DATE) {
+    public void addData(String student_id,String user_id, String password, String student_name, String student_year,String student_class,String mom_year,String father_year,String birthday,String sex,String adaptation_scale,String MAX_DATE) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("student_id", student_id);
+        values.put("user_id", user_id);
         values.put("password", password);
         values.put("student_name", student_name);
         values.put("student_year", student_year);
@@ -106,10 +109,10 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
     }
 
     //判斷student帳號密碼
-    public String checkstudent(String student_id,String password) {
+    public String checkstudent(String user_id,String password) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery(" SELECT * FROM  student"
-                + " WHERE student_id =" + "'" + student_id + "'"
+                + " WHERE user_id =" + "'" + user_id + "'"
                 + " AND password =" + "'" + password + "'", null);
         String count = "";
         if (c.moveToNext()) {
@@ -121,25 +124,27 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
     }
 
     //取得student
-    public ArrayList<HashMap<String, String>> student(String student_id) {
+    public ArrayList<HashMap<String, String>> student(String user_id) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.rawQuery(" SELECT * FROM  student"
-                + " WHERE student_id =" + "'" + student_id + "'", null);
+                + " WHERE user_id =" + "'" + user_id + "'", null);
         ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
         while (c.moveToNext()) {
             HashMap<String, String> hashMap = new HashMap<>();
 
-            String id = c.getString(0);
-            String password = c.getString(1);
-            String name = c.getString(2);
-            String sex = c.getString(8);
-            String adaptation_scale = c.getString(9);
-            String MAX_DATE = c.getString(10);
+            String student_id = c.getString(1);
+            String password = c.getString(3);
+            String name = c.getString(4);
+            String sex = c.getString(10);
+            String adaptation_scale = c.getString(11);
+            String birthday = c.getString(9);
+            String MAX_DATE = c.getString(12);
 
-            hashMap.put("id", id);
+            hashMap.put("student_id", student_id);
             hashMap.put("name", name);
             hashMap.put("password", password);
             hashMap.put("sex", sex);
+            hashMap.put("birthday", birthday);
             hashMap.put("adaptation_scale", adaptation_scale);
             hashMap.put("MAX_DATE", MAX_DATE);
 
@@ -175,6 +180,17 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put("MAX_DATE",MAX_DATE1);
         db.update(TableName, cv, "student_id = ?", new String[]{id});
+    }
+
+    //修改資料(簡單)
+    public void updatestudent(String id, String student_id,String name,String sex,String birthday) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("student_id",student_id);
+        cv.put("student_name",name);
+        cv.put("sex",sex);
+        cv.put("birthday",birthday);
+        db.update(TableName, cv, "user_id = ?", new String[]{id});
     }
 
 

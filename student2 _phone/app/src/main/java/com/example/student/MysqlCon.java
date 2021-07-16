@@ -48,7 +48,7 @@ public class MysqlCon {
         ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
         try {
             Connection con = DriverManager.getConnection(url, db_user, db_password);
-            String sql = "SELECT a.*, b.MAX_DATE FROM `student` as a LEFT JOIN (SELECT A.student_id , MAX(A.write_time) AS MAX_DATE FROM adaptation_scale_w as A GROUP BY A.student_id) as b on a.student_id = b.student_id";
+            String sql = "SELECT a.*, b.MAX_DATE FROM `student` as a LEFT JOIN (SELECT A.student_id , MAX(A.write_time) AS MAX_DATE FROM adaptation_scale_w as A GROUP BY A.student_id) as b on a.user_id = b.student_id";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
 
@@ -57,6 +57,7 @@ public class MysqlCon {
                 HashMap<String, String> hashMap = new HashMap<>();
 
                 String student_id = rs.getString("student_id");
+                String user_id = rs.getString("user_id");
                 String password = rs.getString("password");
                 String student_name = rs.getString("student_name");
                 String student_year = rs.getString("student_year");
@@ -69,6 +70,7 @@ public class MysqlCon {
                 String MAX_DATE = rs.getString("MAX_DATE");
 
                 hashMap.put("student_id", student_id);
+                hashMap.put("user_id", user_id);
                 hashMap.put("password", password);
                 hashMap.put("student_name", student_name);
                 hashMap.put("student_year", student_year);
@@ -376,6 +378,20 @@ public class MysqlCon {
         }
     }
 
+    //修改資料
+    public void updateuser(String user_id,String name,String id,String sex,String birthday) {
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "UPDATE `student` SET `student_name`= '" +  name + "',`student_id`= '" +  id + "',`sex`= '"+  sex + "',`birthday`= '"+  birthday + "' WHERE `user_id` = '"+ user_id +"'";
+            Log.v("DB", "修改資料完成：" + sql);
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+            st.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }

@@ -27,94 +27,93 @@
                 android:src="@drawable/student" />
 
             <EditText
-                android:id="@+id/name2"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_30"
                 android:fontFamily="@font/kai08mz"
-                android:text="我的名字"
+                android:hint="請輸入姓名"
+                android:textColorHint="#ff0000"
                 android:textColor="#fff"
                 android:textSize="@dimen/sp_25"
                 android:textStyle="bold" />
-
         </LinearLayout>
 
-        <androidx.cardview.widget.CardView
+    <!--<androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_170"
+        android:layout_marginRight="@dimen/dp_10">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_60"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dp_170"
-            android:layout_marginRight="@dimen/dp_10">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="@dimen/dp_0"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="2">
+                android:layout_weight="1"
+                android:background="@android:drawable/screen_background_light"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="@dimen/dp_0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@android:drawable/screen_background_light"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="上次心情"
+                    android:textColor="#6f6f6f"
+                    android:textSize="@dimen/sp_17"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/t1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/kai08mz"
-                        android:text="上次心情"
-                        android:textColor="#6f6f6f"
-                        android:textSize="@dimen/sp_17"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/upmood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="7"
+                    android:fontFamily="@font/kai08mz"
+                    android:textColor="@color/startblue"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/upmood"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="7"
-                        android:fontFamily="@font/kai08mz"
-                        android:textColor="@color/startblue"
-                        android:textSize="@dimen/sp_20"
-                        android:textStyle="bold" />
+            </LinearLayout>
 
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:drawable/screen_background_light"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="@dimen/dp_0"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@android:drawable/screen_background_light"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kai08mz"
+                    android:text="目前點數"
+                    android:textColor="#6f6f6f"
+                    android:textSize="@dimen/sp_17"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/t2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/kai08mz"
-                        android:text="目前點數"
-                        android:textColor="#6f6f6f"
-                        android:textSize="@dimen/sp_17"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/kai08mz"
+                    android:textColor="@color/startblue"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/point"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="--"
-                        android:fontFamily="@font/kai08mz"
-                        android:textColor="@color/startblue"
-                        android:textSize="@dimen/sp_20"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <!--<LinearLayout
+               <LinearLayout
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -140,11 +139,11 @@
                         android:textSize="@dimen/sp_15"
                         android:textStyle="bold" />
 
-                </LinearLayout>-->
+                </LinearLayout>
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>-->
 
     </RelativeLayout>
 
@@ -165,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/dp_3">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/t3"
@@ -184,28 +183,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingLeft="@dimen/dp_20"
-                    android:text="123"
+                    android:fontFamily="@font/kai08mz"
+                    android:hint="請輸入學號"
+                    android:textColorHint="#ff0000"
                     android:textColor="#6f6f6f"
                     android:textSize="@dimen/sp_17" />
 
             </LinearLayout>
 
-            <LinearLayout
+            <!-- <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
-                android:padding="@dimen/dp_3">
+                android:padding="@dimen/dp_5">
 
-                <TextView
+               <TextView
                     android:id="@+id/t4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/kai08mz"
                     android:paddingTop="@dimen/dp_10"
-                    android:text="帳號："
+                    android:text="密碼："
                     android:textColor="#6f6f6f"
                     android:textSize="@dimen/sp_17"
                     android:textStyle="bold" />
@@ -220,14 +220,14 @@
                     android:textColor="#6f6f6f"
                     android:textSize="@dimen/sp_17" />
 
-            </LinearLayout>
+            </LinearLayout>-->
 
             <!--<LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
-                android:padding="@dimen/dp_3">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/t5"
@@ -240,7 +240,7 @@
                     android:textSize="@dimen/sp_17"
                     android:textStyle="bold" />
 
-                <EditText
+                <TextView
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -257,7 +257,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
-                android:padding="@dimen/dp_3">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/t6"
@@ -280,10 +280,10 @@
                     <RadioButton
                         android:id="@+id/boys"
                         android:text="男生"
+                        android:fontFamily="@font/kai08mz"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/sp_17"
-                        android:fontFamily="@font/kai08mz"
                         android:textColor="#6f6f6f"
                         android:checked="true"/>
 
@@ -297,15 +297,14 @@
                         android:textSize="@dimen/sp_17"/>
 
                 </RadioGroup>
-
             </LinearLayout>
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
-                android:padding="@dimen/dp_3">
+                android:padding="@dimen/dp_5">
 
                 <TextView
                     android:id="@+id/t7"
@@ -332,7 +331,7 @@
                     android:thumb="@drawable/ex2_switch_thumb"
                     android:track="@drawable/ex2_switch_track" />
 
-            </LinearLayout>
+            </LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -340,7 +339,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal"
-                android:padding="@dimen/dp_3">
+                android:paddingBottom="@dimen/dp_10">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -348,9 +347,9 @@
                     android:fontFamily="@font/kai08mz"
                     android:paddingTop="@dimen/dp_10"
                     android:text="出生年月日："
-                    android:textStyle="bold"
                     android:textColor="#6f6f6f"
-                    android:textSize="@dimen/sp_17" />
+                    android:textSize="@dimen/sp_17"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/img1"
@@ -362,9 +361,10 @@
                     android:id="@+id/txt_day"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="11"
+                    android:text=""
                     android:textColor="#6f6f6f"
-                    android:textSize="@dimen/sp_15" />
+                    android:textSize="@dimen/sp_15"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
@@ -490,7 +490,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -504,13 +504,13 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/btn_bg2"
             android:fontFamily="@font/kai08mz"
-            android:text="回主頁"
+            android:text="下一步"
             android:textAllCaps="false"
             android:textColor="#FFF"
             android:textSize="@dimen/sp_20"
             app:backgroundTint="@null" />
 
-        <Button
+        <!--<Button
             android:id="@+id/save"
             android:layout_width="@dimen/dp_0"
             android:layout_height="wrap_content"
@@ -523,7 +523,7 @@
             android:textAllCaps="false"
             android:textColor="#FFF"
             android:textSize="@dimen/sp_20"
-            app:backgroundTint="@null" />
+            app:backgroundTint="@null" />-->
 
     </LinearLayout>
 

@@ -99,7 +99,6 @@ public class scale10_activity extends AppCompatActivity {
                 //將答案存入全域變數
                 gv.setscale10(t1.getText().toString().substring(0,1));
 
-
                 new Thread(new Runnable(){
                     @Override
                     public void run(){

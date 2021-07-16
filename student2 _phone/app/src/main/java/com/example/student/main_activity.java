@@ -10,7 +10,16 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class main_activity extends AppCompatActivity {
+    private final String DB_NAME = "treatment.db";
+    private String TABLE_NAME = "student";
+    private final int DB_VERSION = 1;
+    SQLiteDataBaseHelper mDBHelper;
+
+    ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();//取得所有資料
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +27,22 @@ public class main_activity extends AppCompatActivity {
         setContentView(R.layout.main);
         getSupportActionBar().hide();//關閉標題列
 
+        //建立共用變數類別
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
+        mDBHelper = new SQLiteDataBaseHelper(this, DB_NAME, null, DB_VERSION, TABLE_NAME);//初始化資料庫
+
+        arrayList = mDBHelper.student(gv.getuser());
+
         //宣告imageview物件
         ImageView exit=findViewById(R.id.exit);
 
-        //建立共用變數類別
-        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
+        gv.setname(arrayList.get(0).get("name"));
+        gv.setstudentid(arrayList.get(0).get("student_id"));
+        gv.setpassword(arrayList.get(0).get("password"));
+        gv.setsex(arrayList.get(0).get("sex"));
+        gv.setbirthday(arrayList.get(0).get("birthday"));
 
         //宣告TextView物件
         TextView text_name=findViewById(R.id.text_name);

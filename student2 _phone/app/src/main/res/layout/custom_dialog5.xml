@@ -37,7 +37,7 @@
                     android:layout_marginRight="@dimen/dp_20"
                     android:fontFamily="@font/kai08mz"
                     android:gravity="center_horizontal"
-                    android:text="咦?\n你選的圖示\n跟描述不一樣喔!"
+                    android:text="唉?\n你怎麼沒寫內容!"
                     android:textAlignment="center"
                     android:textColor="#3D414E"
                     android:textSize="@dimen/sp_20"
@@ -49,22 +49,7 @@
                     android:layout_marginLeft="@dimen/dp_20"
                     android:layout_marginRight="@dimen/dp_20"
                     android:layout_marginBottom="@dimen/dp_10"
-                    android:src="@drawable/confused2" />
-
-                <TextView
-                    android:id="@+id/t2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="即將返回上一頁!!!"
-                    android:fontFamily="@font/kai08mz"
-                    android:textColor="#3D414E"
-                    android:layout_marginLeft="@dimen/dp_20"
-                    android:layout_marginRight="@dimen/dp_20"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/sp_20"
-                    android:gravity="center_horizontal" />
-
+                    android:src="@drawable/read" />
 
                 <Button
                     android:id="@+id/finsh"

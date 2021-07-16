@@ -4,10 +4,12 @@ import android.app.Application;
 import android.text.Editable;
 
 public class GlobalVariable extends Application {
-    private String name;     //帳號
+    private String name;     //姓名
+    private String studentid;     //學號
     private String user;     //帳號
     private String password;  //密碼
     private String sex;  //性別
+    private String birthday;  //生日
     private String scale1;  //社會適應表Q1
     private String scale2;  //社會適應表Q2
     private String scale3;  //社會適應表Q3
@@ -46,6 +48,10 @@ public class GlobalVariable extends Application {
         this.name = name;
     }
 
+    public void setstudentid(String studentid) {
+        this.studentid = studentid;
+    }
+
     public void setuser(String user) {
         this.user = user;
     }
@@ -56,6 +62,10 @@ public class GlobalVariable extends Application {
 
     public void setsex(String sex) {
         this.sex = sex;
+    }
+
+    public void setbirthday(String birthday) {
+        this.birthday = birthday;
     }
 
     public void setscale1(String scale1) {
@@ -184,6 +194,10 @@ public class GlobalVariable extends Application {
 
     //取得 變數值
     public String getname() { return name;  }
+
+    public String getstudentid() { return studentid;  }
+
+    public String getbirthday() { return birthday;  }
 
     public String getuser() { return user;  }
 

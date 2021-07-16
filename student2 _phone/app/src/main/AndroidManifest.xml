@@ -76,6 +76,7 @@
         <activity android:name=".explanation1_activity" />
         <activity android:name=".video_activity" />
         <activity android:name=".student_information_activity" />
+        <activity android:name=".one_student_information_activity" />
         <activity android:name=".puzzle_game" />
         <activity android:name=".puzzle_start_activity" />
     </application>

@@ -67,7 +67,7 @@ public class start_activity extends AppCompatActivity {
                         Log.v("OK", String.valueOf(arrayList));
                         for (int i=0;i<=arrayList.size()-1;i++)
                         {
-                            mDBHelper.addData(arrayList.get(i).get("student_id"),arrayList.get(i).get("password"),arrayList.get(i).get("student_name"),arrayList.get(i).get("student_year"),arrayList.get(i).get("student_class"),arrayList.get(i).get("mom_year"),arrayList.get(i).get("father_year"),arrayList.get(i).get("birthday"),arrayList.get(i).get("sex"),arrayList.get(i).get("adaptation_scale"),arrayList.get(i).get("MAX_DATE"));
+                            mDBHelper.addData(arrayList.get(i).get("student_id"),arrayList.get(i).get("user_id"),arrayList.get(i).get("password"),arrayList.get(i).get("student_name"),arrayList.get(i).get("student_year"),arrayList.get(i).get("student_class"),arrayList.get(i).get("mom_year"),arrayList.get(i).get("father_year"),arrayList.get(i).get("birthday"),arrayList.get(i).get("sex"),arrayList.get(i).get("adaptation_scale"),arrayList.get(i).get("MAX_DATE"));
                         }
                         //影片
                         arrayList=con.getvideo();
