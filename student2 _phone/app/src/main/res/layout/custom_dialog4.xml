@@ -36,7 +36,7 @@
                     android:layout_marginRight="@dimen/dp_20"
                     android:fontFamily="@font/kai08mz"
                     android:gravity="center_horizontal"
-                    android:text="即將前往\n填寫社會適應量表!"
+                    android:text="即將前往\n填寫量表!"
                     android:textAlignment="center"
                     android:textColor="#3D414E"
                     android:textSize="@dimen/sp_20"

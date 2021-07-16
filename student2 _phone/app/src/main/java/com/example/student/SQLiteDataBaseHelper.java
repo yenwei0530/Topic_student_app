@@ -179,7 +179,7 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put("MAX_DATE",MAX_DATE1);
-        db.update(TableName, cv, "student_id = ?", new String[]{id});
+        db.update(TableName, cv, "user_id = ?", new String[]{id});
     }
 
     //修改資料(簡單)

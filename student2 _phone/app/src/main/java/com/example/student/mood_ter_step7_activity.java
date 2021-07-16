@@ -95,7 +95,7 @@ public class mood_ter_step7_activity extends AppCompatActivity {
         calendar.setTime(dt);
         int add =Integer.parseInt(arrayList.get(0).get("adaptation_scale"))*7;
         Log.v("DB", "寫入資料完成：" + add);
-        calendar.add(Calendar.DATE, add);//日期+2
+        calendar.add(Calendar.DATE, add);//日期++
         Date tdt=calendar.getTime();//取得加減過後的Date
 
         //依照設定格式取得字串
@@ -106,6 +106,7 @@ public class mood_ter_step7_activity extends AppCompatActivity {
         try {
             Date sdate=sdf.parse(time);//第一個日期（字符串）
             Date edate=sdf.parse(date);//第二個日期（字符串）
+
         //如果時間到跳出前往社會適應量表
         if(sdate.getTime()<=edate.getTime()){
             //實體化layout

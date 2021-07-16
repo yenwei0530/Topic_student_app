@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -43,6 +44,7 @@ public class main_activity extends AppCompatActivity {
         gv.setpassword(arrayList.get(0).get("password"));
         gv.setsex(arrayList.get(0).get("sex"));
         gv.setbirthday(arrayList.get(0).get("birthday"));
+        Log.v("DB", "寫入資料完成：" + arrayList.get(0).get("student_id"));
 
         //宣告TextView物件
         TextView text_name=findViewById(R.id.text_name);
