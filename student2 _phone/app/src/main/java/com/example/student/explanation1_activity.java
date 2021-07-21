@@ -126,6 +126,13 @@ public class explanation1_activity extends AppCompatActivity {
                     imageView5.startAnimation(packageimg);
                     txt2.startAnimation(atg);
                     txt3.startAnimation(atg);
+                }else if(progress==8){
+                    txt2.setText("心情統計");
+                    txt3.setText("統計兒童紀錄的心情指數紀錄，讓兒童了解自己的情緒指數，在天氣、與何人在一起、時間的情緒狀態");
+                    imageView5.setImageResource(R.drawable.pie_chart);
+                    imageView5.startAnimation(packageimg);
+                    txt2.startAnimation(atg);
+                    txt3.startAnimation(atg);
                 }
 
             }

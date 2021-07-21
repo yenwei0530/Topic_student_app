@@ -316,6 +316,43 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card9"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:cardMaxElevation="@dimen/dp_6"
+                app:cardCornerRadius="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_12">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/screen_background_light"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_5">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
+                        android:src="@drawable/pie_chart" />
+
+                    <TextView
+                        android:id="@+id/t9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="心情統計"
+                        android:textColor="#6f6f6f"
+                        android:fontFamily="@font/kai08mz"
+                        android:textSize="@dimen/sp_15"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/card8"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"

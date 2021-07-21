@@ -92,6 +92,123 @@ public class MysqlCon {
         return arrayList;
     }
 
+    //取得量表填寫資料
+    public ArrayList<HashMap<String, String>> getscalevalue(String id) {
+        ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "SELECT `student_id`,`q1`,`q2`,`q3`,`q4`,`q5`,`q6`,`q7`,`q8`,`q9`,`q10` FROM `adaptation_scale_w` where `student_id`='" +  id + "'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+
+            while (rs.next())
+            {
+                HashMap<String, String> hashMap = new HashMap<>();
+
+                String q1 = rs.getString("q1");
+                String q2 = rs.getString("q2");
+                String q3 = rs.getString("q3");
+                String q4 = rs.getString("q4");
+                String q5 = rs.getString("q5");
+                String q6 = rs.getString("q6");
+                String q7 = rs.getString("q7");
+                String q8 = rs.getString("q8");
+                String q9 = rs.getString("q9");
+                String q10 = rs.getString("q10");
+
+                hashMap.put("q1", q1);
+                hashMap.put("q2", q2);
+                hashMap.put("q3", q3);
+                hashMap.put("q4", q4);
+                hashMap.put("q5", q5);
+                hashMap.put("q6", q6);
+                hashMap.put("q7", q7);
+                hashMap.put("q8", q8);
+                hashMap.put("q9", q9);
+                hashMap.put("q10", q10);
+
+                arrayList.add(hashMap);
+            }
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        Log.v("DB", "寫入資料完成：" + arrayList);
+        return arrayList;
+    }
+
+    //取得溫度計填寫資料
+    public ArrayList<HashMap<String, String>> getthvalue(String id) {
+        ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "SELECT `student_id`,`tmmt_mood1`,`tmmt_body`,`tmmt_idea`,`tmmt_calmidea`,`tmmt_mood3` FROM `mood_thermometer` where `student_id`='" +  id + "'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+
+            while (rs.next())
+            {
+                HashMap<String, String> hashMap = new HashMap<>();
+
+                String tmmt_mood1 = rs.getString("tmmt_mood1");
+                String tmmt_body = rs.getString("tmmt_body");
+                String tmmt_idea = rs.getString("tmmt_idea");
+                String tmmt_calmidea = rs.getString("tmmt_calmidea");
+                String tmmt_mood3 = rs.getString("tmmt_mood3");
+
+
+                hashMap.put("tmmt_mood1", tmmt_mood1);
+                hashMap.put("tmmt_body", tmmt_body);
+                hashMap.put("tmmt_idea", tmmt_idea);
+                hashMap.put("tmmt_calmidea", tmmt_calmidea);
+                hashMap.put("tmmt_mood3", tmmt_mood3);
+
+                arrayList.add(hashMap);
+            }
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        Log.v("DB", "寫入資料完成：" + arrayList);
+        return arrayList;
+    }
+
+    //取得日記填寫資料
+    public ArrayList<HashMap<String, String>> getdiaryvalue(String id) {
+        ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "SELECT `student_id`,`mood`,`weather`,`person`,`time`,`fraction` FROM `diary` where `student_id`='" +  id + "'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+
+            while (rs.next())
+            {
+                HashMap<String, String> hashMap = new HashMap<>();
+
+                String mood = rs.getString("mood");
+                String weather = rs.getString("weather");
+                String person = rs.getString("person");
+                String time = rs.getString("time");
+                String fraction = rs.getString("fraction");
+
+
+                hashMap.put("mood", mood);
+                hashMap.put("weather", weather);
+                hashMap.put("person", person);
+                hashMap.put("time", time);
+                hashMap.put("fraction", fraction);
+
+                arrayList.add(hashMap);
+            }
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        Log.v("DB", "寫入資料完成：" + arrayList);
+        return arrayList;
+    }
+
     //取得影片
     public ArrayList<HashMap<String, String>> getvideo() {
         ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
@@ -259,15 +376,16 @@ public class MysqlCon {
 
     //寫入社會適應量表
     public void insertscale(String id, String q1, String q2, String q3, String q4, String q5, String q6, String q7, String q8, String q9, String q10) {
+        SimpleDateFormat sDateFormat = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            sDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        }
+        String date = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            date = sDateFormat.format(new java.util.Date());
+        }
         try {
-            SimpleDateFormat sDateFormat = null;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-                sDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-            }
-            String date = null;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-                date = sDateFormat.format(new java.util.Date());
-            }
+
 
             Connection con = DriverManager.getConnection(url, db_user, db_password);
             String sql = "INSERT INTO `adaptation_scale_w`(`student_id`, `q1`, `q2`, `q3`, `q4`, `q5`, `q6`, `q7`, `q8`, `q9`, `q10`, `write_time`) VALUES('" + id + "','" + q1 + "','" + q2 + "','" + q3 + "','" + q4 + "','" + q5 + "','" + q6 + "','" + q7 + "','" + q8 + "','" + q9 + "','" + q10 + "','" + date + "')";
@@ -276,8 +394,10 @@ public class MysqlCon {
             st.close();
             Log.v("DB", "寫入資料完成：" + sql);
         } catch (SQLException e) {
+            String sql = "INSERT INTO `adaptation_scale_w`(`student_id`, `q1`, `q2`, `q3`, `q4`, `q5`, `q6`, `q7`, `q8`, `q9`, `q10`, `write_time`) VALUES('" + id + "','" + q1 + "','" + q2 + "','" + q3 + "','" + q4 + "','" + q5 + "','" + q6 + "','" + q7 + "','" + q8 + "','" + q9 + "','" + q10 + "','" + date + "')";
+
             e.printStackTrace();
-            Log.e("DB", "寫入資料失敗" );
+            Log.e("DB", "寫入資料失敗" + sql);
             Log.e("DB", e.toString());
         }
     }

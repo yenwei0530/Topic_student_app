@@ -25,7 +25,7 @@
         android:layout_marginTop="@dimen/dp_30"
         android:text="能和別人一起完成一件事"
         android:textColor="#FFF"
-        android:textSize="@dimen/sp_17"
+        android:textSize="@dimen/sp_18"
         android:fontFamily="@font/kai08mz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,13 +46,13 @@
         app:layout_constraintTop_toTopOf="@+id/view2" >
 
         <com.airbnb.lottie.LottieAnimationView
+            android:layout_marginTop="@dimen/dp_40"
             android:id="@+id/animationView"
             android:layout_width="@dimen/dp_250"
             android:layout_height="@dimen/dp_250"
-            android:layout_marginTop="@dimen/dp_40"
+            app:lottie_rawRes="@raw/scale5"
             app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/scale5" />
+            app:lottie_loop="true"/>
 
         <TextView
             android:id="@+id/t1"
@@ -109,7 +109,7 @@
             android:layout_width="@dimen/dp_300"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/dp_10"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"

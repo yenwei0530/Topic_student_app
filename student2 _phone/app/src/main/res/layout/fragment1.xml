@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_statistics_scale">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:id="@+id/s1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:layout_weight="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginTop="@dimen/dp_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginTop="@dimen/dp_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginTop="@dimen/dp_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginTop="@dimen/dp_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginTop="@dimen/dp_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginTop="@dimen/dp_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginTop="@dimen/dp_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view9"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginTop="@dimen/dp_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.anychart.AnyChartView
+                android:id="@+id/any_chart_view10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginTop="@dimen/dp_100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginBottom="@dimen/dp_55"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

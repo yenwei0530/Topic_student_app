@@ -57,6 +57,7 @@ public class main_activity extends AppCompatActivity {
         TextView t6=findViewById(R.id.t6);
         TextView t7=findViewById(R.id.t7);
         TextView t8=findViewById(R.id.t8);
+        TextView t9=findViewById(R.id.t9);
 
         //宣告CardView物件
         CardView card1=findViewById(R.id.card1);
@@ -67,6 +68,7 @@ public class main_activity extends AppCompatActivity {
         CardView card6=findViewById(R.id.card6);
         CardView card7=findViewById(R.id.card7);
         CardView card8=findViewById(R.id.card8);
+        CardView card9=findViewById(R.id.card9);
 
         //是否注音
         if(gv.getabc().equals("T")){
@@ -79,6 +81,7 @@ public class main_activity extends AppCompatActivity {
             t6.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             t7.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             t8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            t9.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
         }else {
             t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             t2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
@@ -88,6 +91,7 @@ public class main_activity extends AppCompatActivity {
             t6.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             t7.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             t8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            t9.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             text_name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
 
@@ -169,6 +173,16 @@ public class main_activity extends AppCompatActivity {
             public void onClick(View v) {
                 //跳至個人專區頁面
                 Intent intent =new Intent(main_activity.this,explanation1_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        //心情統計觸發事件
+        card9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳至心情溫度計頁面
+                Intent intent =new Intent(main_activity.this, mood_statistics_activity.class);
                 startActivity(intent);
             }
         });

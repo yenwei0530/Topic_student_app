@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="量表"
+        android:id="@+id/nav1"
+        android:icon="@drawable/scale"
+        />
+    <item android:title="溫度計"
+        android:icon="@drawable/temperature"
+        android:id="@+id/nav2"
+        />
+    <item android:title="日記"
+        android:id="@+id/nav3"
+        android:icon="@drawable/diary2"
+        />
+    <item android:title="首頁"
+        android:id="@+id/nav4"
+        android:icon="@drawable/house"
+        />
+</menu>

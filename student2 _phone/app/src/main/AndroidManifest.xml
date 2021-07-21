@@ -79,6 +79,11 @@
         <activity android:name=".one_student_information_activity" />
         <activity android:name=".puzzle_game" />
         <activity android:name=".puzzle_start_activity" />
+        <activity android:name=".mood_statistics_activity" >
+
+        </activity>
+
+
     </application>
 
 </manifest>
