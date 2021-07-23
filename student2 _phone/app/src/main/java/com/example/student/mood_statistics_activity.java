@@ -26,14 +26,11 @@ public class mood_statistics_activity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             // Step02-BottomNavigationView按下時判斷Menu的ID，讓ViewPaper跳去相對應的Fragment:
             switch (item.getItemId()){
-                case R.id.nav1:
+                case R.id.nav2:
                     viewPager.setCurrentItem(0);
                     break;
-                case R.id.nav2:
-                    viewPager.setCurrentItem(1);
-                    break;
                 case R.id.nav3:
-                    viewPager.setCurrentItem(2);
+                    viewPager.setCurrentItem(1);
                     break;
                 case R.id.nav4:
                     finish();
@@ -56,7 +53,6 @@ public class mood_statistics_activity extends AppCompatActivity {
 
         // Step04-設定ViewPaper的適配器:
         MainPagerAdapter adapter = new MainPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new Fragment_statistics_scale(), "scale");
         adapter.addFragment(new Fragment_statistics_thermometer(), "thermometer");
         adapter.addFragment(new Fragment_statistics_diary(), "_diary");
         viewPager = findViewById(R.id.viewPagerMain);

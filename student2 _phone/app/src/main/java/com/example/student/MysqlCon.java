@@ -138,11 +138,11 @@ public class MysqlCon {
     }
 
     //取得溫度計填寫資料
-    public ArrayList<HashMap<String, String>> getthvalue(String id) {
+    public ArrayList<HashMap<String, String>> getthvalue(String id,String date) {
         ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
         try {
             Connection con = DriverManager.getConnection(url, db_user, db_password);
-            String sql = "SELECT `student_id`,`tmmt_mood1`,`tmmt_body`,`tmmt_idea`,`tmmt_calmidea`,`tmmt_mood3` FROM `mood_thermometer` where `student_id`='" +  id + "'";
+            String sql = "SELECT `student_id`,`tmmt_mood1`,`tmmt_mood2`,`tmmt_body`,`tmmt_idea`,`tmmt_calmidea`,`tmmt_mood3` FROM `mood_thermometer` where `student_id`='" +  id + "' and `write_time`='"+  date + "'";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
 
@@ -151,6 +151,7 @@ public class MysqlCon {
                 HashMap<String, String> hashMap = new HashMap<>();
 
                 String tmmt_mood1 = rs.getString("tmmt_mood1");
+                String tmmt_mood2 = rs.getString("tmmt_mood2");
                 String tmmt_body = rs.getString("tmmt_body");
                 String tmmt_idea = rs.getString("tmmt_idea");
                 String tmmt_calmidea = rs.getString("tmmt_calmidea");
@@ -158,6 +159,7 @@ public class MysqlCon {
 
 
                 hashMap.put("tmmt_mood1", tmmt_mood1);
+                hashMap.put("tmmt_mood2", tmmt_mood2);
                 hashMap.put("tmmt_body", tmmt_body);
                 hashMap.put("tmmt_idea", tmmt_idea);
                 hashMap.put("tmmt_calmidea", tmmt_calmidea);
@@ -174,11 +176,11 @@ public class MysqlCon {
     }
 
     //取得日記填寫資料
-    public ArrayList<HashMap<String, String>> getdiaryvalue(String id) {
+    public ArrayList<HashMap<String, String>> getdiaryvalue(String id,String date) {
         ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
         try {
             Connection con = DriverManager.getConnection(url, db_user, db_password);
-            String sql = "SELECT `student_id`,`mood`,`weather`,`person`,`time`,`fraction` FROM `diary` where `student_id`='" +  id + "'";
+            String sql = "SELECT `student_id`,`mood`,`weather`,`person`,`time`,`fraction` FROM `diary` where `student_id`='" +  id + "' and `write_diary_time`='"+  date + "'";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
 

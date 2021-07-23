@@ -82,7 +82,7 @@ public class Fragment_statistics_diary extends Fragment {
             public void run ( ) {
                 MysqlCon con = new MysqlCon();
                 con.run();
-                arrayList=con.getdiaryvalue(gv.getuser());
+                arrayList=con.getdiaryvalue(gv.getuser(),gv.getstatistics());
             };
         };
         thread1.start();
@@ -145,7 +145,7 @@ public class Fragment_statistics_diary extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView);
         Pie pie = AnyChart.pie();
         pie.data(data);
-        pie.title("第一題");
+        pie.title("現在的心情_"+gv.getstatistics());
 
         anyChartView.setChart(pie);
 
@@ -185,7 +185,7 @@ public class Fragment_statistics_diary extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView2);
         Pie pie2 = AnyChart.pie();
         pie2.data(data2);
-        pie2.title("第二題");
+        pie2.title("天氣_"+gv.getstatistics());
 
         anyChartView2.setChart(pie2);
 
@@ -225,7 +225,7 @@ public class Fragment_statistics_diary extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView3);
         Pie pie3 = AnyChart.pie();
         pie3.data(data3);
-        pie3.title("第三題");
+        pie3.title("和誰再一起_"+gv.getstatistics());
 
         anyChartView3.setChart(pie3);
 
@@ -265,7 +265,7 @@ public class Fragment_statistics_diary extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView4);
         Pie pie4 = AnyChart.pie();
         pie4.data(data4);
-        pie4.title("第四題");
+        pie4.title("發生時間_"+gv.getstatistics());
 
         anyChartView4.setChart(pie4);
 
@@ -319,7 +319,7 @@ public class Fragment_statistics_diary extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView5);
         Pie pie5 = AnyChart.pie();
         pie5.data(data5);
-        pie5.title("第五題");
+        pie5.title("自己的表現分數_"+gv.getstatistics());
 
         anyChartView5.setChart(pie5);
 

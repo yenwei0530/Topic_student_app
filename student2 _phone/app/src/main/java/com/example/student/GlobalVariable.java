@@ -41,6 +41,7 @@ public class GlobalVariable extends Application {
     private String exit_ter1_2="非常快樂";  //離開_心情溫度計sp1_2
     private String abc="T";     //注音
     private String upmood;     //上次心情
+    private String statistics;     //姓名
 
 
     //修改 變數値
@@ -192,6 +193,10 @@ public class GlobalVariable extends Application {
         this.upmood = upmood;
     }
 
+    public void setstatistics(String statistics) {
+        this.statistics = statistics;
+    }
+
     //取得 變數值
     public String getname() { return name;  }
 
@@ -331,6 +336,10 @@ public class GlobalVariable extends Application {
 
     public String getupmood() {
         return upmood;
+    }
+
+    public String getstatistics() {
+        return statistics;
     }
 
 

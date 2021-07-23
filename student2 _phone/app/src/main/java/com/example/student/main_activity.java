@@ -3,15 +3,18 @@ package com.example.student;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 
 public class main_activity extends AppCompatActivity {
@@ -181,9 +184,20 @@ public class main_activity extends AppCompatActivity {
         card9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳至心情溫度計頁面
-                Intent intent =new Intent(main_activity.this, mood_statistics_activity.class);
-                startActivity(intent);
+                final Calendar c = Calendar.getInstance();
+                int year = c.get(Calendar.YEAR);
+                int month = c.get(Calendar.MONTH);
+                int day = c.get(Calendar.DAY_OF_MONTH);
+                new DatePickerDialog(main_activity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        month=month+1;
+                        gv.setstatistics(year+"-"+month+"-"+dayOfMonth);
+                        //跳至心情溫度計頁面
+                        Intent intent =new Intent(main_activity.this, mood_statistics_activity.class);
+                        startActivity(intent);
+                    }
+                },year,month,day).show();
             }
         });
 

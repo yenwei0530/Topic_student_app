@@ -81,7 +81,7 @@ public class Fragment_statistics_thermometer extends Fragment {
             public void run ( ) {
                 MysqlCon con = new MysqlCon();
                 con.run();
-                arrayList=con.getthvalue(gv.getuser());
+                arrayList=con.getthvalue(gv.getuser(),gv.getstatistics());
             };
         };
         thread1.start();
@@ -148,9 +148,67 @@ public class Fragment_statistics_thermometer extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView);
         Pie pie = AnyChart.pie();
         pie.data(data);
-        pie.title("第一題");
+        pie.title("現在的心情_"+gv.getstatistics());
 
         anyChartView.setChart(pie);
+
+
+        a=0;
+        b=0;
+        c=0;
+        d=0;
+        e=0;
+        f=0;
+        g=0;
+
+
+
+        for (int i=0;i<=arrayList.size()-1;i++)
+        {
+            if(arrayList.get(i).get("tmmt_mood2").equals("怒氣沖沖失去理智")){
+                a++;
+            }
+            if(arrayList.get(i).get("tmmt_mood2").equals("憤怒發脾氣")){
+                b++;
+            }
+            if(arrayList.get(i).get("tmmt_mood2").equals("不高興")){
+                c++;
+            }
+            if(arrayList.get(i).get("tmmt_mood2").equals("平靜")){
+                d++;
+            }
+            if(arrayList.get(i).get("tmmt_mood2").equals("開心")){
+                e++;
+            }
+            if(arrayList.get(i).get("tmmt_mood2").equals("興奮")){
+                f++;
+            }
+            if(arrayList.get(i).get("tmmt_mood2").equals("非常快樂")){
+                g++;
+            }
+        }
+
+
+        //填資料
+        List<DataEntry> data6 = new ArrayList<>();
+        data6.add(new ValueDataEntry("怒氣沖沖失去理智", a));
+        data6.add(new ValueDataEntry("憤怒發脾氣", b));
+        data6.add(new ValueDataEntry("不高興", c));
+        data6.add(new ValueDataEntry("平靜", d));
+        data6.add(new ValueDataEntry("開心", e));
+        data6.add(new ValueDataEntry("興奮", f));
+        data6.add(new ValueDataEntry("非常快樂", g));
+
+        //建圖表
+        AnyChartView anyChartView6 = view.findViewById(R.id.any_chart_view6);
+
+        APIlib.getInstance().setActiveAnyChartView(anyChartView6);
+        Pie pie6 = AnyChart.pie();
+        pie6.data(data6);
+        pie6.title("心情圖示_"+gv.getstatistics());
+
+        anyChartView6.setChart(pie6);
+
 
 
         a=0;
@@ -221,7 +279,7 @@ public class Fragment_statistics_thermometer extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView2);
         Pie pie2 = AnyChart.pie();
         pie2.data(data2);
-        pie2.title("第二題");
+        pie2.title("身體反應_"+gv.getstatistics());
 
         anyChartView2.setChart(pie2);
 
@@ -275,7 +333,7 @@ public class Fragment_statistics_thermometer extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView3);
         Pie pie3 = AnyChart.pie();
         pie3.data(data3);
-        pie3.title("第三題");
+        pie3.title("當時的想法_"+gv.getstatistics());
 
         anyChartView3.setChart(pie3);
 
@@ -315,7 +373,7 @@ public class Fragment_statistics_thermometer extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView4);
         Pie pie4 = AnyChart.pie();
         pie4.data(data4);
-        pie4.title("第四題");
+        pie4.title("冷靜的分法_"+gv.getstatistics());
 
         anyChartView4.setChart(pie4);
 
@@ -326,9 +384,7 @@ public class Fragment_statistics_thermometer extends Fragment {
         e=0;
         f=0;
         g=0;
-        h=0;
-        j=0;
-        k=0;
+
 
 
         for (int i=0;i<=arrayList.size()-1;i++)
@@ -373,7 +429,7 @@ public class Fragment_statistics_thermometer extends Fragment {
         APIlib.getInstance().setActiveAnyChartView(anyChartView5);
         Pie pie5 = AnyChart.pie();
         pie5.data(data5);
-        pie5.title("第五題");
+        pie5.title("第二次現在的心情_"+gv.getstatistics());
 
         anyChartView5.setChart(pie5);
 
