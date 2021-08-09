@@ -107,6 +107,13 @@ public class SQLiteDataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(TableName,"video_id = " + id,null);
     }
+    //修改影片名稱(簡單)
+    public void updatevideo2(String id, String nmae) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("video",nmae);
+        db.update(TableName, cv, "video_id = ?", new String[]{id});
+    }
 
     //判斷student帳號密碼
     public String checkstudent(String user_id,String password) {

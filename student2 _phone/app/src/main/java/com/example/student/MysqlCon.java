@@ -260,6 +260,22 @@ public class MysqlCon {
         return data;
     }
 
+    //修改影片名稱
+    public String updatevideoid(String id,String name) {
+        String data = "";
+        try {
+            Connection con = DriverManager.getConnection(url, db_user, db_password);
+            String sql = "UPDATE `video` SET `video`='" +  name + "' WHERE `video_id` = '" +  id + "'";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+            st.close();
+            Log.v("DB", "修改資料完成：" + sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
+
     //取得videoid最大值
     public String getvideomax() {
         String data = "";

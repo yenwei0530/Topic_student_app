@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,6 +22,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -174,8 +177,51 @@ public class video_select_activity extends AppCompatActivity {
                 //管理滑動情形
                 int position = viewHolder.getAdapterPosition();
                 switch (direction) {
-                    case ItemTouchHelper.LEFT:
                     case ItemTouchHelper.RIGHT:
+                        //實體化layout
+                        LayoutInflater inflater=getLayoutInflater();
+                        final View textEntryView = inflater.inflate(R.layout.custom_dialog6, null);
+
+                        //用setView把layout放進去
+                        AlertDialog.Builder builder = new AlertDialog.Builder(video_select_activity.this);
+                        builder.setView(textEntryView);
+
+                        //創建一個Dialog
+                        AlertDialog alert = builder.create();
+
+                        //layout中Button結束事件
+                        Button finsh = (Button) textEntryView.findViewById(R.id.finsh);
+                        //layout中EditText
+                        EditText edt1 = (EditText) textEntryView.findViewById(R.id.edt1);
+                        edt1.setText(arrayList1.get(position).get("video"));
+
+                        finsh.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                //刪除資料
+                                new Thread(new Runnable(){
+                                    @Override
+                                    public void run(){
+                                        con.run();
+                                        con.updatevideoid(arrayList1.get(position).get("video_id"),edt1.getText().toString());
+                                    }
+                                }).start();
+                                mDBHelper.updatevideo2(arrayList1.get(position).get("video_id"),edt1.getText().toString());
+                                //延遲一秒
+                                try {
+                                    Thread.sleep(3000);
+                                } catch (InterruptedException e) {
+                                    return;
+                                }
+                                alert.dismiss();
+                                Intent intent = getIntent();
+                                finish();
+                                startActivity(intent);
+                            }
+                        });
+                        alert.show();
+                        break;
+                    case ItemTouchHelper.LEFT:
                         //刪除資料
                         new Thread(new Runnable(){
                             @Override
@@ -206,9 +252,15 @@ public class video_select_activity extends AppCompatActivity {
             }
             @Override
             public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
-                new RecyclerViewSwipeDecorator.Builder(c,recyclerView,viewHolder,dX,dY,actionState,isCurrentlyActive)
-                        .addBackgroundColor(ContextCompat.getColor(video_select_activity.this,android.R.color.holo_red_dark))
-                        .addActionIcon(R.drawable.ic_baseline_delete_24)
+                new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+                        .addSwipeLeftBackgroundColor(ContextCompat.getColor(video_select_activity.this, android.R.color.holo_red_dark))
+                        .addSwipeLeftActionIcon(R.drawable.ic_baseline_delete_24)
+                        .addSwipeRightBackgroundColor(ContextCompat.getColor(video_select_activity.this, android.R.color.holo_green_dark))
+                        .addSwipeRightActionIcon(R.drawable.ic_baseline_build_24)
+                        .addSwipeRightLabel("修改")
+                        .setSwipeRightLabelColor(Color.WHITE)
+                        .addSwipeLeftLabel("刪除")
+                        .setSwipeLeftLabelColor(Color.WHITE)
                         .create()
                         .decorate();
                 super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);

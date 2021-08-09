@@ -41,7 +41,7 @@ public class GlobalVariable extends Application {
     private String exit_ter1_2="非常快樂";  //離開_心情溫度計sp1_2
     private String abc="T";     //注音
     private String upmood;     //上次心情
-    private String statistics;     //姓名
+    private String statistics;
 
 
     //修改 變數値
