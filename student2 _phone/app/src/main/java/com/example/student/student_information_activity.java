@@ -100,6 +100,7 @@ public class student_information_activity extends AppCompatActivity {
         TextView t4=findViewById(R.id.t4);
         TextView t6=findViewById(R.id.t6);
         TextView t7=findViewById(R.id.t7);
+        TextView year=findViewById(R.id.year);
 
         //宣告RadioGroup物件
         RadioGroup radgroup = (RadioGroup) findViewById(R.id.radioGroup);
@@ -166,6 +167,8 @@ public class student_information_activity extends AppCompatActivity {
             point.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             upmood.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            save.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            year.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
         }else {
             switch_Below.setChecked(false);
             Log.v("DB", "寫入資料完成：" + gv.getabc());
@@ -183,6 +186,8 @@ public class student_information_activity extends AppCompatActivity {
             point.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             upmood.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            save.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            year.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
 
         switch_Below.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -204,6 +209,8 @@ public class student_information_activity extends AppCompatActivity {
                     point.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
                     upmood.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
                     exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    save.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+                    year.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
                 }else{
                     gv.setabc("F");
                     t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
@@ -220,6 +227,8 @@ public class student_information_activity extends AppCompatActivity {
                     point.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
                     upmood.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
                     exit.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    save.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+                    year.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
                 }
             }
         });
