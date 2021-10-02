@@ -43,6 +43,7 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
         TextView t8=findViewById(R.id.t8);
         TextView t9=findViewById(R.id.t9);
         TextView t10=findViewById(R.id.t10);
+        TextView t11=findViewById(R.id.t11);
 
         if(gv.getabc().equals("T")){
             t1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
@@ -55,6 +56,7 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
             t8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             t9.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             t10.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
+            t11.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
             uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/kai08mz.TTC"));
@@ -70,6 +72,7 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
             t8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             t9.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             t10.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
+            t11.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             txt1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
@@ -271,6 +274,24 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
 
             }
         });
+        //都沒有點擊事件
+        t11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //取TextView顏色背景
+                ColorDrawable viewColor = (ColorDrawable) t11.getBackground();
+                int colorId = viewColor.getColor();
+                //如果是綠色就變白色
+                if(colorId==-16711936){
+                    t11.setBackgroundColor(Color.WHITE);
+                }
+                //如果是白色就變綠色
+                if(colorId==-1){
+                    t11.setBackgroundColor(Color.GREEN);
+                }
+
+            }
+        });
 
         //離開點擊事件
         exit.setOnClickListener(new View.OnClickListener() {
@@ -297,6 +318,7 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
                 ColorDrawable viewColor8 = (ColorDrawable) t8.getBackground();
                 ColorDrawable viewColor9 = (ColorDrawable) t9.getBackground();
                 ColorDrawable viewColor10 = (ColorDrawable) t10.getBackground();
+                ColorDrawable viewColor11 = (ColorDrawable) t11.getBackground();
                 int colorId = viewColor.getColor();
                 int colorId2 = viewColor2.getColor();
                 int colorId3 = viewColor3.getColor();
@@ -307,6 +329,7 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
                 int colorId8 = viewColor8.getColor();
                 int colorId9 = viewColor9.getColor();
                 int colorId10 = viewColor10.getColor();
+                int colorId11 = viewColor11.getColor();
 
                 if(colorId==-1){
                     //將答案存入全域變數
@@ -351,6 +374,10 @@ public class mood_ter_step1_3_activity extends AppCompatActivity {
                 if(colorId10==-16711936){
                     //將答案存入全域變數
                     gv.setter1_3(gv.getter1_3()+",胃覺得不舒服");
+                }
+                if(colorId11==-16711936){
+                    //將答案存入全域變數
+                    gv.setter1_3(gv.getter1_3()+",都沒有");
                 }
                 //跳至下一頁面
                 Intent intent =new Intent(mood_ter_step1_3_activity.this, mood_ter_step1_4_activity.class);
