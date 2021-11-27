@@ -199,8 +199,12 @@ public class diary_activity7 extends AppCompatActivity {
                 }else {
                     //跳至下一頁面
                     Intent intent = new Intent(diary_activity7.this, diary_activity8.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     mp.pause();
+                    mp.release();
+                    finish();
+
                 }
             }
         });
@@ -210,8 +214,12 @@ public class diary_activity7 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //關閉目前頁面
-                finish();
+                Intent intent = new Intent(diary_activity7.this, diary_activity6.class);
+                startActivity(intent);
                 mp.pause();
+                mp.release();
+                finish();
+
             }
         });
 

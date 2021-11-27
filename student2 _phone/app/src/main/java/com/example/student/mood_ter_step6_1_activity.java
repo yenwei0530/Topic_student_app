@@ -196,6 +196,7 @@ public class mood_ter_step6_1_activity extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
             }
         });
 
@@ -205,8 +206,10 @@ public class mood_ter_step6_1_activity extends AppCompatActivity {
             public void onClick(View v) {
                 //跳至下一頁面
                 Intent intent =new Intent(mood_ter_step6_1_activity.this, mood_ter_step7_activity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
             }
         });
 
@@ -217,6 +220,7 @@ public class mood_ter_step6_1_activity extends AppCompatActivity {
                 //關閉目前頁面
                 finish();
                 mp.pause();
+                mp.release();
             }
         });
 

@@ -8,8 +8,8 @@
         android:startColor="@color/mediumBlue" />
 
     <size
-        android:height="70dp"
-        android:width="20dp" />
-    <corners android:radius="10dp"/>
+        android:height="@dimen/dp_70"
+        android:width="@dimen/dp_20" />
+    <corners android:radius="@dimen/dp_10"/>
 
 </shape>

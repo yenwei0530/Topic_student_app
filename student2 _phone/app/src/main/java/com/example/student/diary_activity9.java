@@ -219,6 +219,9 @@ public class diary_activity9 extends AppCompatActivity {
                     Intent intent = new Intent(diary_activity9.this, diary_activity10.class);
                     startActivity(intent);
                     mp.pause();
+                    mp.release();
+                    finish();
+
                 }
             }
         });
@@ -228,8 +231,12 @@ public class diary_activity9 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //關閉目前頁面
-                finish();
+                Intent intent = new Intent(diary_activity9.this, diary_activity8.class);
+                startActivity(intent);
                 mp.pause();
+                mp.release();
+                finish();
+
             }
         });
 

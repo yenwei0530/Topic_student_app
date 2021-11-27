@@ -94,12 +94,15 @@ public class scale2_activity extends AppCompatActivity {
                 //跳至下一頁面
                 Intent intent =new Intent(scale2_activity.this, scale3_activity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
         uppage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent =new Intent(scale2_activity.this, scale1_activity.class);
+                startActivity(intent);
                 finish();
             }
         });

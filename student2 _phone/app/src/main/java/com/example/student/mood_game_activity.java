@@ -12,6 +12,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,8 @@ import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -72,6 +75,13 @@ public class mood_game_activity extends Activity
         setContentView(R.layout.mood_game);
         //建立共用變數類別
         GlobalVariable gv = (GlobalVariable)getApplicationContext();
+
+        Intent intent = this.getIntent();
+        if (intent.getStringExtra("user") != null) {
+            /**如果有接收到資料*/
+            gv.setuser(intent.getStringExtra("user"));
+        }
+        Log.v("DB", "寫入資料完成：" + gv.getuser());
 
         //宣告TextView物件
         TextView textView7=findViewById(R.id.textView7);
@@ -141,7 +151,7 @@ public class mood_game_activity extends Activity
         textView30.setVisibility(View.INVISIBLE);
         textView32 = (TextView) findViewById(R.id.textView32);
         exit= (Button) findViewById(R.id.exit);
-        imageView4=(ImageView) findViewById(R.id.imageView4);
+        //imageView4=(ImageView) findViewById(R.id.imageView4);
 
 
         if(gv.getabc().equals("T")){
@@ -515,8 +525,9 @@ public class mood_game_activity extends Activity
             public void onClick(View v) {
                 //跳至主頁面
                 Intent intent =new Intent(mood_game_activity.this,main_activity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
+                intent.putExtra("user",gv.getuser());
                 startActivity(intent);
+                System.exit(0);
             }
         });
     }
@@ -545,7 +556,7 @@ public class mood_game_activity extends Activity
             TextView title = findViewById(R.id.textView8);
             title.setText("難過");
             title.setTextColor(Color.parseColor("#5A5AAD"));
-            imageView4.setImageResource(R.drawable.sad_game);
+            //.setImageResource(R.drawable.sad_game);
             //語音
             MediaPlayer mp = MediaPlayer.create(this, R.raw.mood_game);
             mp.start();
@@ -554,7 +565,7 @@ public class mood_game_activity extends Activity
             TextView title = findViewById(R.id.textView8);
             title.setText("快樂");
             title.setTextColor(Color.parseColor("#FF0000"));
-            imageView4.setImageResource(R.drawable.smile_game);
+          // imageView4.setImageResource(R.drawable.smile_game);
             //語音
             MediaPlayer mp = MediaPlayer.create(this, R.raw.mood_game2);
             mp.start();
@@ -563,7 +574,7 @@ public class mood_game_activity extends Activity
             TextView title = findViewById(R.id.textView8);
             title.setText("生氣");
             title.setTextColor(Color.parseColor("#000079"));
-            imageView4.setImageResource(R.drawable.angry_game);
+            //imageView4.setImageResource(R.drawable.angry_game);
             //語音
             MediaPlayer mp = MediaPlayer.create(this, R.raw.mood_game3);
             mp.start();
@@ -572,7 +583,7 @@ public class mood_game_activity extends Activity
             TextView title = findViewById(R.id.textView8);
             title.setText("害怕");
             title.setTextColor(Color.parseColor("#930093"));
-            imageView4.setImageResource(R.drawable.scare_game);
+            //imageView4.setImageResource(R.drawable.scare_game);
             //語音
             MediaPlayer mp = MediaPlayer.create(this, R.raw.mood_game4);
             mp.start();
@@ -581,7 +592,7 @@ public class mood_game_activity extends Activity
             TextView title = findViewById(R.id.textView8);
             title.setText("感動");
             title.setTextColor(Color.parseColor("#FF0080"));
-            imageView4.setImageResource(R.drawable.thank_you_game);
+           // imageView4.setImageResource(R.drawable.thank_you_game);
             //語音
             MediaPlayer mp = MediaPlayer.create(this, R.raw.mood_game5);
             mp.start();
@@ -590,8 +601,8 @@ public class mood_game_activity extends Activity
             TextView title = findViewById(R.id.textView8);
             title.setText("討厭");
             title.setTextColor(Color.parseColor("#009100"));
-            imageView4.setImageResource(R.drawable.hate_game);
-            //語音
+             //imageView4.setImageResource(R.drawable.hate_game);
+           //語音
             MediaPlayer mp = MediaPlayer.create(this, R.raw.mood_game6);
             mp.start();
         }
@@ -677,6 +688,7 @@ public class mood_game_activity extends Activity
                     finsh.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+
                             //寫入資料
                             new Thread(new Runnable(){
                                 @Override
@@ -685,7 +697,10 @@ public class mood_game_activity extends Activity
                                     con.insertgame(gv.getuser(),"2",String.valueOf(temp));
                                 }
                             }).start();
-                            finish();
+                            Intent intent =new Intent(mood_game_activity.this,main_activity.class);
+                            intent.putExtra("user",gv.getuser());
+                            startActivity(intent);
+                            System.exit(0);
                         }
                     });
 
@@ -829,7 +844,7 @@ public class mood_game_activity extends Activity
 
                 break;
             case 10:
-                imageButton12.setImageDrawable(
+               imageButton12.setImageDrawable(
                         getResources().getDrawable(getResourceID(str, "drawable", getApplicationContext()))
                 );
                 imageButton12.setTag(str);

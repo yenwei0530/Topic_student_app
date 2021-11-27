@@ -91,6 +91,7 @@ public class logine_activity extends AppCompatActivity {
                     }else{
                         Intent intent =new Intent(logine_activity.this,main_activity.class);
                         startActivity(intent);
+                        finish();
                     }
                 }else {
                     Toast.makeText(logine_activity.this, "帳號密碼錯誤!!!", Toast.LENGTH_LONG).show();

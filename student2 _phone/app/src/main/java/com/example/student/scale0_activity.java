@@ -50,6 +50,7 @@ public class scale0_activity extends AppCompatActivity {
                 //跳至下一頁面
                 Intent intent =new Intent(scale0_activity.this, scale1_activity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

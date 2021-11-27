@@ -2,6 +2,7 @@ package com.example.student;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -44,9 +45,12 @@ public class mood_ter_step5_1_activity extends AppCompatActivity {
             nextpage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
             uppage.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/ZCOOLKuaiLe-Regular.ttf"));
         }
+
         //語音
+
         MediaPlayer mp = MediaPlayer.create(this, R.raw. mood_ter_step5_1);
         mp.start();
+
 
 
         //離開點擊事件
@@ -57,6 +61,7 @@ public class mood_ter_step5_1_activity extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
             }
         });
 
@@ -68,6 +73,7 @@ public class mood_ter_step5_1_activity extends AppCompatActivity {
                 Intent intent =new Intent(mood_ter_step5_1_activity.this,mood_ter_step5_2_activity.class);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
             }
         });
 
@@ -78,6 +84,7 @@ public class mood_ter_step5_1_activity extends AppCompatActivity {
                 //關閉目前頁面
                 finish();
                 mp.pause();
+                mp.release();
             }
         });
 

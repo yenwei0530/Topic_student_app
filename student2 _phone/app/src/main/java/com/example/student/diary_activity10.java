@@ -61,8 +61,6 @@ public class diary_activity10 extends AppCompatActivity {
         //設定seekBar最大值
         seekBar.setMax(7);
 
-        //設定seekBar最小值
-        seekBar.setMin(1);
 
         //設定seekBar預設值
         seekBar.setProgress(5);
@@ -88,7 +86,6 @@ public class diary_activity10 extends AppCompatActivity {
             }
         });
 
-
         //離開點擊事件
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,6 +108,9 @@ public class diary_activity10 extends AppCompatActivity {
                 Intent intent =new Intent(diary_activity10.this, diary_activity11.class);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
+                finish();
+
             }
         });
 
@@ -119,8 +119,12 @@ public class diary_activity10 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //關閉目前頁面
-                finish();
+                Intent intent =new Intent(diary_activity10.this, diary_activity9.class);
+                startActivity(intent);
                 mp.pause();
+                mp.release();
+                finish();
+
             }
         });
 

@@ -152,7 +152,9 @@ public class diary_activity8 extends AppCompatActivity {
                 Intent intent =new Intent(diary_activity8.this,main_activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
+                finish();
                 mp.pause();
+                mp.release();
             }
         });
 
@@ -201,6 +203,9 @@ public class diary_activity8 extends AppCompatActivity {
                     Intent intent = new Intent(diary_activity8.this, diary_activity9.class);
                     startActivity(intent);
                     mp.pause();
+                    mp.release();
+                    finish();
+
                 }
             }
         });
@@ -210,8 +215,12 @@ public class diary_activity8 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //關閉目前頁面
-                finish();
+                Intent intent = new Intent(diary_activity8.this, diary_activity7.class);
+                startActivity(intent);
                 mp.pause();
+                mp.release();
+                finish();
+
             }
         });
 

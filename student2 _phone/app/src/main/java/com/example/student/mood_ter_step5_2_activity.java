@@ -68,6 +68,7 @@ public class mood_ter_step5_2_activity extends AppCompatActivity {
                 Intent intent =new Intent(mood_ter_step5_2_activity.this,mood_ter_step5_3_activity.class);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
             }
         });
 
@@ -78,6 +79,7 @@ public class mood_ter_step5_2_activity extends AppCompatActivity {
                 //關閉目前頁面
                 finish();
                 mp.pause();
+                mp.release();
             }
         });
 

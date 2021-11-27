@@ -36,18 +36,29 @@ public class main_activity extends AppCompatActivity {
 
         mDBHelper = new SQLiteDataBaseHelper(this, DB_NAME, null, DB_VERSION, TABLE_NAME);//初始化資料庫
 
+        Intent intent = this.getIntent();
+        if (intent.getStringExtra("user") != null) {
+            /**如果有接收到資料*/
+            gv.setuser(intent.getStringExtra("user"));
+
+        }
+
+        Log.v("DB", "寫入資料完成：" + intent.getStringExtra("user"));
+
         arrayList = mDBHelper.student(gv.getuser());
 
         //宣告imageview物件
         ImageView exit=findViewById(R.id.exit);
 
 
-        gv.setname(arrayList.get(0).get("name"));
-        gv.setstudentid(arrayList.get(0).get("student_id"));
-        gv.setpassword(arrayList.get(0).get("password"));
-        gv.setsex(arrayList.get(0).get("sex"));
-        gv.setbirthday(arrayList.get(0).get("birthday"));
-        Log.v("DB", "寫入資料完成：" + arrayList.get(0).get("student_id"));
+        if(gv.getname() == null) {
+            gv.setname(arrayList.get(0).get("name"));
+            gv.setstudentid(arrayList.get(0).get("student_id"));
+            gv.setpassword(arrayList.get(0).get("password"));
+            gv.setsex(arrayList.get(0).get("sex"));
+            gv.setbirthday(arrayList.get(0).get("birthday"));
+            Log.v("DB", "寫入資料完成：" + arrayList.get(0).get("student_id"));
+        }
 
         //宣告TextView物件
         TextView text_name=findViewById(R.id.text_name);
@@ -115,6 +126,7 @@ public class main_activity extends AppCompatActivity {
                 //跳至心情日記頁面
                 Intent intent =new Intent(main_activity.this,diary_activity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -134,7 +146,9 @@ public class main_activity extends AppCompatActivity {
             public void onClick(View v) {
                 //跳至認識情緒頁面
                 Intent intent =new Intent(main_activity.this,mood_game_activity.class);
+                intent.putExtra("user",gv.getuser());
                 startActivity(intent);
+                System.exit(0);
             }
         });
 

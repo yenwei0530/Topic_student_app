@@ -177,6 +177,7 @@ public class mood_ter_step3_1_activity extends AppCompatActivity {
                     gv.setter3_1("轉移注意力");
                 }
                 mp.pause();
+                mp.release();
 
             }
         });
@@ -188,6 +189,7 @@ public class mood_ter_step3_1_activity extends AppCompatActivity {
                 //關閉目前頁面
                 finish();
                 mp.pause();
+                mp.release();
             }
         });
 

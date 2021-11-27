@@ -3,16 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/drawable/button_green.xml" value="0.17039473684210527" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/drawable/layer_seekbar.xml" value="0.17039473684210527" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/drawable/shape_seekbar_thumb.xml" value="0.17039473684210527" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/custom_dialog.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/custom_dialog2.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/custom_dialog3.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/custom_dialog4.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/custom_dialog5.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/custom_dialog6.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/diary10.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/diary4.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/diary6.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/main.xml" value="0.2" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/mood_game.xml" value="0.2" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/mood_ter_step1.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/mood_ter_step1_2.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/mood_ter_step1_3.xml" value="0.264" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/scale0.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/scale10.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/scale4.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/scale5.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/scale6.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/scale7.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/scale8.xml" value="0.16019736842105264" />
+        <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/scale9.xml" value="0.16019736842105264" />
         <entry key="..\:/Users/whu95/Topic_student_app/student2 _phone/app/src/main/res/layout/student_information.xml" value="0.16019736842105264" />
       </map>
     </option>

@@ -78,6 +78,7 @@ public class diary_activity11 extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
             }
         });
 
@@ -89,6 +90,9 @@ public class diary_activity11 extends AppCompatActivity {
                 Intent intent =new Intent(diary_activity11.this, mood_game_activity.class);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
+                finish();
+
             }
         });
 

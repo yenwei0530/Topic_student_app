@@ -93,13 +93,17 @@ public class scale5_activity extends AppCompatActivity {
 
                 //跳至下一頁面
                 Intent intent =new Intent(scale5_activity.this, scale6_activity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+                finish();
             }
         });
 
         uppage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent =new Intent(scale5_activity.this, scale4_activity.class);
+                startActivity(intent);
                 finish();
             }
         });

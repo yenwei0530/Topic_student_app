@@ -146,6 +146,7 @@ public class mood_ter_step7_activity extends AppCompatActivity {
                 Intent intent =new Intent(mood_ter_step7_activity.this, puzzle_start_activity.class);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
             }
         });
 
@@ -158,6 +159,7 @@ public class mood_ter_step7_activity extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_TASK_ON_HOME);
                 startActivity(intent);
                 mp.pause();
+                mp.release();
             }
         });
 
@@ -166,9 +168,12 @@ public class mood_ter_step7_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳至心情溫度計頁面
-                Intent intent =new Intent(mood_ter_step7_activity.this, mood_game_activity.class);
+                Intent intent =new Intent(mood_ter_step7_activity.this,mood_game_activity.class);
+                intent.putExtra("user",gv.getuser());
                 startActivity(intent);
+                System.exit(0);
                 mp.pause();
+                mp.release();
             }
         });
 
